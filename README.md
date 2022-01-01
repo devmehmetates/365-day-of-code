@@ -23,3 +23,8 @@ This repository has been opened for 365 days to code iOS with Swift.
 + Description
 + Code Example
 + Comment of Code
+
+## Target
+
++ Starting a job as an iOS developer by June
++ Specialize in iOS as much as possible 
