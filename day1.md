@@ -1,9 +1,9 @@
 # Day 1 
 
-## Variables
+## Variables 📖
 The variable corresponds to holding data in programming languages.
 
-## Usage
+## Usage 🔨
 
 ### String and Integer
 ```swift
@@ -72,7 +72,7 @@ number = 10 // But you can do this
 
 ```
 
-## Tips 
+## Tips 🤔💭
 
 ### Integer
 ```swift
