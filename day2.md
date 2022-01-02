@@ -1,6 +1,6 @@
 # Day 2
 
-## Complex Data/Variables Type 📖
+## Complex Datas And Variable Types 📖
 Complex data usually refers to holding objects or lists in programming languages.
 
 ## Usage 🔨
