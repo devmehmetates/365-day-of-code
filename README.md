@@ -1,4 +1,4 @@
-# 365 day of code
+# 365 day of code with Swift
 
 This repository has been opened for 365 days to code iOS with Swift.
 
