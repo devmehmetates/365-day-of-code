@@ -28,5 +28,6 @@ That means more markdown files.
 
 ## Target
 
++ Be happy 🙂
 + Starting a job as an iOS developer by June
 + Specialize in iOS as much as possible 
