@@ -39,7 +39,7 @@ struct CountNotification : View{
 }
 ```
 
-## Bage Button 🔨
+## Badge Button 🔨
 ```swift
 import SwiftUI
 
