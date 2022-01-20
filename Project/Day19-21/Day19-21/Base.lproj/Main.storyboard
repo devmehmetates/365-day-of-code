@@ -34,38 +34,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wW4-sY-gfv">
-                                <rect key="frame" x="107" y="230" width="200" height="100"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glf-0v-tUW">
-                                <rect key="frame" x="107" y="360" width="200" height="100"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us" title=""/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tX0-vf-AeY">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGa-q7-Qze">
                                 <rect key="frame" x="107" y="100" width="200" height="100"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <connections>
+                                    <action selector="buttonTabbed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UG3-t1-9tp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Guf-Xy-GKO">
+                                <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <connections>
+                                    <action selector="buttonTabbed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXE-Hn-gpD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGX-Yi-yEk">
+                                <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <connections>
+                                    <action selector="buttonTabbed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hcn-ZM-qMy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="glf-0v-tUW" firstAttribute="top" secondItem="wW4-sY-gfv" secondAttribute="bottom" constant="30" id="3On-eU-LzZ"/>
-                            <constraint firstItem="wW4-sY-gfv" firstAttribute="top" secondItem="tX0-vf-AeY" secondAttribute="bottom" constant="30" id="3kc-m1-R04"/>
-                            <constraint firstItem="wW4-sY-gfv" firstAttribute="centerX" secondItem="tX0-vf-AeY" secondAttribute="centerX" id="99k-ZE-99F"/>
-                            <constraint firstItem="tX0-vf-AeY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="W1P-Uc-iFI"/>
-                            <constraint firstItem="tX0-vf-AeY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="Wu9-Ej-hau"/>
-                            <constraint firstItem="glf-0v-tUW" firstAttribute="centerX" secondItem="wW4-sY-gfv" secondAttribute="centerX" id="kIw-8C-XQt"/>
+                            <constraint firstItem="Guf-Xy-GKO" firstAttribute="top" secondItem="JGa-q7-Qze" secondAttribute="bottom" constant="30" id="2pb-YH-24g"/>
+                            <constraint firstItem="JGa-q7-Qze" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="9uo-cg-pCT"/>
+                            <constraint firstItem="JGa-q7-Qze" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FvW-4w-km8"/>
+                            <constraint firstItem="JGX-Yi-yEk" firstAttribute="centerX" secondItem="Guf-Xy-GKO" secondAttribute="centerX" id="g4i-Nl-p9V"/>
+                            <constraint firstItem="Guf-Xy-GKO" firstAttribute="centerX" secondItem="JGa-q7-Qze" secondAttribute="centerX" id="rOf-nr-BBl"/>
+                            <constraint firstItem="JGX-Yi-yEk" firstAttribute="top" secondItem="Guf-Xy-GKO" secondAttribute="bottom" constant="30" id="vl4-Fk-ubG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Flags" id="xZo-v0-CYB"/>
                     <connections>
-                        <outlet property="button1" destination="tX0-vf-AeY" id="8dV-Nb-Lh0"/>
-                        <outlet property="button2" destination="wW4-sY-gfv" id="MUD-KM-pqU"/>
-                        <outlet property="button3" destination="glf-0v-tUW" id="tOd-ab-b0h"/>
+                        <outlet property="button1" destination="JGa-q7-Qze" id="mC7-Fm-oa2"/>
+                        <outlet property="button2" destination="Guf-Xy-GKO" id="d5F-Vu-MeF"/>
+                        <outlet property="button3" destination="JGX-Yi-yEk" id="L7h-b5-yGI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
