@@ -53,3 +53,22 @@ So we don't have to constantly enter nil when we don't need to enter a value whe
 ```swift
 func askQuestion(action:UIAlertAction! = nil){
 ```
+
+## Update
+This is how I solved the auto-layout padding problem due to the version difference
+```swift
+ button1.configuration?.contentInsets.top = 0.0
+ button1.configuration?.contentInsets.bottom = 0.0
+ button1.configuration?.contentInsets.leading = 0.0
+ button1.configuration?.contentInsets.trailing = 0.0
+
+ button2.configuration?.contentInsets.top = 0.0
+ button2.configuration?.contentInsets.bottom = 0.0
+ button2.configuration?.contentInsets.leading = 0.0
+ button2.configuration?.contentInsets.trailing = 0.0
+
+ button3.configuration?.contentInsets.top = 0.0
+ button3.configuration?.contentInsets.bottom = 0.0
+ button3.configuration?.contentInsets.leading = 0.0
+ button3.configuration?.contentInsets.trailing = 0.0
+```
