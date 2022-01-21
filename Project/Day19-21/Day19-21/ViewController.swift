@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -29,6 +30,21 @@ class ViewController: UIViewController {
         button1.layer.borderColor = UIColor.lightGray.cgColor
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
+        
+        button1.configuration?.contentInsets.top = 0.0
+        button1.configuration?.contentInsets.bottom = 0.0
+        button1.configuration?.contentInsets.leading = 0.0
+        button1.configuration?.contentInsets.trailing = 0.0
+        
+        button2.configuration?.contentInsets.top = 0.0
+        button2.configuration?.contentInsets.bottom = 0.0
+        button2.configuration?.contentInsets.leading = 0.0
+        button2.configuration?.contentInsets.trailing = 0.0
+        
+        button3.configuration?.contentInsets.top = 0.0
+        button3.configuration?.contentInsets.bottom = 0.0
+        button3.configuration?.contentInsets.leading = 0.0
+        button3.configuration?.contentInsets.trailing = 0.0
     }
     
     func askQuestion(action:UIAlertAction! = nil){
