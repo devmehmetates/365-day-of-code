@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
-        title = countries[correctAnswer].uppercased() + " - Current Score :"+String(score)
+        title = countries[correctAnswer].uppercased() + " - Current Score :" + String(score)
     }
     
     func resetGame(action:UIAlertAction! = nil){
@@ -88,13 +88,6 @@ class ViewController: UIViewController {
         }else{
             present(ac,animated: true)
         }
-        
-        
-        
-        
-        
-        
-        
     }
     
 }
