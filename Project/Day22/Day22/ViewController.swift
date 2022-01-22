@@ -1,9 +1,10 @@
 //
 //  ViewController.swift
-//  Day16-18
+//  Day22
 //
-//  Created by Mehmet Ateş on 15.01.2022.
+//  Created by Mehmet Ateş on 22.01.2022.
 //
+
 
 import UIKit
 
@@ -27,8 +28,6 @@ class ViewController: UITableViewController {
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = .none
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(onTab))
         print(pictures)
         // Do any additional setup after loading the view.
     }
@@ -50,18 +49,9 @@ class ViewController: UITableViewController {
             vc.selectedImage = pictures[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }
+        
+        
     }
     
-    @objc func onTab(){
-        let message = "This's awesome app. You should be try :)"
-        let appLink = "https://github.com/devmehmetates"
-        
-        let vc  = UIActivityViewController(activityItems: [message,appLink], applicationActivities: [])
-        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-        
-        present(vc,animated: true)
-    }
-
-
+    
 }
-

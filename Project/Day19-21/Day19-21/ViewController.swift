@@ -15,13 +15,16 @@ class ViewController: UIViewController {
     
     var countries = [String]()
     var score = 0
+    var correct = 0
     var correctAnswer = 0
     var howMuchQuestion = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         askQuestion()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(onTab))
         
         button1.layer.borderWidth = 1
         button2.layer.borderWidth = 1
@@ -45,6 +48,19 @@ class ViewController: UIViewController {
         button3.configuration?.contentInsets.bottom = 0.0
         button3.configuration?.contentInsets.leading = 0.0
         button3.configuration?.contentInsets.trailing = 0.0
+    }
+    
+    @objc func onTab(action: UIAlertAction! = nil){
+        let message = """
+        Currently score is \(score)
+        Tour : \(howMuchQuestion)
+        Wrong Answer : \((howMuchQuestion - correct) - 1)
+        Correct Answer : \(correct)
+        """
+        
+        let vc = UIAlertController(title: "Score", message: message, preferredStyle: .alert)
+        vc.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(vc,animated: true)
     }
     
     func askQuestion(action:UIAlertAction! = nil){
@@ -71,6 +87,7 @@ class ViewController: UIViewController {
         if sender.tag == correctAnswer{
             title = "Correct"
             score += 1
+            correct += 1
         }else{
             title = "Wrong choice\n" + "That's the flag of : \(countries[sender.tag])"
             score -= 1
