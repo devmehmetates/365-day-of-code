@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E28E5D727A19A5300E82CD3 /* InitPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E28E5D627A19A5300E82CD3 /* InitPageTableViewController.swift */; };
 		2ED95BC4279EE4A5005F1DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED95BC3279EE4A5005F1DA3 /* AppDelegate.swift */; };
 		2ED95BC6279EE4A5005F1DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED95BC5279EE4A5005F1DA3 /* SceneDelegate.swift */; };
 		2ED95BC8279EE4A5005F1DA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED95BC7279EE4A5005F1DA3 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E28E5D627A19A5300E82CD3 /* InitPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitPageTableViewController.swift; sourceTree = "<group>"; };
 		2ED95BC0279EE4A5005F1DA3 /* Day24-26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day24-26.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED95BC3279EE4A5005F1DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ED95BC5279EE4A5005F1DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				2ED95BC3279EE4A5005F1DA3 /* AppDelegate.swift */,
 				2ED95BC5279EE4A5005F1DA3 /* SceneDelegate.swift */,
 				2ED95BC7279EE4A5005F1DA3 /* ViewController.swift */,
+				2E28E5D627A19A5300E82CD3 /* InitPageTableViewController.swift */,
 				2ED95BC9279EE4A5005F1DA3 /* Main.storyboard */,
 				2ED95BCC279EE4A6005F1DA3 /* Assets.xcassets */,
 				2ED95BCE279EE4A6005F1DA3 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E28E5D727A19A5300E82CD3 /* InitPageTableViewController.swift in Sources */,
 				2ED95BC8279EE4A5005F1DA3 /* ViewController.swift in Sources */,
 				2ED95BC4279EE4A5005F1DA3 /* AppDelegate.swift in Sources */,
 				2ED95BC6279EE4A5005F1DA3 /* SceneDelegate.swift in Sources */,
