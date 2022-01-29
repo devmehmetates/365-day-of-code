@@ -52,16 +52,19 @@ navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh
 ```
 ## Bug Fix
 ```swift
-func isPossible (word: String) -> Bool{
-    guard var tempWord = title?.lowercased() else {return false}
+func isOriginal (word : String) -> Bool{
+    if word.lowercased() == title?.lowercased(){
+        return false
+    }
 
-    for letter in word{
-        if let position = tempWord.firstIndex(of: letter){
-            tempWord.remove(at: position)
+    for usedWord in usedWords {
+        if usedWord.lowercased() == word.lowercased(){
+            return false
         }else{
             return true
         }
     }
+
     return true
 }
 ```
