@@ -18,6 +18,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDN-Lv-9Lg">
                                 <rect key="frame" x="107" y="124" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KDN-Lv-9Lg" secondAttribute="height" multiplier="2:1" id="Hm8-sa-sK5"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdk-WS-mli"/>
@@ -25,6 +28,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad5-ft-jdL">
                                 <rect key="frame" x="107" y="254" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ad5-ft-jdL" secondAttribute="height" multiplier="2:1" id="stE-kb-pTd"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XcI-ZP-yMx"/>
@@ -32,6 +38,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9A-sJ-FIC">
                                 <rect key="frame" x="107" y="384" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G9A-sJ-FIC" secondAttribute="height" multiplier="2:1" id="Lyg-Ls-mfs"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VN0-Or-TuQ"/>
@@ -41,10 +50,13 @@
                         <viewLayoutGuide key="safeArea" id="BZm-FK-ZBl"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="BZm-FK-ZBl" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="G9A-sJ-FIC" secondAttribute="bottom" constant="20" id="Gvr-1H-8sN"/>
+                            <constraint firstItem="G9A-sJ-FIC" firstAttribute="height" secondItem="ad5-ft-jdL" secondAttribute="height" id="MD8-Ls-r71"/>
                             <constraint firstItem="KDN-Lv-9Lg" firstAttribute="top" secondItem="BZm-FK-ZBl" secondAttribute="top" constant="36" id="Qgp-ln-Krq"/>
                             <constraint firstItem="G9A-sJ-FIC" firstAttribute="centerX" secondItem="BZm-FK-ZBl" secondAttribute="centerX" id="UB5-Qx-Z1E"/>
                             <constraint firstItem="ad5-ft-jdL" firstAttribute="centerX" secondItem="BZm-FK-ZBl" secondAttribute="centerX" id="UIn-wq-eQY"/>
                             <constraint firstItem="ad5-ft-jdL" firstAttribute="top" secondItem="KDN-Lv-9Lg" secondAttribute="bottom" constant="30" id="XeY-ms-QKH"/>
+                            <constraint firstItem="ad5-ft-jdL" firstAttribute="height" secondItem="KDN-Lv-9Lg" secondAttribute="height" id="eSH-1a-m5D"/>
                             <constraint firstItem="G9A-sJ-FIC" firstAttribute="top" secondItem="ad5-ft-jdL" secondAttribute="bottom" constant="30" id="g4a-LT-tyM"/>
                             <constraint firstItem="KDN-Lv-9Lg" firstAttribute="centerX" secondItem="BZm-FK-ZBl" secondAttribute="centerX" id="kqZ-c7-ff4"/>
                         </constraints>
