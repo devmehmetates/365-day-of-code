@@ -1,6 +1,6 @@
 # Day 33 <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day33-35"> Project </a>
 
-## Developing on WebKit
+## Developing on Json Data
 
 ## Subjects
 
