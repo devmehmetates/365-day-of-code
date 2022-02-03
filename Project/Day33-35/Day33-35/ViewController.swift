@@ -25,8 +25,17 @@ class ViewController: UITableViewController {
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
                 parse(json: data)
+                return
             }
         }
+        
+        showError()
+    }
+    
+    func showError() {
+        let ac = UIAlertController(title: "Loading error", message: "Please check your connection and try again.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
     }
     
     func parse(json: Data) {
