@@ -10,11 +10,18 @@ import UIKit
 class ViewController: UITableViewController {
     
     var petitions = [Petition]()
+    var mainPetitions = [Petition]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let urlString: String
+        
+        
+        let leftItems = [UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchFilter)), UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(clearFilter))]
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(showInformation))
+        navigationItem.leftBarButtonItems = leftItems
         
         if navigationController?.tabBarItem.tag == 0 {
             urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
@@ -31,6 +38,55 @@ class ViewController: UITableViewController {
         
         showError()
     }
+    
+    @objc func clearFilter(){
+        if !self.mainPetitions.isEmpty{
+            self.petitions = self.mainPetitions
+        }
+        tableView.reloadData()
+    }
+    
+    @objc func searchFilter(){
+        let sac = UIAlertController(title:"Search any word", message: "Enter your keyword",preferredStyle: .alert)
+        sac.addTextField()
+        
+        let submitAction = UIAlertAction(title: "Search", style: .default) { [weak self, weak sac] _ in
+            var keys = [String]()
+            guard let count = sac?.textFields?.count else{return}
+            for textIndex in 0..<count{
+                if let collectAnswer = sac?.textFields?[textIndex]{
+                    keys.append(collectAnswer.text ?? "")
+                }
+            }
+            self?.searchWord(keys)
+        }
+        
+        sac.addAction(submitAction)
+        present(sac,animated: true)
+    }
+    
+    func searchWord(_ keys : [String]){
+        if !mainPetitions.isEmpty{
+            self.petitions = mainPetitions
+        }
+        var changePetition = [Petition]()
+        for petition in petitions {
+            if petition.body.lowercased().contains(keys[0].lowercased()){
+                changePetition.append(petition)
+            }
+        }
+        self.mainPetitions = self.petitions
+        self.petitions = changePetition
+        tableView.reloadData()
+    }
+    
+    @objc func showInformation(){
+        let iac = UIAlertController(title: "Information", message: "This information got by White House API", preferredStyle: .alert)
+        iac.addAction(UIAlertAction(title: "OK", style: .default))
+        
+        present(iac,animated: true)
+    }
+    
     
     func showError() {
         let ac = UIAlertController(title: "Loading error", message: "Please check your connection and try again.", preferredStyle: .alert)
