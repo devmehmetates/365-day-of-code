@@ -20,7 +20,7 @@ class ViewController: UITableViewController {
         
         let leftItems = [UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchFilter)), UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(clearFilter))]
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(showInformation))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(showInformation))
         navigationItem.leftBarButtonItems = leftItems
         
         if navigationController?.tabBarItem.tag == 0 {
