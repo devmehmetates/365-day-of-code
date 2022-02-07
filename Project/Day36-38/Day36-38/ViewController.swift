@@ -73,6 +73,8 @@ class ViewController: UIViewController {
         
         let buttonView = UIView()
         buttonView.translatesAutoresizingMaskIntoConstraints = false
+        buttonView.layer.borderWidth = 1
+        buttonView.layer.borderColor = UIColor.gray.cgColor
         view.addSubview(buttonView)
         
         
@@ -104,7 +106,7 @@ class ViewController: UIViewController {
             buttonView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             buttonView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             buttonView.heightAnchor.constraint(equalToConstant: 340),
-            buttonView.widthAnchor.constraint(equalToConstant: 720),
+            buttonView.widthAnchor.constraint(equalToConstant: 750),
             buttonView.topAnchor.constraint(equalTo: submit.bottomAnchor,constant: 20)
             
         ])
@@ -158,17 +160,44 @@ class ViewController: UIViewController {
             currentAnswer.text = ""
             score += 1
             
-            if score % 7 == 0 {
-                let ac = UIAlertController(title: "Well done", message: "are you ready to next level", preferredStyle: .alert)
-                ac.addAction(UIAlertAction(title: "let's go", style: .default, handler: levelUp))
-                present(ac,animated: true)
+            var levelEnd = true
+            for lebutton in letterButtons {
+                if lebutton.isHidden == false{
+                    levelEnd = false
+                    break
+                }
             }
+            
+            if levelEnd{
+                if score > 4{
+                    showLevelAlert(title: "Well Done", message: "Are you ready to next level?",buttonTitle: "Let's Go!")
+                }else{
+                    showLevelAlert(title: "Level not completed", message: "Maybe next time?", buttonTitle: "Try Again!")
+                }
+            }
+        }else{
+            let wrAc = UIAlertController(title: "Wrong Anwswer", message: "Try Again", preferredStyle: .alert)
+            wrAc.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+            present(wrAc,animated: true)
+            clearTapped(nil)
+            score -= 1
         }
+    }
+    
+    func showLevelAlert(title : String, message : String?, buttonTitle : String){
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if title == "Well Done"{
+            ac.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: levelUp))
+        }else{
+            ac.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: resetLevel))
+        }
+        present(ac,animated: true)
     }
     
     func levelUp(action : UIAlertAction? = nil){
         level += 1
         solutions.removeAll(keepingCapacity: true)
+        score = 0
         loadLevel()
         
         for button in letterButtons {
@@ -177,7 +206,18 @@ class ViewController: UIViewController {
         
     }
     
-    @objc func clearTapped(_ sender: UIButton) {
+    func resetLevel(action : UIAlertAction? = nil){
+        solutions.removeAll(keepingCapacity: true)
+        score = 0
+        loadLevel()
+        
+        for button in letterButtons {
+            button.isHidden = false
+        }
+        
+    }
+    
+    @objc func clearTapped(_ sender: UIButton? = nil) {
         currentAnswer.text = ""
         for button in activatedButtons {
             button.isHidden = false
