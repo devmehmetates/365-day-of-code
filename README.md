@@ -33,7 +33,7 @@ Sorted by development time.
 
 | Name | Status | Url | Subject | Main Technologies | Sub Technologies or Target |
 | ---- | ------ | --- | ------- | ----------------- | ---------------- |
-| My Custom iTunes | on Development | <a href="https://github.com/devmehmetates/iTunes-Search-API">Go to Project</a> | Music | SwiftUI and iTunes Search API | MVVM, MVP, AVFoundation |
+| My Custom iTunes | on Development | <a href="https://github.com/devmehmetates/iTunes-Search-API">Go to Project</a> | Music | SwiftUI and iTunes Search API | MVVM, MVP, AVFoundation, WebView, UserDefaults, UIKit usage in SwiftUI, UIActivityViewController |
 | Tate Mcrae App | Canceled(I moved it to "My Custom iTunes" project) | <a href="https://twitter.com/devmehmetates/status/1482353368853004288?s=20&t=aFlb1Nz1GslgnMscA8RcKQ">Some Detail</a> | Music | SwiftUI | StoryBoard to SwiftUI, Animations, MVVM |
 | Health Care | Completed | <a href="https://github.com/devmehmetates/Health-Care-Public">Go to Project</a> | Health and Life Style | SwiftUI and Firebase | MVVM, Twitter API, HealthKit, Notifications |
 | CountDown App | Completed | <a href="https://github.com/devmehmetates/CountDown-App">Go to Project</a> | Movie | SwiftUI | Timer, Splash Design |
