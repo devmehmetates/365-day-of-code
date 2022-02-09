@@ -11,6 +11,19 @@ class ViewController: UITableViewController {
     var pictures = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        performSelector(inBackground: #selector(self.getPhotos), with: nil)
+        
+        title = "Storm Viewer"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = .none
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(onTab))
+        print(pictures)
+        // Do any additional setup after loading the view.
+    }
+    
+    @objc func getPhotos(){
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
         let items = try! fm.contentsOfDirectory(atPath: path)
@@ -22,16 +35,11 @@ class ViewController: UITableViewController {
             
         }
         pictures.sort()
-        
-        
-        title = "Storm Viewer"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.backgroundColor = .none
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(onTab))
-        print(pictures)
-        // Do any additional setup after loading the view.
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pictures.count
