@@ -17,7 +17,6 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         let urlString: String
         
-        
         let leftItems = [UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchFilter)), UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(clearFilter))]
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(showInformation))
@@ -66,18 +65,22 @@ class ViewController: UITableViewController {
     }
     
     func searchWord(_ keys : [String]){
-        if !mainPetitions.isEmpty{
-            self.petitions = mainPetitions
-        }
-        var changePetition = [Petition]()
-        for petition in petitions {
-            if petition.body.lowercased().contains(keys[0].lowercased()){
-                changePetition.append(petition)
+        DispatchQueue.global(qos: .userInitiated).async {
+            if !self.mainPetitions.isEmpty{
+                self.petitions = self.mainPetitions
             }
+            var changePetition = [Petition]()
+            for petition in self.petitions {
+                if petition.body.lowercased().contains(keys[0].lowercased()){
+                    changePetition.append(petition)
+                }
+            }
+            self.mainPetitions = self.petitions
+            self.petitions = changePetition
         }
-        self.mainPetitions = self.petitions
-        self.petitions = changePetition
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     @objc func showInformation(){
