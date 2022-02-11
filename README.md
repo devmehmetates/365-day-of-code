@@ -26,6 +26,7 @@ That means more markdown files.
 | Day36-38 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day36-38/Day36-38"> Project </a>| Subviews, NSLayoutConstraint, UIProperties |
 | Day39-41 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day39-41/Day39-41"> Project </a>| Async, DispatchQueue, GCD |
 | Day41-Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day41-Challenge/Day41-Challenge"> Project </a>| Hangman Game  |
+| Day42-44 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day42-44/Day42-44"> Project </a>| UICollectionView, UICollectionViewCell |
 | ... | ... | ... |
 
 ## Side Project Map
