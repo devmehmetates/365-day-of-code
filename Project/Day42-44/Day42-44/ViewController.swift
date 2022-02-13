@@ -28,6 +28,10 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            picker.sourceType = .camera
+        }
+        
         guard let image = info[.editedImage] as? UIImage else { return }
         
         let imageName = UUID().uuidString
@@ -76,20 +80,28 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let person = people[indexPath.item]
         
-        
-        let ac = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
-        ac.addTextField()
-        
-        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        
-        ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak ac] _ in
-            guard let newName = ac?.textFields?[0].text else { return }
-            person.name = newName
+        let fac  = UIAlertController(title: "What is your choice", message: nil, preferredStyle: .alert)
+        fac.addAction(UIAlertAction(title: "Rename", style: .default){ [weak self] _ in
+            let sac = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
+            sac.addTextField()
             
+            sac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            
+            sac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak sac] _ in
+                guard let newName = sac?.textFields?[0].text else { return }
+                person.name = newName
+                
+                self?.collectionView.reloadData()
+            })
+            self!.present(sac,animated: true)
+        })
+        
+        fac.addAction(UIAlertAction(title: "Delete", style: .default){ [weak self] _ in
+            self?.people.remove(at: indexPath.item)
             self?.collectionView.reloadData()
         })
         
-        present(ac, animated: true)
+        present(fac, animated: true)
     }
 
 
