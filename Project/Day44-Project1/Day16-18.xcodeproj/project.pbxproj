@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E0272E62792F4C600361018 /* Day44-Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day44-Project1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E0272E62792F4C600361018 /* Day16-18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day16-18.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E0272E92792F4C600361018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E0272EB2792F4C600361018 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2E0272ED2792F4C600361018 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		2E0272DD2792F4C600361018 = {
 			isa = PBXGroup;
 			children = (
-				2E0272E82792F4C600361018 /* Day44-Project1 */,
+				2E0272E82792F4C600361018 /* Day16-18 */,
 				2E0272E72792F4C600361018 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,12 +70,12 @@
 		2E0272E72792F4C600361018 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2E0272E62792F4C600361018 /* Day44-Project1.app */,
+				2E0272E62792F4C600361018 /* Day16-18.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2E0272E82792F4C600361018 /* Day44-Project1 */ = {
+		2E0272E82792F4C600361018 /* Day16-18 */ = {
 			isa = PBXGroup;
 			children = (
 				2E0272E92792F4C600361018 /* AppDelegate.swift */,
@@ -88,7 +88,7 @@
 				2E0272F72792F4C700361018 /* Info.plist */,
 				2E49AAE427941BFC00A096A1 /* Content */,
 			);
-			path = "Day44-Project1";
+			path = "Day16-18";
 			sourceTree = "<group>";
 		};
 		2E49AAE427941BFC00A096A1 /* Content */ = {
@@ -111,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2E0272E52792F4C600361018 /* Day44-Project1 */ = {
+		2E0272E52792F4C600361018 /* Day16-18 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E0272FA2792F4C700361018 /* Build configuration list for PBXNativeTarget "Day44-Project1" */;
+			buildConfigurationList = 2E0272FA2792F4C700361018 /* Build configuration list for PBXNativeTarget "Day16-18" */;
 			buildPhases = (
 				2E0272E22792F4C600361018 /* Sources */,
 				2E0272E32792F4C600361018 /* Frameworks */,
@@ -123,9 +123,9 @@
 			);
 			dependencies = (
 			);
-			name = "Day44-Project1";
+			name = "Day16-18";
 			productName = "Day16-18";
-			productReference = 2E0272E62792F4C600361018 /* Day44-Project1.app */;
+			productReference = 2E0272E62792F4C600361018 /* Day16-18.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,7 +143,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2E0272E12792F4C600361018 /* Build configuration list for PBXProject "Day44-Project1" */;
+			buildConfigurationList = 2E0272E12792F4C600361018 /* Build configuration list for PBXProject "Day16-18" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -156,7 +156,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2E0272E52792F4C600361018 /* Day44-Project1 */,
+				2E0272E52792F4C600361018 /* Day16-18 */,
 			);
 		};
 /* End PBXProject section */
@@ -354,7 +354,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.devmehmetates.Day44-Project1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devmehmetates.Day16-18";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -382,7 +382,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.devmehmetates.Day44-Project1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devmehmetates.Day16-18";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -393,7 +393,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E0272E12792F4C600361018 /* Build configuration list for PBXProject "Day44-Project1" */ = {
+		2E0272E12792F4C600361018 /* Build configuration list for PBXProject "Day16-18" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E0272F82792F4C700361018 /* Debug */,
@@ -402,7 +402,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E0272FA2792F4C700361018 /* Build configuration list for PBXNativeTarget "Day44-Project1" */ = {
+		2E0272FA2792F4C700361018 /* Build configuration list for PBXNativeTarget "Day16-18" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E0272FB2792F4C700361018 /* Debug */,
