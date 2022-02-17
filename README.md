@@ -28,6 +28,7 @@ That means more markdown files.
 | Day41-Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day41-Challenge/Day41-Challenge"> Project </a>| Hangman Game  |
 | Day42-44 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day42-44/Day42-44"> Project </a>| UICollectionView, UICollectionViewCell |
 | Day45-47 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day45-47/Day45-47"> Project </a>| Begin to iOS games with SpriteKit |
+| Day48-49 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day48-49/Day42-44"> Project </a>| UserDefaults, NSCoding |
 | ... | ... | ... |
 
 ## Side Project Map
