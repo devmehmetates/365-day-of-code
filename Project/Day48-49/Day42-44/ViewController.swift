@@ -115,7 +115,6 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             let defaults = UserDefaults.standard
             defaults.set(savedData, forKey: "people")
         }
-            
     }
 
 }

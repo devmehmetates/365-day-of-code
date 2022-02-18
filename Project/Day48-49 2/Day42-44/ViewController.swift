@@ -17,6 +17,18 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
         
+        let defaults = UserDefaults.standard
+        
+        if let savedPeople = defaults.object(forKey: "people") as? Data {
+            let jsonDecoder = JSONDecoder()
+            
+            do {
+                people = try jsonDecoder.decode([Person].self, from: savedPeople)
+            } catch {
+                print("Failed to load people")
+            }
+        }
+        
     }
     
     @objc func addNewPerson(){
@@ -90,7 +102,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             sac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak sac] _ in
                 guard let newName = sac?.textFields?[0].text else { return }
                 person.name = newName
-                
+                self?.save()
                 self?.collectionView.reloadData()
             })
             self!.present(sac,animated: true)
@@ -102,6 +114,16 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         })
         
         present(fac, animated: true)
+    }
+    
+    func save() {
+        let jsonEncoder = JSONEncoder()
+        if let savedData = try? jsonEncoder.encode(people) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "people")
+        } else {
+            print("Failed to save people.")
+        }
     }
 
 
