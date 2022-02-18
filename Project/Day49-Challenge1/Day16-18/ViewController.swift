@@ -8,7 +8,10 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    var pictures = [String]() 
+    let defaults = UserDefaults.standard
+    var pictures = [String]()
+    var picturesShowCount = [Int]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +23,12 @@ class ViewController: UITableViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(onTab))
         print(pictures)
+        
+        for picture in pictures{
+            picturesShowCount.append(defaults.object(forKey: picture) as? Int ?? 0)
+        }
         // Do any additional setup after loading the view.
+        
     }
     
     @objc func getPhotos(){
@@ -47,7 +55,9 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
+        let showingCount = defaults.object(forKey: pictures[indexPath.row]) as? Int ?? 0
         cell.textLabel?.text = pictures[indexPath.row]
+        cell.detailTextLabel?.text = String(showingCount)
         return cell
     }
     
@@ -56,6 +66,9 @@ class ViewController: UITableViewController {
             vc.count = self.pictures.count
             vc.selectedIndex = indexPath.row
             vc.selectedImage = pictures[indexPath.row]
+            defaults.set(picturesShowCount[indexPath.row] + 1, forKey: pictures[indexPath.row])
+            picturesShowCount[indexPath.row] = picturesShowCount[indexPath.row] + 1
+            self.tableView.reloadData()
             navigationController?.pushViewController(vc, animated: true)
         }
     }
