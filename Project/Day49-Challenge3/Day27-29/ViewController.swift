@@ -10,10 +10,10 @@ import UIKit
 class ViewController: UITableViewController {
     var allWords = [String]()
     var usedWords = [String]()
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetGame))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
@@ -33,12 +33,25 @@ class ViewController: UITableViewController {
     }
     
     @objc func resetGame(){
-        startGame()
+        let newWorld = allWords.randomElement()
+        DispatchQueue.main.async {
+            self.defaults.set(newWorld, forKey: "currentWord")
+            self.defaults.set([String](), forKey: "usedWords")
+            self.startGame()
+        }
+       
     }
     
     func startGame(){
-        title = allWords.randomElement()
-        usedWords.removeAll(keepingCapacity: true)
+        if let currentTitle = defaults.object(forKey: "currentWord") as? String{
+            title = currentTitle
+        }else{
+            title = allWords.randomElement()
+            defaults.set(title, forKey: "currentWord")
+        }
+        if let savedUsedWords = defaults.object(forKey: "usedWords") as? [String]{
+            usedWords = savedUsedWords
+        }
         tableView.reloadData()
     }
     
@@ -78,6 +91,9 @@ class ViewController: UITableViewController {
             if isOriginal(word: lowerAnswer){
                 if isReal(word: lowerAnswer){
                     usedWords.insert(answer, at: 0)
+                    DispatchQueue.main.async {
+                        self.defaults.set(self.usedWords, forKey: "usedWords")
+                    }
                     let indexPath = IndexPath(row: 0, section: 0)
                     tableView.insertRows(at: [indexPath], with: .automatic)
                     return
@@ -91,9 +107,6 @@ class ViewController: UITableViewController {
             guard let title = title else{return}
             showErrorMessage(title: "word not possible", message: "You can't spell that word from \(title.lowercased()).")
         }
-        
-        
-        
     }
     
     func isPossible (word: String) -> Bool{
