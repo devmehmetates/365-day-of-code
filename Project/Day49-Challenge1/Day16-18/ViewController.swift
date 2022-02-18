@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    var pictures = [String]()
+    var pictures = [String]() 
     override func viewDidLoad() {
         super.viewDidLoad()
         
