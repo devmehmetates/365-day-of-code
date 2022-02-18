@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     var correct = 0
     var correctAnswer = 0
     var howMuchQuestion = 0
+    var highScoreSetted = false
+    
+    let defaults = UserDefaults.standard
     
     
     override func viewDidLoad() {
@@ -79,9 +82,12 @@ class ViewController: UIViewController {
         score = 0
         howMuchQuestion = 0
         askQuestion()
+        highScoreSetted = false
     }
 
     @IBAction func buttonTabbed(_ sender: UIButton) {
+        let highScore = defaults.object(forKey: "highScore") as? Int ?? 0
+        
         var title : String
         
         if sender.tag == correctAnswer{
@@ -99,8 +105,16 @@ class ViewController: UIViewController {
         let ac = UIAlertController(title: title, message: "Your score is: \(score)", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         
+        let hc = UIAlertController(title: "High Score!", message: "You reach a new high score\n ⭐️", preferredStyle: .alert)
+        hc.addAction(UIAlertAction(title: "Thanks😎", style: .default, handler: askQuestion))
+        
+        if highScore != 0 && score > highScore && !highScoreSetted{
+            present(hc,animated: true)
+            highScoreSetted = true
+        }
         
         if howMuchQuestion == 10{
+            defaults.set(score, forKey: "highScore")
             present(cc,animated: true)
         }else{
             present(ac,animated: true)
