@@ -114,7 +114,9 @@ class ViewController: UIViewController {
         }
         
         if howMuchQuestion == 10{
-            defaults.set(score, forKey: "highScore")
+            if score > highScore{
+                defaults.set(score, forKey: "highScore")
+            }
             present(cc,animated: true)
         }else{
             present(ac,animated: true)
