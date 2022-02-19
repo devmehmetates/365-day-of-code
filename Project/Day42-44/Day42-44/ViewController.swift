@@ -21,6 +21,9 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     
     @objc func addNewPerson(){
         let picker  = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            picker.sourceType = .camera
+        }
         picker.allowsEditing = true
         picker.delegate = self
         present(picker, animated: true)
@@ -28,9 +31,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-            picker.sourceType = .camera
-        }
+
         
         guard let image = info[.editedImage] as? UIImage else { return }
         
