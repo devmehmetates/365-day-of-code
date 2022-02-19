@@ -298,7 +298,7 @@
 				INFOPLIST_FILE = "Day50-Challenge/Info.plist";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "We need usage photo library";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need usage camera";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "we need use your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -329,7 +329,7 @@
 				INFOPLIST_FILE = "Day50-Challenge/Info.plist";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "We need usage photo library";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need usage camera";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "we need use your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

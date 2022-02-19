@@ -8,18 +8,13 @@
 import UIKit
 
 class ViewController:UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    let defaults = UserDefaults.standard
     var images = [UIImage]()
     var imagesNames = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPhoto))
-        self.images = defaults.object(forKey: "images") as? Array<UIImage> ?? [UIImage]()
-        self.imagesNames = defaults.object(forKey: "imageNames") as? Array<String> ?? [String]()
-        
     }
     
     @objc func addPhoto(){
@@ -42,9 +37,7 @@ class ViewController:UITableViewController, UIImagePickerControllerDelegate, UIN
             try? jpegData.write(to: imagePath)
         }
         self.images.append(image)
-        
-//        defaults.set(images, forKey: "images")
-//        defaults.set(imagesNames, forKey: "imageNames")
+
         dismiss(animated: true)
         getImageName()
     }
@@ -61,7 +54,6 @@ class ViewController:UITableViewController, UIImagePickerControllerDelegate, UIN
         }))
         
         present(ac,animated: true)
-    
     }
     
     
