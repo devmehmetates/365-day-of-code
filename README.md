@@ -31,6 +31,7 @@ That means more markdown files.
 | Day48-49 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day48-49/Day42-44"> Project-A </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day48-49%202/Day42-44"> Project-B </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day48(UserDefault)/Day48(UserDefault)"> Project-C </a>| UserDefaults, NSCoding |
 | Day49 Challenges | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day49-Challenge1"> Project-1 </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day49-Challenge2"> Project-2 </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day49-Challenge3"> Project-5 </a>| UserDefaults, Codable |
 | Day50 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day50-Challenge/Day50-Challenge"> Project </a>| Review(Milestone) |
+| Day51 Horizon Day | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day51%20Playground.playground"> Playground </a>| Functional Programming and some functions(map, flatMap, compactMap) |
 | ... | ... | ... |
 
 ## Side Project Map
