@@ -32,6 +32,7 @@ That means more markdown files.
 | Day49 Challenges | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day49-Challenge1"> Project-1 </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day49-Challenge2"> Project-2 </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day49-Challenge3"> Project-5 </a>| UserDefaults, Codable |
 | Day50 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day50-Challenge/Day50-Challenge"> Project </a>| Review(Milestone) |
 | Day51 Horizon Day | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day51%20Playground.playground"> Playground </a>| Functional Programming and some functions(map, flatMap, compactMap) |
+| Day52-54 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day52-54/Day52-54"> Project </a>| UISlider and UIImagePicker |
 | ... | ... | ... |
 
 ## Side Project Map
