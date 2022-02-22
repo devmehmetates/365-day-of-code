@@ -10,7 +10,7 @@
         <!--???-->
         <scene sceneID="OeH-nZ-Evh">
             <objects>
-                <viewController id="auf-MO-pDQ" customClass="ViewController" customModule="Project13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="auf-MO-pDQ" customClass="ViewController" customModule="Day52_54" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SLM-Wn-UzJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,7 @@
                     <navigationItem key="navigationItem" title="???" id="tZA-vU-Ub0"/>
                     <connections>
                         <outlet property="imageView" destination="PMq-b1-g0F" id="zFG-pr-MeQ"/>
+                        <outlet property="slider" destination="wDx-iy-mUA" id="rLf-kc-IjV"/>
                         <outlet property="sliderView" destination="R2z-hp-exo" id="j41-Ub-pbQ"/>
                     </connections>
                 </viewController>
