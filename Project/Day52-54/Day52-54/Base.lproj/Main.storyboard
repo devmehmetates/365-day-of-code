@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KY7-M9-cgD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z6G-Rz-43b">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--???-->
+        <!--ViewController-->
         <scene sceneID="OeH-nZ-Evh">
             <objects>
-                <viewController id="auf-MO-pDQ" customClass="ViewController" customModule="Day52_54" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="auf-MO-pDQ" userLabel="ViewController" customClass="ViewController" customModule="Day52_54" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SLM-Wn-UzJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,7 @@
                             <constraint firstItem="gxM-GL-9Yg" firstAttribute="top" secondItem="NwU-Pm-4g4" secondAttribute="top" id="sGc-pw-2gC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="???" id="tZA-vU-Ub0"/>
+                    <navigationItem key="navigationItem" id="UIT-5O-uYz"/>
                     <connections>
                         <outlet property="imageView" destination="PMq-b1-g0F" id="zFG-pr-MeQ"/>
                         <outlet property="slider" destination="wDx-iy-mUA" id="rLf-kc-IjV"/>
@@ -96,25 +96,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xds-O6-yAD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901" y="650"/>
+            <point key="canvasLocation" x="2720.289855072464" y="649.55357142857144"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="pUi-rC-9Ni">
+        <scene sceneID="sJc-50-LGn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KY7-M9-cgD" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z6G-Rz-43b" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="heu-yz-X8n">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0E6-C8-dej">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="auf-MO-pDQ" kind="relationship" relationship="rootViewController" id="w2e-2c-n7O"/>
+                        <segue destination="auf-MO-pDQ" kind="relationship" relationship="rootViewController" id="VCu-zz-jqc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GSP-IS-Pyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0I-IJ-sOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="650"/>
+            <point key="canvasLocation" x="1810.144927536232" y="649.55357142857144"/>
         </scene>
     </scenes>
 </document>

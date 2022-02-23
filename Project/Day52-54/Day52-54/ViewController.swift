@@ -22,6 +22,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(takeImage))
         
+        title = "SEPIA"
         
         context = CIContext()
         currentFilter = CIFilter(name: "CISepiaTone")
@@ -88,9 +89,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func save(_ sender: Any) {
-        guard let image = imageView.image else { return }
-        
-        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        if let image = imageView.image{
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        }else{
+            self.showErrorMessage(title: "An Error!", message: "You don't select any image.\nPlease try again after choice a image by photo library.")
+        }
     }
     
     @IBAction func sliderChange(_ sender: Any) {
@@ -109,6 +112,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let processedImage = UIImage(cgImage: cgimg)
             self.imageView.image = processedImage
         }
+    }
+    
+    func showErrorMessage(title: String, message: String? = nil){
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        present(ac,animated: true)
     }
     
 
