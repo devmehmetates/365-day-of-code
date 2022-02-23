@@ -10,8 +10,11 @@ import CoreImage
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var sliderView: UILabel!
-    @IBOutlet var slider: UISlider!
+
+    @IBOutlet var intensity: UISlider!
+    @IBOutlet var radiusSlider: UISlider!
+    @IBOutlet var scaleSlider: UISlider!
+    
     var currentImage: UIImage!
     
     var context: CIContext!
@@ -58,6 +61,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let beginImage = CIImage(image: currentImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
         applyProcessing()
+        radiusProcessing()
+        scaleProcessing()
         
     }
 
@@ -76,16 +81,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func setFilter(_ action: UIAlertAction? = nil){
-        guard currentImage != nil else { return }
         
         guard let actionTitle = action?.title else { return }
+        
+        title = actionTitle.replacingOccurrences(of: "CI", with: "")
+        
+        guard currentImage != nil else { return }
         
         currentFilter = CIFilter(name: actionTitle)
         
         let beginImage = CIImage(image: currentImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
         
-        applyProcessing()
+        DispatchQueue.main.async {
+            self.applyProcessing()
+            self.radiusProcessing()
+            self.scaleProcessing()
+        }
     }
     
     @IBAction func save(_ sender: Any) {
@@ -96,18 +108,56 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    @IBAction func sliderChange(_ sender: Any) {
-        applyProcessing()
+    
+    @IBAction func intensityChange(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.applyProcessing()
+        }
+    }
+    
+    
+    @IBAction func radiusChanged(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.radiusProcessing()
+        }
+    }
+    
+    @IBAction func scaleChanged(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.scaleProcessing()
+        }
+       
     }
     
     func applyProcessing(){
+        guard let currentImage = currentImage else{ return }
+        
         let inputKeys = currentFilter.inputKeys
         
-        if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(slider.value, forKey: kCIInputIntensityKey) }
-        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(slider.value * 200, forKey: kCIInputRadiusKey) }
-        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(slider.value * 10, forKey: kCIInputScaleKey) }
+        if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey) }
         if inputKeys.contains(kCIInputCenterKey) { currentFilter.setValue(CIVector(x: currentImage.size.width / 2, y: currentImage.size.height / 2), forKey: kCIInputCenterKey) }
         
+        if let cgimg = context.createCGImage(currentFilter.outputImage!, from: currentFilter.outputImage!.extent) {
+            let processedImage = UIImage(cgImage: cgimg)
+            self.imageView.image = processedImage
+        }
+    }
+    
+    func radiusProcessing(){
+        guard currentImage != nil else{ return }
+        let inputKeys = currentFilter.inputKeys
+        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(radiusSlider.value * 200, forKey: kCIInputRadiusKey) }
+        if let cgimg = context.createCGImage(currentFilter.outputImage!, from: currentFilter.outputImage!.extent) {
+            let processedImage = UIImage(cgImage: cgimg)
+            self.imageView.image = processedImage
+        }
+        
+    }
+    
+    func scaleProcessing(){
+        guard currentImage != nil else{ return }
+        let inputKeys = currentFilter.inputKeys
+        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(scaleSlider.value * 10, forKey: kCIInputScaleKey) }
         if let cgimg = context.createCGImage(currentFilter.outputImage!, from: currentFilter.outputImage!.extent) {
             let processedImage = UIImage(cgImage: cgimg)
             self.imageView.image = processedImage
