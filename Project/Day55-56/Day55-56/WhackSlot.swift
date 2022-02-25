@@ -15,7 +15,7 @@ class WhackSlot: SKNode {
     var isHit = false
     
     
-    func configure(as position: CGPoint){
+    func configure(at position: CGPoint){
         self.position = position
         
         let sprite = SKSpriteNode(imageNamed: "whackHole")
@@ -38,9 +38,17 @@ class WhackSlot: SKNode {
     func show(hideTime: Double) {
         if isVisible { return }
         
+        charNode.xScale = 1
+        charNode.yScale = 1
+        
         charNode.run(SKAction.moveBy(x: 0, y: 80, duration: 0.05))
         isVisible = true
         isHit = false
+        
+        if let fuse = SKEmitterNode(fileNamed: "PlayerExplosion") {
+            addChild(fuse)
+        }
+
         
         if Int.random(in: 0...2) == 0 {
             charNode.texture = SKTexture(imageNamed: "penguinGood")
@@ -60,5 +68,14 @@ class WhackSlot: SKNode {
         
         charNode.run(SKAction.moveBy(x: 0, y: -80, duration: 0.05))
         isVisible = false
+    }
+
+    func hit() {
+        isHit = true
+
+        let delay = SKAction.wait(forDuration: 0.25)
+        let hide = SKAction.moveBy(x: 0, y: -80, duration: 0.5)
+        let notVisible = SKAction.run { [unowned self] in self.isVisible = false }
+        charNode.run(SKAction.sequence([delay, hide, notVisible]))
     }
 }

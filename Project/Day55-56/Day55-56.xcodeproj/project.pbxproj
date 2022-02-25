@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E13EE9627C7E19C006C1161 /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13EE9527C7E19C006C1161 /* WhackSlot.swift */; };
+		2E72195227C93B4C0016902C /* PlayerExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2E72195127C93B4C0016902C /* PlayerExplosion.sks */; };
 		2EDA096127C7C4C40009DEA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDA096027C7C4C40009DEA8 /* AppDelegate.swift */; };
 		2EDA096327C7C4C40009DEA8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA096227C7C4C40009DEA8 /* GameScene.sks */; };
 		2EDA096727C7C4C40009DEA8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDA096627C7C4C40009DEA8 /* GameScene.swift */; };
@@ -21,6 +22,8 @@
 		2E13EE9327C7DE60006C1161 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		2E13EE9427C7DE60006C1161 /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whackBad.caf; sourceTree = "<group>"; };
 		2E13EE9527C7E19C006C1161 /* WhackSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
+		2E72195027C932590016902C /* gameover.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.m4a; sourceTree = "<group>"; };
+		2E72195127C93B4C0016902C /* PlayerExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerExplosion.sks; sourceTree = "<group>"; };
 		2EDA095D27C7C4C40009DEA8 /* Day55-56.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day55-56.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDA096027C7C4C40009DEA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EDA096227C7C4C40009DEA8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 				2EDA096F27C7C4C50009DEA8 /* LaunchScreen.storyboard */,
 				2E13EE9327C7DE60006C1161 /* whack.caf */,
 				2E13EE9427C7DE60006C1161 /* whackBad.caf */,
+				2E72195027C932590016902C /* gameover.m4a */,
+				2E72195127C93B4C0016902C /* PlayerExplosion.sks */,
 			);
 			path = "Day55-56";
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				2EDA096C27C7C4C40009DEA8 /* Main.storyboard in Resources */,
 				2EDA096327C7C4C40009DEA8 /* GameScene.sks in Resources */,
 				2EDA096E27C7C4C50009DEA8 /* Assets.xcassets in Resources */,
+				2E72195227C93B4C0016902C /* PlayerExplosion.sks in Resources */,
 				2EDA097127C7C4C50009DEA8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
