@@ -119,6 +119,7 @@ class ViewController: UIViewController {
                 let letterButton = UIButton(type: .system)
                 letterButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
                 letterButton.setTitle("www", for: .normal)
+                letterButton.alpha = 1
                 letterButton.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
                 
                 let frame = CGRect(x: column * width, y: row * heigth, width: width, height: heigth)
@@ -143,7 +144,11 @@ class ViewController: UIViewController {
         
         currentAnswer.text = currentAnswer.text?.appending(buttonTitle)
         activatedButtons.append(sender)
-        sender.isHidden = true
+        UIView.animate(withDuration: 1, delay: 0, options: .curveLinear) {
+            sender.alpha = 0
+        } completion: { finished in
+            
+        }
     }
     
     @objc func submitTapped(_ sender: UIButton) {
@@ -201,7 +206,11 @@ class ViewController: UIViewController {
         loadLevel()
         
         for button in letterButtons {
-            button.isHidden = false
+            UIView.animate(withDuration: 1, delay: 0, options: []) {
+                button.alpha = 1
+            } completion: { finished in
+                
+            }
         }
         
     }
@@ -212,7 +221,11 @@ class ViewController: UIViewController {
         loadLevel()
         
         for button in letterButtons {
-            button.isHidden = false
+            UIView.animate(withDuration: 1, delay: 0, options: []) {
+                button.alpha = 1
+            } completion: { finished in
+                
+            }
         }
         
     }
@@ -220,7 +233,13 @@ class ViewController: UIViewController {
     @objc func clearTapped(_ sender: UIButton? = nil) {
         currentAnswer.text = ""
         for button in activatedButtons {
-            button.isHidden = false
+            UIView.animate(withDuration: 1, delay: 0, options: []) {
+                button.alpha = 1
+            } completion: { finished in
+                
+            }
+
+           
         }
         
         activatedButtons.removeAll()
