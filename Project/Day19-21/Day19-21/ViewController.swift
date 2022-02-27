@@ -64,6 +64,10 @@ class ViewController: UIViewController {
     }
     
     func askQuestion(action:UIAlertAction! = nil){
+        self.button1.transform = .identity
+        self.button2.transform = .identity
+        self.button3.transform = .identity
+        
         howMuchQuestion += 1
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
@@ -76,34 +80,45 @@ class ViewController: UIViewController {
     }
     
     func resetGame(action:UIAlertAction! = nil){
+        self.button1.transform = .identity
+        self.button2.transform = .identity
+        self.button3.transform = .identity
+        
         score = 0
         howMuchQuestion = 0
         askQuestion()
     }
 
     @IBAction func buttonTabbed(_ sender: UIButton) {
-        var title : String
-        
-        if sender.tag == correctAnswer{
-            title = "Correct"
-            score += 1
-            correct += 1
-        }else{
-            title = "Wrong choice\n" + "That's the flag of : \(countries[sender.tag])"
-            score -= 1
-        }
-        
-        let cc = UIAlertController(title: title, message: "Game is over\n Your score is: \(score)", preferredStyle: .alert)
-        cc.addAction(UIAlertAction(title: "Reset the game", style: .default, handler: resetGame))
-        
-        let ac = UIAlertController(title: title, message: "Your score is: \(score)", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        
-        
-        if howMuchQuestion == 10{
-            present(cc,animated: true)
-        }else{
-            present(ac,animated: true)
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: []) {
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        } completion: { finished in
+            
+            var title : String
+            
+            if sender.tag == self.correctAnswer{
+                title = "Correct"
+                self.score += 1
+                self.correct += 1
+            }else{
+                title = "Wrong choice\n" + "That's the flag of : \(self.countries[sender.tag])"
+                self.score -= 1
+            }
+            
+            let cc = UIAlertController(title: title, message: "Game is over\n Your score is: \(self.score)", preferredStyle: .alert)
+            cc.addAction(UIAlertAction(title: "Reset the game", style: .default, handler: self.resetGame))
+            
+            let ac = UIAlertController(title: title, message: "Your score is: \(self.score)", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: self.askQuestion))
+            
+            
+            if self.howMuchQuestion == 10{
+                self.present(cc,animated: true)
+                
+            }else{
+                self.present(ac,animated: true)
+                
+            }
         }
     }
     
