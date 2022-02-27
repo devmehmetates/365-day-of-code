@@ -167,7 +167,7 @@ class ViewController: UIViewController {
             
             var levelEnd = true
             for lebutton in letterButtons {
-                if lebutton.isHidden == false{
+                if lebutton.alpha == 1{
                     levelEnd = false
                     break
                 }
@@ -238,8 +238,6 @@ class ViewController: UIViewController {
             } completion: { finished in
                 
             }
-
-           
         }
         
         activatedButtons.removeAll()
