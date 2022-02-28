@@ -35,6 +35,7 @@ That means more markdown files.
 | Day52-54 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day52-54/Day52-54"> Project </a>| UISlider and UIImagePicker |
 | Day55-56 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day55-56/Day55-56"> Project </a>| iOS games with SpriteKit, SKCropNode |
 | Day57-58 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day57-58/Day-57-58"> Project </a>| Animations |
+| Day59 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day59-Challenge/Day59-Challenge"> Project </a>| Animations |
 | ... | ... | ... |
 
 ## Side Project Map
