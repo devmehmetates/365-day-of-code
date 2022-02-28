@@ -1,0 +1,36 @@
+{
+    "data": [
+        {
+            "name": "USA",
+            "data": [
+                {
+                    "title": "Support",
+                    "desc": "No war"
+                },
+                {
+                    "title": "Singer",
+                    "desc": "Tate Mcrae"
+                }
+            ]
+        },
+        {
+            "name": "Ukraina",
+            "data": [
+                {
+                    "title": "War",
+                    "desc": "No war"
+                }
+            ]
+        },
+        {
+            "name": "Turkey",
+            "data": [
+                {
+                    "title": "Support",
+                    "desc": "No war"
+                }
+            ]
+        }
+
+    ]
+}
