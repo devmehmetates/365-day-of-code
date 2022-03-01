@@ -14,7 +14,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .edit, target: self, action: #selector(changeMapMethod))
         
         let ankara = Capital(title: "Ankara", coordinate: CLLocationCoordinate2D(latitude: 39.925533, longitude: 32.866287), info: "The province with the Anıtkabir, where the tomb of Atatürk, the founder of Turkey, is located.")
         let london = Capital(title: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), info: "Home to the 2012 Summer Olympics.")
@@ -27,7 +27,36 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.addAnnotations([ankara,london, oslo, paris, rome, washington])
     }
     
+    @objc func changeMapMethod(){
+        let ac = UIAlertController(title: "Change map style", message: nil, preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "Standart", style: .default, handler: changeMethod))
+        ac.addAction(UIAlertAction(title: "Satellite", style: .default, handler: changeMethod))
+        ac.addAction(UIAlertAction(title: "Hybrid", style: .default, handler: changeMethod))
+        ac.addAction(UIAlertAction(title: "Hybrid Flyover", style: .default, handler: changeMethod))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        present(ac,animated: true)
+    }
+    
+    func changeMethod(action: UIAlertAction? = nil){
+        guard let actionTitle = action?.title else{
+            return
+        }
 
+        switch actionTitle{
+        case "Satellite":
+            self.mapView.mapType = .satellite
+        case "Hybrid":
+            self.mapView.mapType = .hybrid
+        case "Hybrid Flyover":
+            self.mapView.mapType = .hybridFlyover
+        default:
+            self.mapView.mapType = .standard
+        }
+        
+        
+        
+    }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard annotation is Capital else { return nil }

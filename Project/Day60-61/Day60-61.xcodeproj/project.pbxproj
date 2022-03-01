@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E996D9B27CEC82A00611E84 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E996D9A27CEC82A00611E84 /* WebViewController.swift */; };
 		2EA6D3C527CE7B670014C85B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6D3C427CE7B670014C85B /* AppDelegate.swift */; };
 		2EA6D3C727CE7B670014C85B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6D3C627CE7B670014C85B /* SceneDelegate.swift */; };
 		2EA6D3C927CE7B670014C85B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6D3C827CE7B670014C85B /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E996D9A27CEC82A00611E84 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		2EA6D3C127CE7B670014C85B /* Day60-61.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day60-61.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA6D3C427CE7B670014C85B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EA6D3C627CE7B670014C85B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		2EA6D3C327CE7B670014C85B /* Day60-61 */ = {
 			isa = PBXGroup;
 			children = (
+				2E996D9A27CEC82A00611E84 /* WebViewController.swift */,
 				2EA6D3C427CE7B670014C85B /* AppDelegate.swift */,
 				2EA6D3D827CE80AF0014C85B /* Capital.swift */,
 				2EA6D3C627CE7B670014C85B /* SceneDelegate.swift */,
@@ -144,6 +147,7 @@
 				2EA6D3C927CE7B670014C85B /* ViewController.swift in Sources */,
 				2EA6D3C527CE7B670014C85B /* AppDelegate.swift in Sources */,
 				2EA6D3D927CE80AF0014C85B /* Capital.swift in Sources */,
+				2E996D9B27CEC82A00611E84 /* WebViewController.swift in Sources */,
 				2EA6D3C727CE7B670014C85B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
