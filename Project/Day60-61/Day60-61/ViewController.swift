@@ -82,8 +82,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "Web") as? WebViewController else{ return }
         guard let capital = view.annotation as? Capital else { return }
+        guard let capitalTitle = capital.title else { return }
+    
         
-        vc.countryName = capital.title ?? "İstanbul"
+        vc.countryName = capitalTitle.replacingOccurrences(of: " ", with: "%20")
+        
         navigationController?.pushViewController(vc, animated: true)
     }
 
