@@ -34,9 +34,10 @@ That means more markdown files.
 | Day51 Horizon Day | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day51%20Playground.playground"> Playground </a>| Functional Programming and some functions(map, flatMap, compactMap) |
 | Day52-54 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day52-54/Day52-54"> Project </a>| UISlider and UIImagePicker |
 | Day55-56 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day55-56/Day55-56"> Project </a>| iOS games with SpriteKit, SKCropNode |
-| Day57-58 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day57-58/Day-57-58"> Project </a>| Animations |
-| Day59 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day59-Challenge/Day59-Challenge"> Project </a>| Animations |
-| Day60-61 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day60-61/Day60-61"> Project </a>| MapKit |
+| Day57-58 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day57-58/Day-57-58"> Project </a>| Begin to Animations |
+| Day59 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day59-Challenge/Day59-Challenge"> Project </a>| Try Animations |
+| Day60-61 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day60-61/Day60-61"> Project </a>| Begin to MapKit |
+| Day62-63 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day62-63/Day62-63"> Project </a>| Improve yourself on Sprite-Kit |
 | ... | ... | ... |
 
 ## Side Project Map
@@ -46,7 +47,7 @@ Sorted by development time.
 
 | Name | Status | Url | Subject | Main Technologies | Sub Technologies or Target |
 | ---- | ------ | --- | ------- | ----------------- | ---------------- |
-| Socia | Development |  <a href="https://github.com/devmehmetates/Socia">Go to Project</a> | Social Media | SwiftUI, UIKit integration, Firebase | MVVM, WebKit, Auth System, MapKit? |
+| Socia | Development |  <a href="https://github.com/devmehmetates/Socia">Go to Project</a> | Social Media | SwiftUI, UIKit integration, Firebase | MVVM, WebKit, UIImagePicker, Auth-System, EnvironmentObjects, ObservedObjects, UserDefaults, Video-Player, Pure iOS Properties |
 | My Custom iTunes | Completed | <a href="https://github.com/devmehmetates/iTunes-Search-API">Go to Project</a> | Music | SwiftUI and iTunes Search API | MVVM, MVP, AVFoundation, WebView, UserDefaults, UIKit usage in SwiftUI, UIActivityViewController |
 | Tate Mcrae App | Canceled(I moved it to "My Custom iTunes" project) | <a href="https://twitter.com/devmehmetates/status/1482353368853004288?s=20&t=aFlb1Nz1GslgnMscA8RcKQ">Some Detail</a> | Music | SwiftUI | StoryBoard to SwiftUI, Animations, MVVM |
 | Health Care | Completed | <a href="https://github.com/devmehmetates/Health-Care-Public">Go to Project</a> | Health and Life Style | SwiftUI and Firebase | MVVM, Twitter API, HealthKit, Notifications |
