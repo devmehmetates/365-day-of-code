@@ -38,6 +38,7 @@ That means more markdown files.
 | Day59 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day59-Challenge/Day59-Challenge"> Project </a>| Try Animations |
 | Day60-61 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day60-61/Day60-61"> Project </a>| Begin to MapKit |
 | Day62-63 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day62-63/Day62-63"> Project </a>| Improve yourself on Sprite-Kit |
+| Day64-65 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day64-65/Day64-65"> Project </a>| Debugging |
 | ... | ... | ... |
 
 ## Side Project Map
