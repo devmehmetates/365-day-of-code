@@ -17,6 +17,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        assert(selectedImage != "", "Photo Error!")
+        
         title = "Picture \(selectedIndex + 1) of \(count)"
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.navigationBar.backgroundColor = .systemBackground
