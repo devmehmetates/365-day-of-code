@@ -40,6 +40,7 @@ That means more markdown files.
 | Day62-63 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day62-63/Day62-63"> Project </a>| Improve yourself on Sprite-Kit |
 | Day64-65 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day64-65/Day64-65"> Project </a>| Debugging |
 | Day66 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day66-Challenge/Day66-Challenge"> Project </a>| A biggest Challennge - Shooting game |
+| Day67-69 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day67-69/Day67-69"> Project </a>| App Extensions |
 | ... | ... | ... |
 
 ## Side Project Map
