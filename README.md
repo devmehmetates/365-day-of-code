@@ -41,6 +41,7 @@ That means more markdown files.
 | Day64-65 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day64-65/Day64-65"> Project </a>| Debugging |
 | Day66 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day66-Challenge/Day66-Challenge"> Project </a>| A biggest Challennge - Shooting game |
 | Day67-69 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day67-69/Day67-69"> Project </a>| App Extensions, JavaScript Codes |
+| Day70-71 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day70-71/Day70-71"> Project </a>| Growing up on SpriteKit |
 | ... | ... | ... |
 
 ## Side Project Map
