@@ -34,17 +34,17 @@ class GameScene: SKScene {
     }
     
     func createFirework(xMovement: CGFloat, x: Int, y: Int) {
-        // 1
+
         let node = SKNode()
         node.position = CGPoint(x: x, y: y)
         
-        // 2
+
         let firework = SKSpriteNode(imageNamed: "rocket")
         firework.colorBlendFactor = 1
         firework.name = "firework"
         node.addChild(firework)
         
-        // 3
+        
         switch Int.random(in: 0...2) {
         case 0:
             firework.color = .cyan
@@ -59,22 +59,22 @@ class GameScene: SKScene {
             break
         }
         
-        // 4
+
         let path = UIBezierPath()
         path.move(to: .zero)
         path.addLine(to: CGPoint(x: xMovement, y: 1000))
         
-        // 5
+
         let move = SKAction.follow(path.cgPath, asOffset: true, orientToPath: true, speed: 200)
         node.run(move)
         
-        // 6
+
         if let emitter = SKEmitterNode(fileNamed: "fuse") {
             emitter.position = CGPoint(x: 0, y: -22)
             node.addChild(emitter)
         }
         
-        // 7
+  
         fireworks.append(node)
         addChild(node)
     }
@@ -155,11 +155,51 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         for (index, firework) in fireworks.enumerated().reversed() {
             if firework.position.y > 900 {
-                // this uses a position high above so that rockets can explode off screen
+                
                 fireworks.remove(at: index)
                 firework.removeFromParent()
             }
         }
     }
-
+    
+    func explode(firework: SKNode) {
+        if let emitter = SKEmitterNode(fileNamed: "explode") {
+            emitter.position = firework.position
+            addChild(emitter)
+        }
+        
+        firework.removeFromParent()
+    }
+    
+    func explodeFireworks() {
+        var numExploded = 0
+        
+        for (index, fireworkContainer) in fireworks.enumerated().reversed() {
+            guard let firework = fireworkContainer.children.first as? SKSpriteNode else { continue }
+            
+            if firework.name == "selected" {
+               
+                explode(firework: fireworkContainer)
+                fireworks.remove(at: index)
+                numExploded += 1
+            }
+        }
+        
+        switch numExploded {
+        case 0:
+            
+            break
+        case 1:
+            score += 200
+        case 2:
+            score += 500
+        case 3:
+            score += 1500
+        case 4:
+            score += 2500
+        default:
+            score += 4000
+        }
+    }
+    
 }
