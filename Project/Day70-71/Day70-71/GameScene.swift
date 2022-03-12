@@ -16,10 +16,27 @@ class GameScene: SKScene {
     let leftEdge = -22
     let bottomEdge = -22
     let rightEdge = 1024 + 22
+    var fireworkCount = 0{
+        didSet{
+            if fireworkCount == 3{
+                self.gameTimer?.invalidate()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                    self.showDone = SKLabelNode(fontNamed: "Chalkduster")
+                    self.showDone!.text = "Show is done!"
+                    self.showDone!.position = CGPoint(x: 512, y: 368)
+                    self.showDone!.horizontalAlignmentMode = .center
+                    self.addChild(self.showDone!)
+                }
+            }
+        }
+    }
     
+    var showDone: SKLabelNode?
+    
+    var scoreLabel: SKLabelNode!
     var score = 0 {
         didSet {
-            // your code here
+            scoreLabel.text = "Score: \(score)"
         }
     }
     
@@ -29,6 +46,13 @@ class GameScene: SKScene {
         background.blendMode = .replace
         background.zPosition = -1
         addChild(background)
+        
+        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+        scoreLabel.text = "Score: 0"
+        scoreLabel.position = CGPoint(x: 16, y: 16)
+        scoreLabel.horizontalAlignmentMode = .left
+        addChild(scoreLabel)
+
         
         gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(launchFireworks), userInfo: nil, repeats: true)
     }
@@ -80,6 +104,7 @@ class GameScene: SKScene {
     }
     
     @objc func launchFireworks() {
+        self.fireworkCount += 1
         let movementAmount: CGFloat = 1800
         
         switch Int.random(in: 0...3) {
@@ -163,10 +188,18 @@ class GameScene: SKScene {
     }
     
     func explode(firework: SKNode) {
-        if let emitter = SKEmitterNode(fileNamed: "explode") {
-            emitter.position = firework.position
-            addChild(emitter)
-        }
+        let emitter = SKEmitterNode(fileNamed: "explode")!
+           
+            
+        let delayedRemoval = SKAction.sequence([
+            SKAction.wait(forDuration: 3),
+            SKAction.removeFromParent(),
+        ])
+
+        emitter.position = firework.position
+        emitter.run(delayedRemoval)
+        
+        addChild(emitter)
         
         firework.removeFromParent()
     }
