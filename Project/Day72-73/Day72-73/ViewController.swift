@@ -44,14 +44,15 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         content.userInfo = ["customData": "fizzbuzz"]
         content.sound = UNNotificationSound.default
         
-        var dateComponents = DateComponents()
-        dateComponents.hour = 10
-        dateComponents.minute = 30
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+//        var dateComponents = DateComponents()
+//        dateComponents.hour = 10
+//        dateComponents.minute = 30
+//     let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         center.add(request)
+        
     }
     
     func registerCategories() {
@@ -59,7 +60,8 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         center.delegate = self
         
         let show = UNNotificationAction(identifier: "show", title: "Tell me more…", options: .foreground)
-        let category = UNNotificationCategory(identifier: "alarm", actions: [show], intentIdentifiers: [])
+        let remind = UNNotificationAction(identifier: "remind", title: "Remind me later...", options: .foreground)
+        let category = UNNotificationCategory(identifier: "alarm", actions: [show, remind], intentIdentifiers: [])
         
         center.setNotificationCategories([category])
     }
@@ -73,12 +75,21 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
             
             switch response.actionIdentifier {
             case UNNotificationDefaultActionIdentifier:
-                // the user swiped to unlock
-                print("Default identifier")
+                showAlert(title: "This is a default identifier", message: "Not special! Sorry :(")
                 
             case "show":
-                // the user tapped our "show more info…" button
-                print("Show more information…")
+                showAlert(title: "This is show more button!", message: "Here is the your notification information;\n\(customData)")
+                
+            case "remind":
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 20, repeats: false)
+                let secondContent = UNMutableNotificationContent()
+                secondContent.title = "Reminder!!"
+                secondContent.body = response.notification.request.content.body
+                secondContent.categoryIdentifier = response.notification.request.content.categoryIdentifier
+                secondContent.userInfo = response.notification.request.content.userInfo
+                secondContent.sound = UNNotificationSound.default
+                let request = UNNotificationRequest(identifier: UUID().uuidString, content: secondContent, trigger: trigger)
+                center.add(request)
                 
             default:
                 break
@@ -87,6 +98,13 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         
         // you must call the completion handler when you're done
         completionHandler()
+    }
+    
+    func showAlert(title: String?, message: String?){
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Okay!", style: .default, handler: nil))
+        
+        present(ac, animated: true)
     }
 }
 
