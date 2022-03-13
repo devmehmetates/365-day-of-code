@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
 
@@ -19,9 +20,15 @@ class ViewController: UIViewController {
     var correctAnswer = 0
     var howMuchQuestion = 0
     
+    let center = UNUserNotificationCenter.current()
+    let defaults = UserDefaults.standard
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        registerNotification()
+        
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         askQuestion()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(onTab))
@@ -48,6 +55,42 @@ class ViewController: UIViewController {
         button3.configuration?.contentInsets.bottom = 0.0
         button3.configuration?.contentInsets.leading = 0.0
         button3.configuration?.contentInsets.trailing = 0.0
+    }
+    
+    func registerNotification(){
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                print("Everything is okay")
+                self.setNotification()
+            } else {
+                print("oh no! :(")
+            }
+        }
+    }
+    
+    func setNotification(){
+        center.removeAllPendingNotificationRequests()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Come back! We miss you."
+        content.body = "Hey! You wanna a quick game! I know. Come!"
+        content.categoryIdentifier = "reminder"
+        content.userInfo = ["gamename": "flag game"]
+        content.sound = UNNotificationSound.default
+        
+        let components = Calendar.current.dateComponents([.day], from: Date.now)
+        var dateComponents = DateComponents()
+        
+        dateComponents.day = (components.day ?? 0) + 1
+        dateComponents.hour = 20
+        dateComponents.minute = 30
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
+        
+        print("Trigger Date: \(dateComponents)")
+        
     }
     
     @objc func onTab(action: UIAlertAction! = nil){
