@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     var howMuchQuestion = 0
     
     let center = UNUserNotificationCenter.current()
-    let defaults = UserDefaults.standard
+
     
     
     override func viewDidLoad() {

@@ -81,7 +81,7 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
                 showAlert(title: "This is show more button!", message: "Here is the your notification information;\n\(customData)")
                 
             case "remind":
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 20, repeats: false)
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 86400, repeats: false)
                 let secondContent = UNMutableNotificationContent()
                 secondContent.title = "Reminder!!"
                 secondContent.body = response.notification.request.content.body
