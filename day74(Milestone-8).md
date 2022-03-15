@@ -16,6 +16,42 @@ Hello again. Maybe it is the first application that I have used all the informat
 + This note allows us to share the part we took. Fast and effective.
 + That's enough information. I leave you alone with the codes and images of the application :)
 
+## Codes that may be useful
+
+### Codeable objects
+```swift
+class Note: NSObject, Codable {
+    var id: Int
+    var title: String
+    var detail: String
+    
+    init (id: Int, title : String, detail : String){
+        self.id = id
+        self.title = title
+        self.detail = detail
+    }
+}
+```
+
+### For toolbar button
+```swift
+navigationController?.isToolbarHidden = false
+
+let addNote = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil"), style: .done, target: self, action: #selector(addNote))
+
+addNote.tintColor = UIColor.systemOrange
+let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+
+toolbarItems = [spacer,addNote]
+```
+
+### Is the note old?
+```swift
+let isNoteNew = self.notes?.first(where: { myNote in
+    myNote.id == thisNote.id
+})
+```
+
 ## Images
 
 <div>
@@ -24,10 +60,6 @@ Hello again. Maybe it is the first application that I have used all the informat
   <img src="https://user-images.githubusercontent.com/74152011/158447010-2c208deb-8d11-4d8f-8cee-20630612c457.png" width=255>
   <img src="https://user-images.githubusercontent.com/74152011/158447027-62981e24-7c0d-451c-9917-943e61aa16a3.png" width=255>
   <img src="https://user-images.githubusercontent.com/74152011/158447018-6e772bfd-f1bc-4fef-8628-b956a6c8b0fb.png" width=255>
-
-
-  
-  
   
 </div>
 
