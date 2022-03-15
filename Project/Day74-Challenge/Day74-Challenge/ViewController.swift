@@ -59,6 +59,9 @@ class ViewController: UITableViewController {
             
             do {
                 notes = try jsonDecoder.decode([Note].self, from: savedNotes)
+                self.notes.sort { note1, note2 in
+                    note1.id < note2.id
+                }
             } catch {
                 print("Notes can not loaded")
             }
