@@ -47,16 +47,18 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
     
     func startScanning() {
         let uuid = UUID(uuidString: "5A4BCFCE-174E-4BAC-A814-092E77F6B7E5")!
+        let uuid2 = UUID(uuidString: "5A4BCFCE-174E-4BAC-A814-092E77F6B7EA")!
+        let uuid3 = UUID(uuidString: "5A4BCFCE-174E-4BAC-A814-092E77F6B7E7")!
         
         let beaconRegion = CLBeaconRegion(uuid: uuid, major: 123, minor: 456, identifier: "MyBeacon")
         locationManager?.startMonitoring(for: beaconRegion)
         locationManager?.startRangingBeacons(satisfying: CLBeaconIdentityConstraint.init(uuid: uuid, major: 123, minor: 456))
         
-        let secondBeaconRegion = CLBeaconRegion(uuid: uuid, major: 153, minor: 456, identifier: "MyBeacon2")
+        let secondBeaconRegion = CLBeaconRegion(uuid: uuid2, major: 153, minor: 456, identifier: "MyBeacon2")
         locationManager?.startMonitoring(for: secondBeaconRegion)
         locationManager?.startRangingBeacons(satisfying: CLBeaconIdentityConstraint.init(uuid: uuid, major: 153, minor: 456))
         
-        let thirtBeaconRegion = CLBeaconRegion(uuid: uuid, major: 163, minor: 456, identifier: "MyBeacon3")
+        let thirtBeaconRegion = CLBeaconRegion(uuid: uuid3, major: 163, minor: 456, identifier: "MyBeacon3")
         locationManager?.startMonitoring(for: thirtBeaconRegion)
         locationManager?.startRangingBeacons(satisfying: CLBeaconIdentityConstraint.init(uuid: uuid, major: 163, minor: 456))
     }
