@@ -44,6 +44,7 @@ That means more markdown files.
 | Day70-71 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day70-71/Day70-71"> Project </a>| Growing up on SpriteKit |
 | Day72-73 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day72-73/Day72-73"> Project </a>| UserNotifications, Local Notifications |
 | Day74 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day74-Challenge/Day74-Challenge"> Project </a>| iOS Notes App Clone |
+| Day75-76 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day75-76/Day75-76"> Project </a>| Core Location |
 | ... | ... | ... |
 
 ## Side Project Map
