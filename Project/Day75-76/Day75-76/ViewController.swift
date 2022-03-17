@@ -64,46 +64,35 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
     func update(distance: CLProximity, beaconID: Int) {
         UIView.animate(withDuration: 0.8) {
             self.beaconLabel.text = (beaconID == 123) ? "First Beacon" : (beaconID == 153) ? "Second Beacon" : (beaconID == 163) ? "Thirt Beaon" : "Beacon Not Found"
-            switch distance {
-            case .far:
-                self.view.backgroundColor = UIColor.blue
-                self.distanceLabel.text = "FAR"
-                UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut) {
+            
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut) {
+                switch distance {
+                case .far:
+                    self.view.backgroundColor = UIColor.blue
+                    self.distanceLabel.text = "FAR"
                     self.circleImage.transform = CGAffineTransform(scaleX: 1, y: 1)
-                } completion: { finished in
-                    //
-                }
-
-                
-            case .near:
-                self.view.backgroundColor = UIColor.orange
-                self.distanceLabel.text = "NEAR"
-                UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut) {
+                    
+                    
+                case .near:
+                    self.view.backgroundColor = UIColor.orange
+                    self.distanceLabel.text = "NEAR"
                     self.circleImage.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                } completion: { finished in
-                    //
-                }
-
-                
-            case .immediate:
-                self.view.backgroundColor = UIColor.red
-                self.distanceLabel.text = "RIGHT HERE"
-                UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut) {
+                    
+                    
+                case .immediate:
+                    self.view.backgroundColor = UIColor.red
+                    self.distanceLabel.text = "RIGHT HERE"
                     self.circleImage.transform = CGAffineTransform(scaleX: 0.25, y: 0.25)
-                } completion: { finished in
-                    //
-                }
-
-                
-            default:
-                self.view.backgroundColor = UIColor.gray
-                self.distanceLabel.text = "UNKNOWN"
-                UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut) {
+                    
+                    
+                default:
+                    self.view.backgroundColor = UIColor.gray
+                    self.distanceLabel.text = "UNKNOWN"
                     self.circleImage.transform = CGAffineTransform(scaleX: 0.0001, y: 0.0001)
-                } completion: { finished in
-                    //
                 }
-
+                
+            } completion: { finished in
+                //
             }
         }
     }
