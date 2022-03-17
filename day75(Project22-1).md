@@ -1,4 +1,4 @@
-# Day 75 <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day75-77/Day75-77"> Project </a>
+# Day 75 <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day75-76/Day75-76"> Project </a>
 
 ## Developing on CoreLocation
 
