@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,24 +22,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknoned Beacon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23q-rE-SIr">
+                                <rect key="frame" x="137" y="485" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ion-mQ-sVY">
+                                <rect key="frame" x="197" y="443.5" width="20" height="19"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="23q-rE-SIr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="222-wx-9Fg"/>
                             <constraint firstItem="AeQ-5A-TLI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EGC-oW-KfV"/>
                             <constraint firstItem="AeQ-5A-TLI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="X5I-ut-7GB"/>
+                            <constraint firstItem="23q-rE-SIr" firstAttribute="top" secondItem="AeQ-5A-TLI" secondAttribute="bottom" constant="8" symbolic="YES" id="j6M-nT-59F"/>
+                            <constraint firstItem="ion-mQ-sVY" firstAttribute="centerX" secondItem="AeQ-5A-TLI" secondAttribute="centerX" id="vHn-tS-Aag"/>
+                            <constraint firstItem="ion-mQ-sVY" firstAttribute="centerY" secondItem="AeQ-5A-TLI" secondAttribute="centerY" id="zBG-L5-g5N"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="beaconLabel" destination="23q-rE-SIr" id="w40-id-DDt"/>
+                        <outlet property="circleImage" destination="ion-mQ-sVY" id="1E3-dP-cZ6"/>
                         <outlet property="distanceLabel" destination="AeQ-5A-TLI" id="Oge-3N-GEa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="84"/>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
