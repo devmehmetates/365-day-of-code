@@ -438,6 +438,11 @@ class GameScene: SKScene {
             DispatchQueue.main.asyncAfter(deadline: .now() + (chainDelay / 10.0 * 4)) { [weak self] in self?.createEnemy() }
         case .bonus:
             createEnemy(isBonus: true)
+            createEnemy(forceBomb: .always)
+            createEnemy(forceBomb: .always)
+            createEnemy(forceBomb: .always)
+            createEnemy(forceBomb: .always)
+            
         }
         
         
