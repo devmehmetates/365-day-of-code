@@ -104,3 +104,47 @@ attributedString.addAttribute(.strikethroughStyle, value: true, range: NSRange(l
 attributedString.addAttribute(.paragraphStyle, value: true, range: NSRange(location: 15, length: 6))
 
 attributedString.addAttribute(.link, value: true, range: NSRange(location: 15, length: 6))
+
+// MARK: CHALLENGE 1
+extension String{
+    func withPrefix(_ prefix: String) -> String{
+        if self.contains(prefix){
+            return self
+        }else{
+            return prefix + self
+        }
+    }
+}
+
+var myExample = "pet"
+myExample.withPrefix("car")
+
+// MARK: CHALLENGE 2
+extension String{
+    func isContainNumeric() -> Bool{
+        for letter in self{
+            if letter.isNumber{
+                return true
+            }
+        }
+        return false
+    }
+}
+
+var myString = "aaa1aaaaa"
+myString.isContainNumeric()
+
+// MARK: CHALLENGE 3
+extension String{
+    func takeLines() -> Array<String>{
+        var array = [String]()
+        for word in self.split(separator: "\n"){
+            array.append(String(word))
+        }
+        return array
+    }
+}
+
+var myMultiLineText = "this\nis\na\ntest"
+print(myMultiLineText.takeLines())
+
