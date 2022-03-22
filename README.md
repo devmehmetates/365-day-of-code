@@ -2,14 +2,12 @@
 This repository has been opened to develop iOS in a planned way.
 
 ## Plan
-### Plan edit on 04 october 2021
-That means more markdown files.
 
-| Start Date | Finish Date | Day | Title | Side Studies |
-| ---------- | ----------- | --- | ----- | ------------ |
-| 01/01/2022 | 09/04/2022  | 100 | Swift And UIKit | Unit tests |
-| 10/04/2022 | 19/07/2022  | 100 | SwiftUI | Side project without bonded to tutorial |
-| 20/07/2022 | 01/01/2023  | 165 | Project examples and more practice (Difficult section) | UI coding tutorials with md |
+| Start Date | Finish Date | Day | Title |
+| ---------- | ----------- | --- | ----- |
+| 01/01/2022 | 09/04/2022  | 100 | Swift And UIKit |
+| 26/03/2022 | 04/07/2022  | 100 | Swift Review and SwiftUI |
+| 01/01/2022 | 01/01/2023  | 365 | Project examples and more practice |
 
 ## Project Map
 
@@ -46,6 +44,7 @@ That means more markdown files.
 | Day74 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day74-Challenge/Day74-Challenge"> Project </a>| iOS Notes App Clone |
 | Day75-76 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day75-76/Day75-76"> Project </a>| Core Location |
 | Day77-79 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day77-79/Day77-79"> Project </a>| Fruit ninja with Sprite Kit |
+| Day80-81 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day80-81.playground"> Project </a>| Extensions |
 | ... | ... | ... |
 
 ## Side Project Map
