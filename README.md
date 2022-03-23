@@ -45,6 +45,7 @@ This repository has been opened to develop iOS in a planned way.
 | Day75-76 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day75-76/Day75-76"> Project </a>| Core Location |
 | Day77-79 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day77-79/Day77-79"> Project </a>| Fruit ninja with Sprite Kit |
 | Day80-81 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day80-81.playground"> Project </a>| Extensions |
+| Day82 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day82.playground"> Project </a>| Extensions Challenges |
 | ... | ... | ... |
 
 ## Side Project Map
