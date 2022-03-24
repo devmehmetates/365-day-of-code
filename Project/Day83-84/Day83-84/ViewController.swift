@@ -9,6 +9,12 @@ import UIKit
 import MultipeerConnectivity
 
 class ViewController: UICollectionViewController,  UINavigationControllerDelegate, UIImagePickerControllerDelegate, MCSessionDelegate, MCBrowserViewControllerDelegate {
+    
+    var images = [UIImage]()
+    var peerID = MCPeerID(displayName: UIDevice.current.name)
+    var mcSession: MCSession?
+    var mcAdvertiserAssistant: MCAdvertiserAssistant?
+    
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
         case .connected:
@@ -52,14 +58,9 @@ class ViewController: UICollectionViewController,  UINavigationControllerDelegat
     }
     
     func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
-
-        collectionView.reloadData()
     }
     
-    var images = [UIImage]()
-    var peerID = MCPeerID(displayName: UIDevice.current.name)
-    var mcSession: MCSession?
-    var mcAdvertiserAssistant: MCAdvertiserAssistant?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,6 +120,9 @@ class ViewController: UICollectionViewController,  UINavigationControllerDelegat
         
         dismiss(animated: true)
         
+        images.insert(image, at: 0)
+        collectionView.reloadData()
+        
         guard let mcSession = mcSession else { return }
         
         // 2
@@ -137,8 +141,6 @@ class ViewController: UICollectionViewController,  UINavigationControllerDelegat
             }
         }
         
-        images.insert(image, at: 0)
-        collectionView.reloadData()
     }
 
 }
