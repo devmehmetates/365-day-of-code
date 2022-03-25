@@ -20,15 +20,30 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         
         title = "Selfie Share"
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showConnectionPrompt))
+        let lFirstItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showConnectionPrompt))
+        let lSecondItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(sendText))
+        
         let firstItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(importPicture))
-        let secondItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showConnections))
+        let secondItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(showConnections))
         
         navigationItem.rightBarButtonItems = [firstItem, secondItem]
+        navigationItem.leftBarButtonItems = [lFirstItem, lSecondItem]
         
         peerID = MCPeerID(displayName: UIDevice.current.name)
         mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         mcSession.delegate = self
+    }
+    
+    @objc func sendText(){
+        let ac = UIAlertController(title: "Send A Text", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak ac] _ in
+            guard let message = ac?.textFields?[0].text else { return }
+            self?.sendMessage(message)
+        })
+        self.present(ac,animated: true)
     }
     
     @objc func showConnections(){
@@ -147,6 +162,15 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
                 self.collectionView?.reloadData()
             }
         }
+        
+        let message = String(decoding: data, as: UTF8.self)
+        DispatchQueue.main.async { [unowned self] in
+            let ac = UIAlertController(title: "You have a message", message: message, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+            present(ac,animated: true)
+        }
+        
+        
     }
     
     func sendImage(img: UIImage) {
@@ -159,6 +183,19 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
                     ac.addAction(UIAlertAction(title: "OK", style: .default))
                     present(ac, animated: true)
                 }
+            }
+        }
+    }
+    
+    func sendMessage(_ msg: String){
+        if mcSession.connectedPeers.count > 0 {
+            let msgData = Data(msg.utf8)
+            do {
+                try mcSession.send(msgData, toPeers: mcSession.connectedPeers, with: .reliable)
+            } catch let error as NSError {
+                let ac = UIAlertController(title: "Send error", message: error.localizedDescription, preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default))
+                present(ac, animated: true)
             }
         }
     }
