@@ -117,6 +117,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             print("Connecting: \(peerID.displayName)")
             
         case MCSessionState.notConnected:
+            showAlert(peerID.displayName)
             print("Not Connected: \(peerID.displayName)")
         @unknown default:
             print("Unknown state received: \(peerID.displayName)")
@@ -147,7 +148,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     func showAlert(_ message: String){
-        let ac = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let ac = UIAlertController(title: message + "has disconected", message: nil, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
         present(ac, animated: true)
     }
