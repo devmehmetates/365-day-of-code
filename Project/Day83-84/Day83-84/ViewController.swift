@@ -21,11 +21,27 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         title = "Selfie Share"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showConnectionPrompt))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(importPicture))
+        let firstItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(importPicture))
+        let secondItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showConnections))
+        
+        navigationItem.rightBarButtonItems = [firstItem, secondItem]
         
         peerID = MCPeerID(displayName: UIDevice.current.name)
         mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         mcSession.delegate = self
+    }
+    
+    @objc func showConnections(){
+        var devicesList: String = ""
+        
+        for device in mcSession.connectedPeers{
+            devicesList += device.displayName + "\n"
+        }
+        
+        let ac = UIAlertController(title: "Connected Devices", message: devicesList, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+        present(ac, animated: true)
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
