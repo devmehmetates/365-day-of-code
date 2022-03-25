@@ -3,3 +3,6 @@ I got errors even though I did the same things done in the lesson. Therefore, th
 
 ## Note
 I found other solutions, but even they were not enough to run my project. I think it's a problem with my internet connection, but I couldn't find a solution.
+
+## Note2 
+All the challenges were done on the file, but I have no clue whether it works or not.
