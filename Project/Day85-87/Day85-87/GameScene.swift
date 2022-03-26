@@ -12,7 +12,7 @@ enum CollisionTypes: UInt32{
     case wall = 2
     case star = 4
     case vortex = 8
-    case finish = 10
+    case finish = 16
 }
 
 class GameScene: SKScene {
