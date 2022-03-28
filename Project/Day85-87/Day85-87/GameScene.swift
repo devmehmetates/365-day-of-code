@@ -13,7 +13,8 @@ enum CollisionTypes: UInt32{
     case wall = 2
     case star = 4
     case vortex = 8
-    case finish = 16
+    case teleport = 16
+    case finish = 32
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate{
@@ -22,6 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     var lastTouchPosition: CGPoint?
     var motionManager: CMMotionManager!
     var isGameOver = false
+    var teleportExitPoint = CGPoint(x: 0, y: 0)
     
     var scoreLabel: SKLabelNode!
     
@@ -64,6 +66,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
                     createGameObject(name: "vortex", position: position, type: CollisionTypes.vortex) { node in
                         node.run(SKAction.repeatForever(SKAction.rotate(byAngle: .pi, duration: 1)))
                     }
+                }else if letter == "t"{
+                    createGameObject(name: "teleport", position: position, type: CollisionTypes.teleport)
+                }
+                else if letter == "e"{
+                    self.teleportExitPoint = position
+                    createGameObject(name: "teleport-exit", position: position, type: CollisionTypes.teleport)
                 }else if letter == "s"{
                     createGameObject(name: "star", position: position, type: CollisionTypes.star)
                 }else if letter == "f"{
@@ -168,7 +176,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
                 self?.createPlayer()
                 self?.isGameOver = false
             }
-        } else if node.name == "star" {
+        }else if node.name == "teleport"{
+            player.physicsBody?.isDynamic = false
+            isGameOver = true
+            let move = SKAction.move(to: node.position, duration: 0.25)
+            let scale = SKAction.scale(to: 0.0001, duration: 0.25)
+            let remove = SKAction.removeFromParent()
+            let sequence = SKAction.sequence([move, scale, remove])
+            player.run(sequence) { [weak self] in
+                self?.createPlayer()
+                self?.player.position = self!.teleportExitPoint
+                self?.isGameOver = false
+            }
+            
+            
+        }else if node.name == "star" {
             node.removeFromParent()
             score += 1
         } else if node.name == "finish" {
