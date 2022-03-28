@@ -1,6 +1,6 @@
 # Day 87 <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day85-87/Day85-87"> Project </a>
 
-## Developing on Extensions
+## Developing on SpriteKit
 
 ## Subjects
 
