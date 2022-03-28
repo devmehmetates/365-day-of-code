@@ -18,6 +18,7 @@ enum CollisionTypes: UInt32{
 
 class GameScene: SKScene, SKPhysicsContactDelegate{
     var player: SKSpriteNode!
+    var levelCount: Int = 1
     var lastTouchPosition: CGPoint?
     var motionManager: CMMotionManager!
     var isGameOver = false
@@ -31,31 +32,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     }
     
     override func didMove(to view: SKView) {
-        let background = SKSpriteNode(imageNamed: "background.jpg")
-        background.position = CGPoint(x: 512, y: 384)
-        background.blendMode = .replace
-        background.zPosition = -1
-        addChild(background)
-        loadLevel()
+        setBackgroundAndScore()
+        loadLevel(level: levelCount)
         createPlayer()
         
         physicsWorld.gravity = .zero
         motionManager = CMMotionManager()
         motionManager.startAccelerometerUpdates()
         
-        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
-        scoreLabel.text = "Score: 0"
-        scoreLabel.horizontalAlignmentMode = .left
-        scoreLabel.position = CGPoint(x: 16, y: 16)
-        scoreLabel.zPosition = 2
-        addChild(scoreLabel)
-        
         physicsWorld.contactDelegate = self
         
     }
     
-    func loadLevel(){
-        guard let levelURL = Bundle.main.url(forResource: "level1", withExtension: "txt") else {
+    func loadLevel(level: Int){
+        guard let levelURL = Bundle.main.url(forResource: "level\(level)", withExtension: "txt") else {
             fatalError("Could not found level1.txt file")
         }
         guard let levelString = try? String(contentsOf: levelURL) else {
@@ -182,7 +172,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             node.removeFromParent()
             score += 1
         } else if node.name == "finish" {
-           // Next level codes
+            removeAllChildren()
+            setBackgroundAndScore()
+            createPlayer()
+            levelCount += 1
+            loadLevel(level: levelCount)
+            physicsWorld.gravity = .zero
         }
+    }
+    
+    func setBackgroundAndScore(){
+        let background = SKSpriteNode(imageNamed: "background.jpg")
+        background.position = CGPoint(x: 512, y: 384)
+        background.blendMode = .replace
+        background.zPosition = -1
+        addChild(background)
+        
+        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+        scoreLabel.text = "Score: 0"
+        scoreLabel.horizontalAlignmentMode = .left
+        scoreLabel.position = CGPoint(x: 16, y: 16)
+        scoreLabel.zPosition = 2
+        addChild(scoreLabel)
     }
 }

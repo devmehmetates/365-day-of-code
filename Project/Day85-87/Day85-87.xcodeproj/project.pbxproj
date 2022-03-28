@@ -15,6 +15,7 @@
 		2E12A0AE27EF0E840082C1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E12A0AD27EF0E840082C1FC /* Assets.xcassets */; };
 		2E12A0B127EF0E840082C1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E12A0AF27EF0E840082C1FC /* LaunchScreen.storyboard */; };
 		2E12A0B827EF0F2D0082C1FC /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E12A0B727EF0F2D0082C1FC /* level1.txt */; };
+		2EB36D3227F21C5C009F07DF /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2EB36D3127F21C5C009F07DF /* level2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +27,8 @@
 		2E12A0AB27EF0E820082C1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E12A0AD27EF0E840082C1FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E12A0B027EF0E840082C1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2E12A0B727EF0F2D0082C1FC /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		2E12A0B727EF0F2D0082C1FC /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; usesTabs = 0; };
+		2EB36D3127F21C5C009F07DF /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				2E12A0AD27EF0E840082C1FC /* Assets.xcassets */,
 				2E12A0AF27EF0E840082C1FC /* LaunchScreen.storyboard */,
 				2E12A0B727EF0F2D0082C1FC /* level1.txt */,
+				2EB36D3127F21C5C009F07DF /* level2.txt */,
 			);
 			path = "Day85-87";
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 				2E12A0AC27EF0E820082C1FC /* Main.storyboard in Resources */,
 				2E12A0A327EF0E820082C1FC /* GameScene.sks in Resources */,
 				2E12A0AE27EF0E840082C1FC /* Assets.xcassets in Resources */,
+				2EB36D3227F21C5C009F07DF /* level2.txt in Resources */,
 				2E12A0B127EF0E840082C1FC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
