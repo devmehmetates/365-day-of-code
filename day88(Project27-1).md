@@ -1,6 +1,6 @@
 # Day 88 <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day88-89/Day88-89"> Project </a>
 
-## Developing on Extensions
+## Developing on Core Graphics
 
 ## Subjects
 + Setting up
