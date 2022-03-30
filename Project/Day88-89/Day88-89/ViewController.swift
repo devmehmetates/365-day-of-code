@@ -15,34 +15,62 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        drawRectangle()
+        drawEmote()
     }
 
     @IBAction func reDrawTabbed(_ sender: Any) {
         currentDrawType += 1
         
-        if currentDrawType > 5{
+        if currentDrawType > 6{
             currentDrawType = 0
         }
         
         switch currentDrawType{
         case 0:
-            drawRectangle()
+            drawEmote()
         case 1:
-            drawCircle()
+            drawRectangle()
         case 2:
-            drawCheckerboard()
+            drawCircle()
         case 3:
-            drawRotatedSquares()
+            drawCheckerboard()
         case 4:
-            drawLines()
+            drawRotatedSquares()
         case 5:
+            drawLines()
+        case 6:
             drawImagesAndText()
         
         default:
             break
             
         }
+    }
+    
+    func drawEmote(){
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        
+        let img = renderer.image { ctx in
+            let rectangle = CGRect(x: 66, y: 66, width: 400, height: 400)
+                .insetBy(dx: 5, dy: 5)
+            let eye1 = CGRect(x: 150, y: 200, width: 30, height: 40)
+            let eye2 = CGRect(x: 350, y: 200, width: 30, height: 40)
+            let mount = CGRect(x: 150, y: 330, width: 230, height: 3)
+            
+            ctx.cgContext.setFillColor(UIColor.clear.cgColor)
+            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
+            ctx.cgContext.setLineWidth(3)
+            
+            
+            ctx.cgContext.addEllipse(in: rectangle)
+            ctx.cgContext.addEllipse(in: eye1)
+            ctx.cgContext.addEllipse(in: eye2)
+            ctx.cgContext.addRect(mount)
+            ctx.cgContext.drawPath(using: .stroke)
+        }
+        
+        imageView.image = img
+        
     }
     
     
