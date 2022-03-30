@@ -15,36 +15,80 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        drawEmote()
+        drawTwin()
     }
 
     @IBAction func reDrawTabbed(_ sender: Any) {
         currentDrawType += 1
         
-        if currentDrawType > 6{
+        if currentDrawType > 7{
             currentDrawType = 0
         }
         
         switch currentDrawType{
         case 0:
-            drawEmote()
+            drawTwin()
         case 1:
-            drawRectangle()
+            drawEmote()
         case 2:
-            drawCircle()
+            drawRectangle()
         case 3:
-            drawCheckerboard()
+            drawCircle()
         case 4:
-            drawRotatedSquares()
+            drawCheckerboard()
         case 5:
-            drawLines()
+            drawRotatedSquares()
         case 6:
+            drawLines()
+        case 7:
             drawImagesAndText()
         
         default:
             break
             
         }
+    }
+    
+    func drawTwin(){
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        
+        let img = renderer.image { ctx in
+            ctx.cgContext.translateBy(x: 170, y: 256)
+            
+            // T
+            ctx.cgContext.move(to: CGPoint(x: -30, y: 1))
+            ctx.cgContext.addLine(to: CGPoint(x: 30, y: 1))
+            ctx.cgContext.move(to: CGPoint(x: 0, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 0, y: 60))
+            
+            // W
+            ctx.cgContext.move(to: CGPoint(x: 40, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 60, y: 60))
+            ctx.cgContext.move(to: CGPoint(x: 60, y: 60))
+            ctx.cgContext.addLine(to: CGPoint(x: 80, y: 0))
+            ctx.cgContext.move(to: CGPoint(x: 80, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 100, y: 60))
+            ctx.cgContext.move(to: CGPoint(x: 100, y: 60))
+            ctx.cgContext.addLine(to: CGPoint(x: 120, y: 0))
+            
+            // I
+            ctx.cgContext.move(to: CGPoint(x: 130, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 130, y: 60))
+            
+            // N
+            ctx.cgContext.move(to: CGPoint(x: 140, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 140, y: 60))
+            ctx.cgContext.move(to: CGPoint(x: 140, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 180, y: 60))
+            ctx.cgContext.move(to: CGPoint(x: 180, y: 60))
+            ctx.cgContext.addLine(to: CGPoint(x: 180, y: 0))
+            
+            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
+            ctx.cgContext.strokePath()
+        }
+        
+        imageView.image = img
+        
     }
     
     func drawEmote(){
