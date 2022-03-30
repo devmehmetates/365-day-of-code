@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 class DetailViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
@@ -39,18 +40,42 @@ class DetailViewController: UIViewController {
     }
     
     @objc func shareTabbed(){
-        guard let image = imageView.image?.jpegData(compressionQuality: 0.8) else{
+        guard let imageSize = imageView.image?.size else{ return }
+        
+        let renderer = UIGraphicsImageRenderer(size: imageSize)
+        
+        let willShareImage = renderer.image { ctx in
+            imageView.image?.draw(at: CGPoint(x: 0, y: 0))
+            
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .center
+            
+            let attrs: [NSAttributedString.Key: Any] = [
+                .font: UIFont.systemFont(ofSize: 36),
+                .foregroundColor: UIColor.white,
+                .paragraphStyle: paragraphStyle
+            ]
+            let string = "From Storm Viewer"
+            let attributedString = NSAttributedString(string: string, attributes: attrs)
+            
+            attributedString.draw(with: CGRect(x: 260, y: 32, width: imageSize.width / 2, height: imageSize.height / 2), options: .usesLineFragmentOrigin, context: nil)
+            
+        }
+        
+        
+        
+        guard let image = willShareImage.jpegData(compressionQuality: 0.8) else{
             print("No image found")
             return
         }
-        
+
         guard let imageName = selectedImage else{
             print("No image selected")
             return
         }
         let vc = UIActivityViewController(activityItems: [image,imageName], applicationActivities: [])
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-        
+
         present(vc,animated: true)
     }
     
