@@ -18,6 +18,7 @@ This repository has been opened to develop iOS in a planned way.
 | Day22 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day22/Day22"> Project </a>| UIActivityViewController, UIBarButtonItem, navigationItem |
 | Day23 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day23/Day23"> Project </a>| Review(Milestone) |
 | Day24-26 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day24-26/Day24-26"> Project </a>| WebKit, WKWebView, UIAlertController(actionSheet), UIToolbar, UIProgressView |
+| Day27-29 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day27-29/Day27-29"> Project </a>| TextFields in UIAlertController, UIAlertController |
 | Day30-31 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day30-31/Day30-31"> Project-A </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day30-31-2/Day30-31-2"> Project-B </a>| Auto Layout, Auto Constraint, Auto Layout anchors |
 | Day32 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day32-Challenge/Day32-Challenge"> Project </a>| Review(Milestone) |
 | Day33-35 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day33-35/Day33-35"> Project </a>| JSON Data, Codeable, UITabBarController, SceneDelegate |
@@ -50,6 +51,8 @@ This repository has been opened to develop iOS in a planned way.
 | Day85-87 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day85-87/Day85-87"> Project </a>| CoreMotion |
 | Day88-89 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day88-89/Day88-89"> Project </a>| Core Graphics |
 | Day90 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day90/Day90"> Project </a>| Meme Creator |
+| Day91 | <a href="https://twitter.com/devmehmetates/status/1509940544113418242"> Detail </a>| Swift Playground |
+| Day92-93 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day92-93/Day92-93"> Project </a>| Biometric Authorization, Keychain, LocalAuthentication |
 | ... | ... | ... |
 
 ## Side Project Map
