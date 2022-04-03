@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class ViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -16,7 +17,58 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         // Do any additional setup after loading the view.
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
+        triggerAuth()
+       
         
+    }
+    
+    @objc func triggerAuth(){
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error){
+            let reason = "Identfy yourself!"
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { [weak self] success, AuthError in
+                if success{
+                    self?.loadPeoples()
+                }else{
+                    DispatchQueue.main.async {
+                        let ac = UIAlertController(title: "Login unsuccessful!", message: "Do you wanna use password?", preferredStyle: .alert)
+                        ac.addAction(UIAlertAction(title: "Use password", style: .default, handler: self?.unlockWithPassword))
+                        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                        self?.present(ac, animated: true)
+                    }
+                }
+            }
+        }
+    }
+    
+    func unlockWithPassword(_ action: UIAlertAction? = nil){
+        let passwordAc = UIAlertController(title: "Enter Your password", message: nil, preferredStyle: .alert)
+        passwordAc.addTextField()
+        
+        let submitAction = UIAlertAction(title: "Submit", style: .default){ [weak self, weak passwordAc] _ in
+            guard let field = passwordAc?.textFields?[0].text else { return }
+            self?.checkPassword(password: field)
+        }
+        
+        passwordAc.addAction(submitAction)
+        present(passwordAc, animated: true)
+    }
+    
+    func checkPassword(password: String){
+        let appPassword = "123456"
+        if password == appPassword{
+            self.loadPeoples()
+        }else{
+            let errorAc = UIAlertController(title: "Wrong password", message: nil, preferredStyle: .alert)
+            errorAc.addAction(UIAlertAction(title: "Try Again!", style: .default, handler: unlockWithPassword))
+            errorAc.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            present(errorAc, animated: true)
+        }
+    }
+    
+    func loadPeoples(){
         let defaults = UserDefaults.standard
         
         if let savedPeople = defaults.object(forKey: "people") as? Data {
@@ -24,11 +76,14 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             
             do {
                 people = try jsonDecoder.decode([Person].self, from: savedPeople)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                
             } catch {
                 print("Failed to load people")
             }
         }
-        
     }
     
     @objc func addNewPerson(){
