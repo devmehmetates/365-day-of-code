@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        KeychainWrapper.standard.set("123456", forKey: "Password")
         
         title = "Nothing see here"
         notificationCenter.addObserver(self, selector: #selector(saveSecretMessage), name: UIApplication.willResignActiveNotification, object: nil)
@@ -52,7 +53,10 @@ class ViewController: UIViewController {
                     if success {
                         self?.unlockSecretMessage()
                     }else{
-                        
+                        let ac = UIAlertController(title: "Login unsuccessful!", message: "Do you wanna use password?", preferredStyle: .alert)
+                        ac.addAction(UIAlertAction(title: "Use password", style: .default, handler: self?.unlockWithPassword))
+                        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                        self?.present(ac, animated: true)
                     }
                 }
                 
@@ -65,11 +69,38 @@ class ViewController: UIViewController {
        
     }
     
+    func unlockWithPassword(_ action: UIAlertAction? = nil){
+        let passwordAc = UIAlertController(title: "Enter Your password", message: nil, preferredStyle: .alert)
+        passwordAc.addTextField()
+        
+        let submitAction = UIAlertAction(title: "Submit", style: .default){ [weak self, weak passwordAc] _ in
+            guard let field = passwordAc?.textFields?[0].text else { return }
+            self?.checkPassword(password: field)
+        }
+        
+        passwordAc.addAction(submitAction)
+        present(passwordAc, animated: true)
+    }
+    
+    func checkPassword(password: String){
+        let appPassword = KeychainWrapper.standard.string(forKey: "Password") ?? ""
+        if password == appPassword{
+            unlockSecretMessage()
+        }else{
+            let errorAc = UIAlertController(title: "Wrong password", message: nil, preferredStyle: .alert)
+            errorAc.addAction(UIAlertAction(title: "Try Again!", style: .default, handler: unlockWithPassword))
+            errorAc.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            present(errorAc, animated: true)
+        }
+    }
+    
     func unlockSecretMessage(){
         secret.isHidden = false
         title = "Secret stuff!"
         
         secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ?? ""
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(saveSecretMessage))
+        
     }
     
     @objc func saveSecretMessage() {
@@ -79,6 +110,7 @@ class ViewController: UIViewController {
         secret.resignFirstResponder()
         secret.isHidden = true
         title = "Nothing to see here"
+        navigationItem.rightBarButtonItem = nil
     }
     
 }
