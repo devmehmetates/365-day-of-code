@@ -21,9 +21,14 @@ class GameViewController: UIViewController {
     @IBOutlet var launchButton: UIButton!
     @IBOutlet var playerNumber: UILabel!
     
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         angleChanged(angleSlider)
         velocityChanged(velocitySlider)
         
@@ -37,6 +42,7 @@ class GameViewController: UIViewController {
                 view.presentScene(scene)
                 currentGame = scene as? GameScene
                 currentGame.viewController = self
+                
             }
             
             view.ignoresSiblingOrder = true
@@ -97,5 +103,9 @@ class GameViewController: UIViewController {
         
         launchButton.isHidden = false
     }
+    
+    
+
+    
 
 }
