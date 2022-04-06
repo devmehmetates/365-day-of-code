@@ -3,7 +3,7 @@
 ## Developing on SpriteKit
 
 ## Important announcement
-Greetings all. Unfortunately I can't prepare files today. I'm more tired than I thought and I have corporate work to finish. So I apologize to you. But i was completed all challenges. You can review thats on project last commit.
+Greetings all. Unfortunately I can't prepare files today. I'm more tired than I thought and I have corporate work to finish. So I apologize to you. But i was completed all challenges. You can review that's on the project's last commit for changes.
 
 ## Happy Coding :)
 <img src="https://c.tenor.com/sWEUdV5LQdkAAAAC/yes-apple.gif">
