@@ -21,16 +21,19 @@ class GameViewController: UIViewController {
     @IBOutlet var launchButton: UIButton!
     @IBOutlet var playerNumber: UILabel!
     
-
+    @IBOutlet var windLabel: UILabel!
     
+    @IBOutlet var player1Score: UILabel!
+    @IBOutlet var player2Score: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         angleChanged(angleSlider)
         velocityChanged(velocitySlider)
+        
+        player1Score.text = "Player1: 0"
+        player2Score.text = "Player2: 0"
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
@@ -104,8 +107,15 @@ class GameViewController: UIViewController {
         launchButton.isHidden = false
     }
     
+    func updateScore(player1Score: Int, player2Score: Int){
+        self.player1Score.text = "Player1: \(player1Score)"
+        self.player2Score.text = "Player1: \(player2Score)"
+        
+    }
     
-
+    func updateWindLabel(way: String, strong: Int){
+        self.windLabel.text = way + "\(strong)"
+    }
     
 
 }

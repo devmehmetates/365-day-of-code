@@ -19,20 +19,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var banana: SKSpriteNode!
     
     var currentPlayer = 1
+    var player1Score: Int = 0
+    var player2Score: Int = 0
     
     
     var buildings = [BuildingNode]()
     weak var viewController: GameViewController!
     
     override func didMove(to view: SKView) {
-      
-    
         
         backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
         
         createBuildings()
         createPlayers()
         physicsWorld.contactDelegate = self
+        
     }
         
     
@@ -47,6 +48,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             building.position = CGPoint(x: currentX - (size.width / 2), y: size.height / 2)
             building.setup()
             addChild(building)
+            let speed = Int.random(in: -5...5)
+            
+            physicsWorld.gravity = CGVector(dx: speed, dy: -9)
+            self.viewController?.updateWindLabel(way: speed > 0 ? "right" : "left" , strong: speed)
             
             buildings.append(building)
         }
@@ -119,6 +124,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player1.position = CGPoint(x: player1Building.position.x, y: player1Building.position.y + ((player1Building.size.height + player1.size.height) / 2))
         addChild(player1)
         
+        
         player2 = SKSpriteNode(imageNamed: "player")
         player2.name = "player2"
         player2.physicsBody = SKPhysicsBody(circleOfRadius: player2.size.width / 2)
@@ -156,10 +162,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         if firstNode.name == "banana" && secondNode.name == "player1" {
+            player2Score += 1
+            viewController.updateScore(player1Score: player1Score, player2Score: player2Score)
             destroy(player: player1)
+            
         }
         
         if firstNode.name == "banana" && secondNode.name == "player2" {
+            player1Score += 1
+            viewController.updateScore(player1Score: player1Score, player2Score: player2Score)
             destroy(player: player2)
         }
     }
@@ -176,14 +187,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             let newGame = GameScene(size: self.size)
             newGame.viewController = self.viewController
-            self.viewController.currentGame = newGame
             
-            self.changePlayer()
-            newGame.currentPlayer = self.currentPlayer
-            
-            let transition = SKTransition.doorway(withDuration: 1.5)
-            self.view?.presentScene(newGame, transition: transition)
+            if self.endGame(){
+                // Game ended
+            }else{
+                self.viewController.currentGame = newGame
+                self.changePlayer()
+                
+                newGame.currentPlayer = self.currentPlayer
+                newGame.player1Score = self.player1Score
+                newGame.player2Score = self.player2Score
+                let transition = SKTransition.doorway(withDuration: 1.5)
+                self.view?.presentScene(newGame, transition: transition)
+            }
         }
+    }
+    
+    func endGame() -> Bool{
+        if self.player2Score == 3 || self.player1Score == 3{
+            return true
+        }
+        return false
+        
     }
     
     func bananaHit(building: SKNode, atPoint contactPoint: CGPoint) {
