@@ -12,6 +12,7 @@ class SelectionViewController: UITableViewController {
 	var items = [String]() // this is the array that will store the filenames to load
 	var viewControllers = [UIViewController]() // create a cache of the detail view controllers for faster loading
 	var dirty = false
+    var images = [UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,24 @@ class SelectionViewController: UITableViewController {
 			for item in tempItems {
 				if item.range(of: "Large") != nil {
 					items.append(item)
+                    let imageRootName = item.replacingOccurrences(of: "Large", with: "Thumb")
+                    guard let path = Bundle.main.path(forResource: imageRootName, ofType: nil) else{
+                        return
+                    }
+                    guard let original = UIImage(contentsOfFile: path)else {
+                        return
+                    }
+                    
+                    let renderRect = CGRect(origin: .zero, size: CGSize(width: 90, height: 90))
+                    let renderer = UIGraphicsImageRenderer(size: renderRect.size)
+                    
+                    let rounded = renderer.image { ctx in
+                        ctx.cgContext.addEllipse(in: renderRect)
+                        ctx.cgContext.clip()
+                        
+                        original.draw(in: renderRect)
+                    }
+                    self.images.append(rounded)
 				}
 			}
 		}
@@ -52,7 +71,7 @@ class SelectionViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return items.count * 10
+        return items.count
     }
 
 
@@ -60,27 +79,13 @@ class SelectionViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
 		// find the image for this cell, and load its thumbnail
-		let currentImage = items[indexPath.row % items.count]
-		let imageRootName = currentImage.replacingOccurrences(of: "Large", with: "Thumb")
-        guard let path = Bundle.main.path(forResource: imageRootName, ofType: nil) else{
-            return cell
-        }
-        
-        guard let original = UIImage(contentsOfFile: path)else {
-            return cell
-        }
-
+		
         let renderRect = CGRect(origin: .zero, size: CGSize(width: 90, height: 90))
-        let renderer = UIGraphicsImageRenderer(size: renderRect.size)
+        let currentImage = items[indexPath.row % items.count]
         
-        let rounded = renderer.image { ctx in
-            ctx.cgContext.addEllipse(in: renderRect)
-            ctx.cgContext.clip()
-            
-            original.draw(in: renderRect)
-        }
-
-		cell.imageView?.image = rounded
+        
+        
+        cell.imageView?.image = images[indexPath.row]
 
 		// give the images a nice shadow to make them look a bit more dramatic
         cell.imageView?.layer.shadowColor = UIColor.black.cgColor
