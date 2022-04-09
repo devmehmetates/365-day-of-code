@@ -54,6 +54,8 @@ This repository has been opened to develop iOS in a planned way.
 | Day91 | <a href="https://twitter.com/devmehmetates/status/1509940544113418242"> Detail </a>| Swift Playground |
 | Day92-93 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day92-93/Day92-93"> Project </a>| Biometric Authorization, Keychain, LocalAuthentication |
 | Day94-96 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day94-96/Day94-96"> Project </a>| Another game with SpriteKit |
+| Day97-98 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/project30-files/Project30"> Project </a>| Instruments Usage |
+| Day99 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/Project/Day99/Day99"> Project </a>| Find it, game with UIKit |
 | ... | ... | ... |
 
 ## Side Project Map
