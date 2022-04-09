@@ -8,44 +8,14 @@
 import UIKit
 
 class ViewController: UICollectionViewController {
+    let defaults = UserDefaults.standard
     var selectedCardSequence: Int = 0
     var firstCell: UICollectionViewCell?
+    var savedwords = Array<[String: String]>()
+    var words = [String: String]()
+    var wordsKey = [String]()
+    var wordsValue = [String]()
     var score: Int = 0
-    let words = [
-        "Turkey" : "Türkiye",
-        "World" : "Dünya",
-        "Swift" : "Hızlı",
-        "Welcome" : "Hoşgeldin",
-        "Hello" : "Merhaba",
-        "Love" : "Sevgi",
-        "Hate" : "Nefret",
-        "Mine" : "Benim",
-        "Run" : "Koşmak",
-    ]
-    
-    var wordsKey = [
-        "Turkey",
-        "World",
-        "Swift",
-        "Welcome",
-        "Hello",
-        "Love",
-        "Hate",
-        "Mine",
-        "Run",
-    ]
-    
-    var wordsValue = [
-        "Türkiye",
-        "Dünya",
-        "Hızlı",
-        "Hoşgeldin",
-        "Merhaba",
-        "Sevgi",
-        "Nefret",
-        "Benim",
-        "Koşmak",
-    ]
     
     
     
@@ -53,11 +23,32 @@ class ViewController: UICollectionViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         title = "Find It"
+        
+        self.savedwords = defaults.object(forKey: "Keys") as? Array<[String: String]> ?? []
+        print(savedwords.count)
+        
+        if !savedwords.count.isMultiple(of: 3){
+            self.showError(title: "Your keys is invalid!", message: "Please check and edit your keys.\nNote: Your keys count must be multiple of 3.")
+            self.words.removeAll()
+        }else{
+            for words in self.savedwords{
+                self.words[words.keys.first ?? ""] = words.values.first ?? ""
+                self.wordsKey.append(words.keys.first ?? "")
+                self.wordsValue.append(words.values.first ?? "")
+            }
+        }
+        
+    }
+                
+    func showError(title: String? = nil, message: String? = nil){
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Okay", style: .cancel))
+        present(ac, animated: true)
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 18
+        return words.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -66,10 +57,10 @@ class ViewController: UICollectionViewController {
         cell.contentView.backgroundColor = UIColor.red
         
         let whatIsRandomElement = [wordsKey.randomElement(), wordsValue.randomElement()]
-        let randomElement = whatIsRandomElement.randomElement() ?? ""
+        let randomElement = (whatIsRandomElement.randomElement() ?? "") ?? ""
         
-        let keyIndex = wordsKey.firstIndex(of: randomElement ?? "")
-        let valueIndex = wordsValue.firstIndex(of: randomElement ?? "")
+        let keyIndex = wordsKey.firstIndex(of: randomElement)
+        let valueIndex = wordsValue.firstIndex(of: randomElement)
         
         if keyIndex != nil{
             wordsKey.remove(at: keyIndex!)

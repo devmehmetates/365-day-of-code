@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E484A362801F65C00B3CBF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E484A352801F65C00B3CBF6 /* HomeViewController.swift */; };
+		2E484A382801F85D00B3CBF6 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E484A372801F85D00B3CBF6 /* EditTableViewController.swift */; };
 		2E5D5D662801A1910096C6EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5D5D652801A1910096C6EC /* AppDelegate.swift */; };
 		2E5D5D682801A1910096C6EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5D5D672801A1910096C6EC /* SceneDelegate.swift */; };
 		2E5D5D6A2801A1910096C6EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5D5D692801A1910096C6EC /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E484A352801F65C00B3CBF6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2E484A372801F85D00B3CBF6 /* EditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		2E5D5D622801A1910096C6EC /* Day99.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day99.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5D5D652801A1910096C6EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E5D5D672801A1910096C6EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,8 +64,10 @@
 			children = (
 				2E5D5D652801A1910096C6EC /* AppDelegate.swift */,
 				2E5D5D672801A1910096C6EC /* SceneDelegate.swift */,
+				2E484A352801F65C00B3CBF6 /* HomeViewController.swift */,
 				2E5D5D692801A1910096C6EC /* ViewController.swift */,
 				2E5D5D7D2801AD190096C6EC /* CollectionViewCell.swift */,
+				2E484A372801F85D00B3CBF6 /* EditTableViewController.swift */,
 				2E5D5D6B2801A1910096C6EC /* Main.storyboard */,
 				2E5D5D6E2801A1940096C6EC /* Assets.xcassets */,
 				2E5D5D702801A1940096C6EC /* LaunchScreen.storyboard */,
@@ -141,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E484A362801F65C00B3CBF6 /* HomeViewController.swift in Sources */,
+				2E484A382801F85D00B3CBF6 /* EditTableViewController.swift in Sources */,
 				2E5D5D6A2801A1910096C6EC /* ViewController.swift in Sources */,
 				2E5D5D662801A1910096C6EC /* AppDelegate.swift in Sources */,
 				2E5D5D7E2801AD190096C6EC /* CollectionViewCell.swift in Sources */,

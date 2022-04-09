@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HIJ-ha-ic9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TCc-G5-q09">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="ZOq-6n-b6Q">
             <objects>
-                <collectionViewController id="rkk-Rp-ZeM" customClass="ViewController" customModule="Day99" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="PlayScreen" id="rkk-Rp-ZeM" customClass="ViewController" customModule="Day99" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wXw-TO-pMj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,6 +84,106 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4H-yU-to7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="875.36231884057975" y="163.39285714285714"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="TcK-a1-amf">
+            <objects>
+                <viewController id="Ap5-in-a5S" customClass="HomeViewController" customModule="Day99" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="amc-hu-Z1R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cO9-O2-v3D">
+                                <rect key="frame" x="87" y="235" width="240" height="147"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playButtonTapped:" destination="Ap5-in-a5S" eventType="touchUpInside" id="Put-zq-eW6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqF-oB-A3E">
+                                <rect key="frame" x="87" y="510" width="240" height="147"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="ATG-VK-Gqv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edit">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="editButtonTapped:" destination="Ap5-in-a5S" eventType="touchUpInside" id="Xbm-VI-s5X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5pC-zr-of3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IqF-oB-A3E" firstAttribute="centerX" secondItem="amc-hu-Z1R" secondAttribute="centerX" id="9LK-PV-hz0"/>
+                            <constraint firstItem="cO9-O2-v3D" firstAttribute="top" secondItem="5pC-zr-of3" secondAttribute="top" constant="147" id="T43-5n-4po"/>
+                            <constraint firstItem="IqF-oB-A3E" firstAttribute="leading" secondItem="5pC-zr-of3" secondAttribute="leading" constant="87" id="b5s-f1-uuc"/>
+                            <constraint firstItem="IqF-oB-A3E" firstAttribute="width" secondItem="cO9-O2-v3D" secondAttribute="width" id="m95-Pa-osD"/>
+                            <constraint firstItem="IqF-oB-A3E" firstAttribute="centerX" secondItem="cO9-O2-v3D" secondAttribute="centerX" id="o2v-4a-C5Q"/>
+                            <constraint firstItem="5pC-zr-of3" firstAttribute="bottom" secondItem="IqF-oB-A3E" secondAttribute="bottom" constant="205" id="v8a-mf-Vdh"/>
+                            <constraint firstItem="IqF-oB-A3E" firstAttribute="height" secondItem="cO9-O2-v3D" secondAttribute="height" id="w82-4F-KRi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EjW-ac-nv3"/>
+                    <connections>
+                        <outlet property="editButton" destination="IqF-oB-A3E" id="2Fd-JT-bv9"/>
+                        <outlet property="playButton" destination="cO9-O2-v3D" id="BhQ-Y2-jeD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tms-Z9-X23" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785.5072463768117" y="873.88392857142856"/>
+        </scene>
+        <!--Edit Table View Controller-->
+        <scene sceneID="YMr-gL-aka">
+            <objects>
+                <tableViewController storyboardIdentifier="EditScreen" id="f8V-AK-gYm" customClass="EditTableViewController" customModule="Day99" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Alm-zK-E1x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditCell" id="s4W-oK-heh">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s4W-oK-heh" id="OLm-H7-ixn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="f8V-AK-gYm" id="Q9W-kk-XPw"/>
+                            <outlet property="delegate" destination="f8V-AK-gYm" id="Yk4-Yf-M8H"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rS-Vm-USf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2655" y="874"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vyR-Wl-KVD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TCc-G5-q09" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uoj-EN-yEc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ap5-in-a5S" kind="relationship" relationship="rootViewController" id="JDr-ev-5sV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xuf-zY-Vkr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="874"/>
         </scene>
     </scenes>
     <resources>
