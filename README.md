@@ -57,6 +57,7 @@ This repository has been opened to develop iOS in a planned way.
 | Day97-98 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/project30-files/Project30"> Project </a>| Instruments Usage |
 | Day99 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day99/Day99"> Project </a>| Find it, game with UIKit |
 | Day100 | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Certificates/certificate.jpg"> Certificate </a>| Exam |
+| Day101-103 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/WeSplit/WeSplit"> Project </a>| WeSplit - Begin to SwiftUI |
 | ... | ... | ... |
 
 ## Side Project Map
