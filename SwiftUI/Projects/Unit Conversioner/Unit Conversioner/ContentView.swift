@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     // MARK: Changeable properties
+    @FocusState private var keyboardFocus: Bool
     @State private var inputValue: Double = 0.0
     @State private var inputType: String = "Kilometers"
     @State private var resultType: String = "Meters"
@@ -34,6 +35,7 @@ struct ContentView: View {
                     
                     TextField("Enter your value", value: self.$inputValue, format: .number)
                         .keyboardType(.decimalPad)
+                        .focused($keyboardFocus)
                 } header: {
                     Text("Enter the value you want to convert.")
                 }
@@ -49,8 +51,17 @@ struct ContentView: View {
                 } header: {
                     Text("Result")
                 }
+               
                 
             }.navigationTitle("Unit Conversioner")
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        Button("Done") {
+                            keyboardFocus = false
+                        }
+                    }
+                }
         }
     }
     
