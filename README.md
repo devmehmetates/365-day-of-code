@@ -58,6 +58,8 @@ This repository has been opened to develop iOS in a planned way.
 | Day99 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day99/Day99"> Project </a>| Find it, game with UIKit |
 | Day100 | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Certificates/certificate.jpg"> Certificate </a>| Exam |
 | Day101-103 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/WeSplit/WeSplit"> Project </a>| WeSplit - Begin to SwiftUI |
+| Day104 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Unit%20Conversioner/Unit%20Conversioner"> Project </a>| Unit Conversioner |
+| Day105-107 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Guess%20the%20Flag/Guess%20the%20Flag"> Project </a>| Guess the Flag - SwiftUI shapes and fundamentals |
 | ... | ... | ... |
 
 ## Side Project Map
