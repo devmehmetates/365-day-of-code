@@ -11,6 +11,7 @@
 		2E402C39280C344C004BBEAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E402C38280C344C004BBEAF /* ContentView.swift */; };
 		2E402C3B280C344E004BBEAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E402C3A280C344E004BBEAF /* Assets.xcassets */; };
 		2E402C3E280C344E004BBEAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E402C3D280C344E004BBEAF /* Preview Assets.xcassets */; };
+		2E838FBF280CCD0F00E94805 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E838FBE280CCD0F00E94805 /* Challenge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2E402C38280C344C004BBEAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E402C3A280C344E004BBEAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E402C3D280C344E004BBEAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E838FBE280CCD0F00E94805 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				2E402C36280C344C004BBEAF /* ViewsAndModifiersApp.swift */,
 				2E402C38280C344C004BBEAF /* ContentView.swift */,
+				2E838FBE280CCD0F00E94805 /* Challenge.swift */,
 				2E402C3A280C344E004BBEAF /* Assets.xcassets */,
 				2E402C3C280C344E004BBEAF /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E402C39280C344C004BBEAF /* ContentView.swift in Sources */,
+				2E838FBF280CCD0F00E94805 /* Challenge.swift in Sources */,
 				2E402C37280C344C004BBEAF /* ViewsAndModifiersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -67,12 +67,7 @@ struct ContentView: View {
                                 self.selectedFlag = number // for selecting the tapped flag
                                 flagTapped(number)
                             } label: {
-                                Image(countries[number])
-                                    .renderingMode(.original)
-                                    .clipShape(Capsule())
-                                    .shadow(radius: 5)
-                                    .scaleEffect(selectedFlag == number || rotationDegree == 0 ? 1.0 : 0.9) // for a good look after tapped
-                                    .rotation3DEffect(.degrees(rotationDegree), axis: (x: selectedFlag == number ? rotationDegree: 0, y: 0, z: 0)) // for rotating the selected flag
+                                FlagImage(image: Image(countries[number]), selectedFlag: self.$selectedFlag, number: number, rotationDegree: self.$rotationDegree)
                             }
                         }
                     }.frame(maxWidth: .infinity)
@@ -148,5 +143,22 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+
+struct FlagImage: View{
+    var image: Image
+    @Binding var selectedFlag: Int
+    var number: Int
+    @Binding var rotationDegree: CGFloat
+    
+    var body: some View{
+       image
+            .renderingMode(.original)
+            .clipShape(Capsule())
+            .shadow(radius: 5)
+            .scaleEffect(selectedFlag == number || rotationDegree == 0 ? 1.0 : 0.9) // for a good look after tapped
+            .rotation3DEffect(.degrees(rotationDegree), axis: (x: selectedFlag == number ? rotationDegree: 0, y: 0, z: 0)) // for rotating the selected flag
     }
 }
