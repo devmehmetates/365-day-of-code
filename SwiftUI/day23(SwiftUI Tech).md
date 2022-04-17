@@ -1,6 +1,6 @@
 # Day 23 <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/ViewsAndModifiers/ViewsAndModifiers"> Project </a>
 
-## SwiftUI fundamentals and shapes
+## What is SwiftUI?
 
 ## Subjects
 
