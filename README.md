@@ -60,6 +60,8 @@ This repository has been opened to develop iOS in a planned way.
 | Day101-103 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/WeSplit/WeSplit"> Project </a>| WeSplit - Begin to SwiftUI |
 | Day104 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Unit%20Conversioner/Unit%20Conversioner"> Project </a>| Unit Conversioner |
 | Day105-107 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Guess%20the%20Flag/Guess%20the%20Flag"> Project </a>| Guess the Flag - SwiftUI shapes and fundamentals |
+| Day108-109 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/ViewsAndModifiers/ViewsAndModifiers"> Project </a>| Views And Modifiers |
+| Day110 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/RockPaperScissors/RockPaperScissors"> Project </a>| Rock-Paper-Scissors Game |
 | ... | ... | ... |
 
 ## Side Project Map
