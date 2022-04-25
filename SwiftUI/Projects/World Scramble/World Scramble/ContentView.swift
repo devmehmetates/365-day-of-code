@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
+    @State private var score = 0
     
     var body: some View {
         NavigationView {
@@ -40,7 +41,25 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        resetGame()
+                    } label: {
+                        Image(systemName: "arrow.counterclockwise")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("Score: \(score)")
+                }
+            }
         }
+    }
+    
+    func resetGame(){
+        usedWords.removeAll()
+        newWord = ""
+        startGame()
     }
     
     func addNewWord() {
@@ -62,10 +81,26 @@ struct ContentView: View {
             wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
             return
         }
+        
+        guard isShort(word: answer) else {
+            wordError(title: "Word not long enough", message: "You should try entering longer texts")
+            return
+        }
+        
+        guard isSame(word: answer) else {
+            wordError(title: "Word not original", message: "Be original")
+            return
+        }
+        
         withAnimation {
             usedWords.insert(answer, at: 0)
+            calculateScore(answer: answer)
         }
         newWord = ""
+    }
+    
+    func calculateScore(answer: String){
+        score += (usedWords.count + answer.count)
     }
     
     func startGame() {
@@ -105,11 +140,21 @@ struct ContentView: View {
         return misspelledRange.location == NSNotFound
     }
     
+    func isShort(word: String) -> Bool{
+        return word.count > 3
+    }
+    
+    func isSame(word: String) -> Bool{
+        return word != rootWord
+    }
+    
     func wordError(title: String, message: String) {
         errorTitle = title
         errorMessage = message
         showingError = true
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
