@@ -1,4 +1,4 @@
-# Day 16 <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/WeSplit/WeSplit"> Project </a>
+# Day 32 <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/SwiftUIAnimations/SwiftUIAnimations"> Project </a>
 
 ## Animations with SwiftUI
 
