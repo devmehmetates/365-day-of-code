@@ -29,7 +29,7 @@ struct Basics: View {
                 )
         ).onAppear {
             animationAmount = 2
-        }
+        }.navigationTitle("Basics")
 //        .animation(
 //            .easeInOut(duration: 1)
 //            .repeatForever(autoreverses: true),

@@ -28,6 +28,7 @@ struct BindingOnAnimations: View {
             .clipShape(Circle())
             .scaleEffect(animationAmount)
         }.padding()
+            .navigationTitle("Binding On Animations")
     }
 }
 

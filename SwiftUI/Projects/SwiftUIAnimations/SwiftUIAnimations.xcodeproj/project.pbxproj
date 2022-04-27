@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E43FAC428194C8300C156F9 /* ModifierStackWithAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E43FAC328194C8300C156F9 /* ModifierStackWithAnimations.swift */; };
+		2E43FAC628194D5200C156F9 /* AnimationsAndGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E43FAC528194D5200C156F9 /* AnimationsAndGestures.swift */; };
+		2E43FAC82819501000C156F9 /* ShowAndHideWithTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E43FAC72819501000C156F9 /* ShowAndHideWithTransitions.swift */; };
+		2E43FACA281952BB00C156F9 /* CustomAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E43FAC9281952BB00C156F9 /* CustomAnimations.swift */; };
 		2E98F8912818188700F3DB2D /* SwiftUIAnimationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E98F8902818188700F3DB2D /* SwiftUIAnimationsApp.swift */; };
 		2E98F8932818188700F3DB2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E98F8922818188700F3DB2D /* ContentView.swift */; };
 		2E98F8952818188800F3DB2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E98F8942818188800F3DB2D /* Assets.xcassets */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E43FAC328194C8300C156F9 /* ModifierStackWithAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierStackWithAnimations.swift; sourceTree = "<group>"; };
+		2E43FAC528194D5200C156F9 /* AnimationsAndGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsAndGestures.swift; sourceTree = "<group>"; };
+		2E43FAC72819501000C156F9 /* ShowAndHideWithTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAndHideWithTransitions.swift; sourceTree = "<group>"; };
+		2E43FAC9281952BB00C156F9 /* CustomAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimations.swift; sourceTree = "<group>"; };
 		2E98F88D2818188700F3DB2D /* SwiftUIAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E98F8902818188700F3DB2D /* SwiftUIAnimationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationsApp.swift; sourceTree = "<group>"; };
 		2E98F8922818188700F3DB2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +46,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E43FAC128194C4600C156F9 /* FirstDay */ = {
+			isa = PBXGroup;
+			children = (
+				2E98F89F28181B5B00F3DB2D /* Basics.swift */,
+				2E98F8A128181F8200F3DB2D /* BindingOnAnimations.swift */,
+				2E98F8A32818215900F3DB2D /* ExplicitAnimations.swift */,
+			);
+			path = FirstDay;
+			sourceTree = "<group>";
+		};
+		2E43FAC228194C5400C156F9 /* SecondDay */ = {
+			isa = PBXGroup;
+			children = (
+				2E43FAC328194C8300C156F9 /* ModifierStackWithAnimations.swift */,
+				2E43FAC528194D5200C156F9 /* AnimationsAndGestures.swift */,
+				2E43FAC72819501000C156F9 /* ShowAndHideWithTransitions.swift */,
+				2E43FAC9281952BB00C156F9 /* CustomAnimations.swift */,
+			);
+			path = SecondDay;
+			sourceTree = "<group>";
+		};
 		2E98F8842818188700F3DB2D = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +106,8 @@
 		2E98F89E28181A2900F3DB2D /* Tutorials */ = {
 			isa = PBXGroup;
 			children = (
-				2E98F89F28181B5B00F3DB2D /* Basics.swift */,
-				2E98F8A128181F8200F3DB2D /* BindingOnAnimations.swift */,
-				2E98F8A32818215900F3DB2D /* ExplicitAnimations.swift */,
+				2E43FAC228194C5400C156F9 /* SecondDay */,
+				2E43FAC128194C4600C156F9 /* FirstDay */,
 			);
 			path = Tutorials;
 			sourceTree = "<group>";
@@ -154,11 +182,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E43FACA281952BB00C156F9 /* CustomAnimations.swift in Sources */,
 				2E98F8A028181B5B00F3DB2D /* Basics.swift in Sources */,
 				2E98F8932818188700F3DB2D /* ContentView.swift in Sources */,
 				2E98F8912818188700F3DB2D /* SwiftUIAnimationsApp.swift in Sources */,
 				2E98F8A228181F8200F3DB2D /* BindingOnAnimations.swift in Sources */,
+				2E43FAC428194C8300C156F9 /* ModifierStackWithAnimations.swift in Sources */,
 				2E98F8A42818215900F3DB2D /* ExplicitAnimations.swift in Sources */,
+				2E43FAC82819501000C156F9 /* ShowAndHideWithTransitions.swift in Sources */,
+				2E43FAC628194D5200C156F9 /* AnimationsAndGestures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

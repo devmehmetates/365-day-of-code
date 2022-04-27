@@ -8,9 +8,57 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            List{
+                Section{
+                    NavigationLink {
+                        Basics()
+                    } label: {
+                        Text("Basics")
+                    }
+                    NavigationLink {
+                        BindingOnAnimations()
+                    } label: {
+                        Text("Binding On Animations")
+                    }
+                    NavigationLink {
+                        ModifierStackWithAnimations()
+                    } label: {
+                        Text("Modifier Stack Controls")
+                    }
+                } header: {
+                    Text("Fundamentals")
+                }
+                
+                Section{
+                    NavigationLink {
+                        ExplicitAnimations()
+                    } label: {
+                        Text("Explicit Animations")
+                    }
+                    NavigationLink {
+                        AnimationsAndGestures()
+                    } label: {
+                        Text("Animations With Gestures")
+                    }
+                    NavigationLink {
+                        ShowAndHideWithTransitions()
+                    } label: {
+                        Text("Show and Hide Transitions")
+                    }
+                    NavigationLink {
+                        CustomAnimations()
+                    } label: {
+                        Text("Custom Animations")
+                    }
+                } header: {
+                    Text("Advanced")
+                }
+                
+            }.navigationTitle("Animations")
+        }
     }
 }
 

@@ -21,6 +21,7 @@ struct ExplicitAnimations: View {
         .foregroundColor(.white)
         .clipShape(Circle())
         .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
+        .navigationTitle("Explicit Animations")
     }
 }
 
