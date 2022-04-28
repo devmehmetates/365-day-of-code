@@ -158,7 +158,8 @@ struct FlagImage: View{
             .renderingMode(.original)
             .clipShape(Capsule())
             .shadow(radius: 5)
+            .opacity(selectedFlag == number || rotationDegree == 0 ? 1: 0.75)
             .scaleEffect(selectedFlag == number || rotationDegree == 0 ? 1.0 : 0.9) // for a good look after tapped
-            .rotation3DEffect(.degrees(rotationDegree), axis: (x: selectedFlag == number ? rotationDegree: 0, y: 0, z: 0)) // for rotating the selected flag
+            .rotation3DEffect(.degrees(rotationDegree), axis: (x: 0, y: selectedFlag == number ? rotationDegree: 0, z: 0)) // for rotating the selected flag
     }
 }
