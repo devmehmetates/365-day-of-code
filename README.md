@@ -64,6 +64,7 @@ This repository has been opened to develop iOS in a planned way.
 | Day110 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/RockPaperScissors/RockPaperScissors"> Project </a>| Rock-Paper-Scissors Game |
 | Day111-113 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/BetterRest/BetterRest"> Project </a>| CoreML, DatePicker and Stepper |
 | Day114-116 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/World%20Scramble"> Project </a>| UITextChecker, Bundle, fatalError, onAppear, onSubmit |
+| Day117-119 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/SwiftUIAnimations/SwiftUIAnimations"> Project </a>| A Demo application for almost all SwiftUI animations types |
 | ... | ... | ... |
 
 ## Side Project Map
