@@ -65,6 +65,7 @@ This repository has been opened to develop iOS in a planned way.
 | Day111-113 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/BetterRest/BetterRest"> Project </a>| CoreML, DatePicker and Stepper |
 | Day114-116 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/World%20Scramble"> Project </a>| UITextChecker, Bundle, fatalError, onAppear, onSubmit |
 | Day117-119 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/SwiftUIAnimations/SwiftUIAnimations"> Project </a>| A Demo application for almost all SwiftUI animations types |
+| Day120 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/MultiplicationTable"> Project </a>| Lottie Animations and A Little MVVM Project |
 | ... | ... | ... |
 
 ## Side Project Map
