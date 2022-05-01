@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E52C771281ED296001D035D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52C770281ED296001D035D /* HomeView.swift */; };
+		2E52C773281ED2AA001D035D /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52C772281ED2AA001D035D /* ExpenseItem.swift */; };
+		2E52C775281ED2EA001D035D /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52C774281ED2EA001D035D /* Expenses.swift */; };
+		2E52C777281ED4EA001D035D /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52C776281ED4EA001D035D /* AddView.swift */; };
 		2E9A63E0281DAC2D004B52D9 /* iExpenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A63DF281DAC2D004B52D9 /* iExpenseApp.swift */; };
 		2E9A63E4281DAC30004B52D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9A63E3281DAC30004B52D9 /* Assets.xcassets */; };
 		2E9A63E7281DAC30004B52D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9A63E6281DAC30004B52D9 /* Preview Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E52C770281ED296001D035D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2E52C772281ED2AA001D035D /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
+		2E52C774281ED2EA001D035D /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		2E52C776281ED4EA001D035D /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		2E9A63DC281DAC2D004B52D9 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9A63DF281DAC2D004B52D9 /* iExpenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseApp.swift; sourceTree = "<group>"; };
 		2E9A63E3281DAC30004B52D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +50,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E52C76F281ED27E001D035D /* MainApplication */ = {
+			isa = PBXGroup;
+			children = (
+				2E52C779281ED5B1001D035D /* Views */,
+				2E52C778281ED5AA001D035D /* Models */,
+			);
+			path = MainApplication;
+			sourceTree = "<group>";
+		};
+		2E52C778281ED5AA001D035D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E52C774281ED2EA001D035D /* Expenses.swift */,
+				2E52C772281ED2AA001D035D /* ExpenseItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E52C779281ED5B1001D035D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E52C770281ED296001D035D /* HomeView.swift */,
+				2E52C776281ED4EA001D035D /* AddView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2E9A63D3281DAC2D004B52D9 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +96,7 @@
 		2E9A63DE281DAC2D004B52D9 /* iExpense */ = {
 			isa = PBXGroup;
 			children = (
+				2E52C76F281ED27E001D035D /* MainApplication */,
 				2E9A63EF281DADBB004B52D9 /* Tutorials */,
 				2E9A63DF281DAC2D004B52D9 /* iExpenseApp.swift */,
 				2E9A63E3281DAC30004B52D9 /* Assets.xcassets */,
@@ -184,11 +220,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E52C775281ED2EA001D035D /* Expenses.swift in Sources */,
 				2E9A63EE281DAD53004B52D9 /* SecondView.swift in Sources */,
 				2E9A63FC281DB1AB004B52D9 /* ArchivingWithCodable.swift in Sources */,
 				2E9A63F4281DADF8004B52D9 /* FirstView.swift in Sources */,
 				2E9A63F9281DAF9B004B52D9 /* UserDefaultsUsage.swift in Sources */,
+				2E52C773281ED2AA001D035D /* ExpenseItem.swift in Sources */,
+				2E52C777281ED4EA001D035D /* AddView.swift in Sources */,
 				2E9A63F1281DADCC004B52D9 /* MainTutorial.swift in Sources */,
+				2E52C771281ED296001D035D /* HomeView.swift in Sources */,
 				2E9A63E0281DAC2D004B52D9 /* iExpenseApp.swift in Sources */,
 				2E9A63F7281DAED6004B52D9 /* DeleteWithOnDelete.swift in Sources */,
 			);
