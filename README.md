@@ -66,6 +66,8 @@ This repository has been opened to develop iOS in a planned way.
 | Day114-116 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/World%20Scramble"> Project </a>| UITextChecker, Bundle, fatalError, onAppear, onSubmit |
 | Day117-119 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/SwiftUIAnimations/SwiftUIAnimations"> Project </a>| A Demo application for almost all SwiftUI animations types |
 | Day120 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/MultiplicationTable"> Project </a>| Lottie Animations and A Little MVVM Project |
+| Day121-123 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/iExpense/iExpense"> Project </a>| States, Basic-Codable and Events  |
+| Day124-127 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Moonshot/Moonshot"> Project </a>| FlexDecode, Json files, Custom Grids   |
 | ... | ... | ... |
 
 ## Side Project Map
