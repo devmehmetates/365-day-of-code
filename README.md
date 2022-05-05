@@ -10,26 +10,27 @@ This repository has been opened to develop iOS in a planned way.
 | 01/01/2022 | 01/01/2023  | 365 | Project examples and more practice |
 
 ## Project Map
+ℹ️ Projects with Project and Gallery link are completely made by me.
 
 | Name | File | Subjects |
 | ---- | ---- | -------- |
 | Day16-18 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day16-18/Day16-18"> Project </a>| FileManager, UITableViewController, CocoaTouch Classes, UIImage, NavigationController |
 | Day19-21 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day19-21/Day19-21"> Project </a>| UIButton, CALayer, Randoms, IBAction, UIAlertAction, UIAlertController |
 | Day22 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day22/Day22"> Project </a>| UIActivityViewController, UIBarButtonItem, navigationItem |
-| Day23 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day23/Day23"> Project </a>| Review(Milestone) |
+| Day23 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day23/Day23"> Project and Gallery </a>| Review(Milestone) |
 | Day24-26 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day24-26/Day24-26"> Project </a>| WebKit, WKWebView, UIAlertController(actionSheet), UIToolbar, UIProgressView |
 | Day27-29 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day27-29/Day27-29"> Project </a>| TextFields in UIAlertController, UIAlertController |
 | Day30-31 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day30-31/Day30-31"> Project-A </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day30-31-2/Day30-31-2"> Project-B </a>| Auto Layout, Auto Constraint, Auto Layout anchors |
-| Day32 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day32-Challenge/Day32-Challenge"> Project </a>| Review(Milestone) |
+| Day32 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day32-Challenge/Day32-Challenge"> Project and Gallery </a>| Review(Milestone) |
 | Day33-35 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day33-35/Day33-35"> Project </a>| JSON Data, Codeable, UITabBarController, SceneDelegate |
 | Day36-38 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day36-38/Day36-38"> Project </a>| Subviews, NSLayoutConstraint, UIProperties |
 | Day39-41 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day39-41/Day39-41"> Project </a>| Async, DispatchQueue, GCD |
-| Day41-Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day41-Challenge/Day41-Challenge"> Project </a>| Hangman Game  |
+| Day41-Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day41-Challenge/Day41-Challenge"> Project and Gallery </a>| Hangman Game  |
 | Day42-44 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day42-44/Day42-44"> Project </a>| UICollectionView, UICollectionViewCell |
 | Day45-47 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day45-47/Day45-47"> Project </a>| Begin to iOS games with SpriteKit |
 | Day48-49 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day48-49/Day42-44"> Project-A </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day48-49%202/Day42-44"> Project-B </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day48(UserDefault)/Day48(UserDefault)"> Project-C </a>| UserDefaults, NSCoding |
 | Day49 Challenges | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day49-Challenge1"> Project-1 </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day49-Challenge2"> Project-2 </a> <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day49-Challenge3"> Project-5 </a>| UserDefaults, Codable |
-| Day50 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day50-Challenge/Day50-Challenge"> Project </a>| Review(Milestone) |
+| Day50 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day50-Challenge/Day50-Challenge"> Project and Gallery </a>| Review(Milestone) |
 | Day51 Horizon Day | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day51%20Playground.playground"> Playground </a>| Functional Programming and some functions(map, flatMap, compactMap) |
 | Day52-54 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day52-54/Day52-54"> Project </a>| UISlider and UIImagePicker |
 | Day55-56 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day55-56/Day55-56"> Project </a>| iOS games with SpriteKit, SKCropNode |
@@ -38,11 +39,11 @@ This repository has been opened to develop iOS in a planned way.
 | Day60-61 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day60-61/Day60-61"> Project </a>| Begin to MapKit |
 | Day62-63 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day62-63/Day62-63"> Project </a>| Improve yourself on Sprite-Kit |
 | Day64-65 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day64-65/Day64-65"> Project </a>| Debugging |
-| Day66 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day66-Challenge/Day66-Challenge"> Project </a>| A biggest Challennge - Shooting game |
+| Day66 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day66-Challenge/Day66-Challenge"> Project and Gallery </a>| A biggest Challennge - Shooting game |
 | Day67-69 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day67-69/Day67-69"> Project </a>| App Extensions, JavaScript Codes |
 | Day70-71 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day70-71/Day70-71"> Project </a>| Growing up on SpriteKit |
 | Day72-73 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day72-73/Day72-73"> Project </a>| UserNotifications, Local Notifications |
-| Day74 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day74-Challenge/Day74-Challenge"> Project </a>| iOS Notes App Clone |
+| Day74 Challenge | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day74-Challenge/Day74-Challenge"> Project and Gallery </a>| iOS Notes App Clone |
 | Day75-76 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day75-76/Day75-76"> Project </a>| Core Location |
 | Day77-79 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day77-79/Day77-79"> Project </a>| Fruit ninja with Sprite Kit |
 | Day80-81 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day80-81.playground"> Project </a>| Extensions |
@@ -50,22 +51,22 @@ This repository has been opened to develop iOS in a planned way.
 | Day83-84 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day83-84/Day83-84"> Project </a>| MCSession |
 | Day85-87 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day85-87/Day85-87"> Project </a>| CoreMotion |
 | Day88-89 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day88-89/Day88-89"> Project </a>| Core Graphics |
-| Day90 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day90/Day90"> Project </a>| Meme Creator |
+| Day90 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day90/Day90"> Project and Gallery </a>| Meme Creator |
 | Day91 | <a href="https://twitter.com/devmehmetates/status/1509940544113418242"> Detail </a>| Swift Playground |
 | Day92-93 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day92-93/Day92-93"> Project </a>| Biometric Authorization, Keychain, LocalAuthentication |
 | Day94-96 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day94-96/Day94-96"> Project </a>| Another game with SpriteKit |
 | Day97-98 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/project30-files/Project30"> Project </a>| Instruments Usage |
-| Day99 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day99/Day99"> Project </a>| Find it, game with UIKit |
+| Day99 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/UIKit/Project/Day99/Day99"> Project and Gallery </a>| Find it, game with UIKit |
 | Day100 | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Certificates/certificate.jpg"> Certificate </a>| Exam |
 | Day101-103 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/WeSplit/WeSplit"> Project </a>| WeSplit - Begin to SwiftUI |
 | Day104 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Unit%20Conversioner/Unit%20Conversioner"> Project </a>| Unit Conversioner |
 | Day105-107 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Guess%20the%20Flag/Guess%20the%20Flag"> Project </a>| Guess the Flag - SwiftUI shapes and fundamentals |
 | Day108-109 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/ViewsAndModifiers/ViewsAndModifiers"> Project </a>| Views And Modifiers |
-| Day110 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/RockPaperScissors/RockPaperScissors"> Project </a>| Rock-Paper-Scissors Game |
+| Day110 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/RockPaperScissors/RockPaperScissors"> Project and Gallery </a>| Rock-Paper-Scissors Game |
 | Day111-113 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/BetterRest/BetterRest"> Project </a>| CoreML, DatePicker and Stepper |
 | Day114-116 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/World%20Scramble"> Project </a>| UITextChecker, Bundle, fatalError, onAppear, onSubmit |
 | Day117-119 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/SwiftUIAnimations/SwiftUIAnimations"> Project </a>| A Demo application for almost all SwiftUI animations types |
-| Day120 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/MultiplicationTable"> Project </a>| Lottie Animations and A Little MVVM Project |
+| Day120 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/MultiplicationTable"> Project and Gallery </a>| Lottie Animations and A Little MVVM Project |
 | Day121-123 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/iExpense/iExpense"> Project </a>| States, Basic-Codable and Events  |
 | Day124-127 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Moonshot/Moonshot"> Project </a>| FlexDecode, Json files, Custom Grids   |
 | ... | ... | ... |
