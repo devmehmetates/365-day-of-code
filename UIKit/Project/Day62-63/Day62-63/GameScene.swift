@@ -14,12 +14,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     
     var enemyCount: Int = 0{
         didSet{
-            if enemyCount > 40{
+            if enemyCount > 100{
                 self.timeInver = 0.1
             }
             else if enemyCount.isMultiple(of: 5){
                 self.gameTimer?.invalidate()
-                self.timeInver -= 0.1
+                self.timeInver -= 0.05
                 self.gameTimer = Timer.scheduledTimer(timeInterval: timeInver, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
             }
            

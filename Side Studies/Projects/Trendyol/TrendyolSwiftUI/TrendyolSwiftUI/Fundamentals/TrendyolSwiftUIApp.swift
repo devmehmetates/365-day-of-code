@@ -11,7 +11,7 @@ import SwiftUI
 struct TrendyolSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabController()
         }
     }
 }

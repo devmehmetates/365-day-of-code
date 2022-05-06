@@ -7,16 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2B319E2825A83200650C07 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B319D2825A83200650C07 /* HomeView.swift */; };
+		2E2B31A12825A83F00650C07 /* GoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B31A02825A83F00650C07 /* GoView.swift */; };
+		2E2B31A32825A84800650C07 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B31A22825A84800650C07 /* FavoriteView.swift */; };
+		2E2B31A62825A85C00650C07 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B31A52825A85C00650C07 /* BasketView.swift */; };
+		2E2B31A82825A86500650C07 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B31A72825A86500650C07 /* ProfileView.swift */; };
+		2E2B31AA2825A87A00650C07 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B31A92825A87A00650C07 /* TabController.swift */; };
+		2E2B31AC2825A8FE00650C07 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B31AB2825A8FE00650C07 /* TabBarView.swift */; };
+		2E2B31AE2825A93800650C07 /* TabBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B31AD2825A93800650C07 /* TabBarButtonView.swift */; };
 		2E9CCA1A28246682004E24CB /* TrendyolSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CCA1928246682004E24CB /* TrendyolSwiftUIApp.swift */; };
-		2E9CCA1C28246682004E24CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CCA1B28246682004E24CB /* ContentView.swift */; };
 		2E9CCA1E28246683004E24CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9CCA1D28246683004E24CB /* Assets.xcassets */; };
 		2E9CCA2128246683004E24CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9CCA2028246683004E24CB /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E2B319D2825A83200650C07 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2E2B31A02825A83F00650C07 /* GoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoView.swift; sourceTree = "<group>"; };
+		2E2B31A22825A84800650C07 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		2E2B31A52825A85C00650C07 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		2E2B31A72825A86500650C07 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2E2B31A92825A87A00650C07 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		2E2B31AB2825A8FE00650C07 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		2E2B31AD2825A93800650C07 /* TabBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButtonView.swift; sourceTree = "<group>"; };
 		2E9CCA1628246682004E24CB /* TrendyolSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendyolSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9CCA1928246682004E24CB /* TrendyolSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendyolSwiftUIApp.swift; sourceTree = "<group>"; };
-		2E9CCA1B28246682004E24CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E9CCA1D28246683004E24CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E9CCA2028246683004E24CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +46,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E2B31952825A7A200650C07 /* Fundamentals */ = {
+			isa = PBXGroup;
+			children = (
+				2E9CCA1928246682004E24CB /* TrendyolSwiftUIApp.swift */,
+			);
+			path = Fundamentals;
+			sourceTree = "<group>";
+		};
+		2E2B31962825A7B200650C07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B319C2825A81E00650C07 /* StartUP */,
+				2E2B319B2825A81A00650C07 /* AppViews */,
+				2E2B319A2825A81100650C07 /* TabController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E2B31972825A7B600650C07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E2B31982825A7BC00650C07 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2E2B31992825A7C700650C07 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2E2B319A2825A81100650C07 /* TabController */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B31A92825A87A00650C07 /* TabController.swift */,
+				2E2B31AB2825A8FE00650C07 /* TabBarView.swift */,
+				2E2B31AD2825A93800650C07 /* TabBarButtonView.swift */,
+			);
+			path = TabController;
+			sourceTree = "<group>";
+		};
+		2E2B319B2825A81A00650C07 /* AppViews */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B319D2825A83200650C07 /* HomeView.swift */,
+				2E2B31A02825A83F00650C07 /* GoView.swift */,
+				2E2B31A22825A84800650C07 /* FavoriteView.swift */,
+				2E2B31A52825A85C00650C07 /* BasketView.swift */,
+				2E2B31A72825A86500650C07 /* ProfileView.swift */,
+			);
+			path = AppViews;
+			sourceTree = "<group>";
+		};
+		2E2B319C2825A81E00650C07 /* StartUP */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StartUP;
+			sourceTree = "<group>";
+		};
 		2E9CCA0D28246682004E24CB = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +133,11 @@
 		2E9CCA1828246682004E24CB /* TrendyolSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				2E9CCA1928246682004E24CB /* TrendyolSwiftUIApp.swift */,
-				2E9CCA1B28246682004E24CB /* ContentView.swift */,
+				2E2B31992825A7C700650C07 /* Services */,
+				2E2B31982825A7BC00650C07 /* ViewModels */,
+				2E2B31972825A7B600650C07 /* Models */,
+				2E2B31962825A7B200650C07 /* Views */,
+				2E2B31952825A7A200650C07 /* Fundamentals */,
 				2E9CCA1D28246683004E24CB /* Assets.xcassets */,
 				2E9CCA1F28246683004E24CB /* Preview Content */,
 			);
@@ -137,8 +222,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E9CCA1C28246682004E24CB /* ContentView.swift in Sources */,
+				2E2B31AA2825A87A00650C07 /* TabController.swift in Sources */,
+				2E2B31A62825A85C00650C07 /* BasketView.swift in Sources */,
+				2E2B31AC2825A8FE00650C07 /* TabBarView.swift in Sources */,
+				2E2B31A32825A84800650C07 /* FavoriteView.swift in Sources */,
 				2E9CCA1A28246682004E24CB /* TrendyolSwiftUIApp.swift in Sources */,
+				2E2B319E2825A83200650C07 /* HomeView.swift in Sources */,
+				2E2B31AE2825A93800650C07 /* TabBarButtonView.swift in Sources */,
+				2E2B31A82825A86500650C07 /* ProfileView.swift in Sources */,
+				2E2B31A12825A83F00650C07 /* GoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
