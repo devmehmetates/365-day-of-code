@@ -31,8 +31,8 @@ This repository has been opened to develop iOS in a planned way.
 | Topics | File | 
 |--------| - |
 | Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day13(Summary-1).md">File</a> |
-| Functions, Optionals, Optional chaining, Enumaretion, Struct, Classes and <code>Structs vs Classes</code> | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day13(Summary-2).md">File</a> |
-| Properties, Static properties and methods, Access control, Polymorphism and typecasting, Closures | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day13(Summary-3).md">File</a> |
+| Functions, Optionals, Optional chaining, Enumaretion, Struct, Classes and <code>Structs vs Classes</code> | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day14(Summary-2).md">File</a> |
+| Properties, Static properties and methods, Access control, Polymorphism and typecasting, Closures | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day15(Summary-3).md">File</a> |
 
 
 
