@@ -3,11 +3,38 @@ This repository has been opened to develop iOS in a planned way.
 
 ## Plan
 
-| Start Date | Finish Date | Day | Title |
-| ---------- | ----------- | --- | ----- |
-| 01/01/2022 | 10/04/2022  | 100 | Swift And UIKit |
-| 26/03/2022 | 04/07/2022  | 100 | Swift Review and SwiftUI |
+| Start Date | Finish Date | Day | Title                              |
+|------------|-------------|-----|------------------------------------|
+| 01/01/2022 | 10/04/2022  | 100 | Swift And UIKit                    |
+| 26/03/2022 | 04/07/2022  | 100 | Swift Review and SwiftUI           |
 | 01/01/2022 | 01/01/2023  | 365 | Project examples and more practice |
+
+## Swift Fundamentals 
+| Topics                                        | File                                                                                                                                                        |
+|-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Variables                                     | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day1(Variables).md">File</a>                                |
+| Complex Variables and Enums                   | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day2(Complex%20Datas%20And%20Variable%20Types).md">File</a> |
+| Operators, Conditions and Switch-Case Usage   | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day3(Operators%20and%20Conditions).md">File</a>            |
+| Loops                                         | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day4(Loops).md">File</a>                                    |
+| Function types, Throwing and inOut parameters | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day5(Functions).md">File</a>                                |
+| Basic Closures                                | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day6(Closures-1).md">File</a>                               |
+| Basic Closures                                | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day7(Closures-2).md">File</a>                               |
+| Advanced Closures                             | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day7(Closures-2).md">File</a>                               |
+| Basic Structs and String Properties           | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day8(Structs-1%20and%20Properties).md">File</a>             |
+| Advanced Structs                              | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day9(Structs-2).md">File</a>                                |
+| Basic Classes                                 | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day10(Classes).md">File</a>                                 |
+| Protocols and P.O.P                           | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day11(Protocols).md">File</a>                               |
+| Optional Datas and Typecasting                | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day12(Optionals).md">File</a>                               |
+| Protocols and P.O.P                           | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day11(Protocols).md">File</a>                               |
+
+### Summary files
+| Topics | File | 
+|--------| - |
+| Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day13(Summary-1).md">File</a> |
+| Functions, Optionals, Optional chaining, Enumaretion, Struct, Classes and <code>Structs vs Classes</code> | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day13(Summary-2).md">File</a> |
+| Properties, Static properties and methods, Access control, Polymorphism and typecasting, Closures | <a href="https://github.com/devmehmetates/365-day-of-code/blob/main/Swift%20Documents%20Day1-15/day13(Summary-3).md">File</a> |
+
+
 
 ## Project Map
 ℹ️ Projects with Project and Gallery link are completely made by me.
