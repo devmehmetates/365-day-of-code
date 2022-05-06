@@ -7,7 +7,7 @@ Operators and conditions are used to perform mathematical operations.
 
 ### Arithmetic Operators
 For 4 operations in mathematics
-|--|--|--|--|
+| Plus | Minus | Multiply | Plenty |
 |-|-|-|-|
 |+|-|*|/|
 
@@ -65,9 +65,9 @@ anyText += "her zaman devam edebilir."
 
 ### Comparison Operators
 They are used too much and compare two values.
-|--|--|--|--|--|--|
+| Equal | Not Equal | Bigger | Less | Bigger or Equal | Less or Equal |
 |-|-|-|-|-|-|
-|==|!=|<|>|>=|<=|
+|==|!=|<|>|<=|>=|
 
 ```swift
 let compareMe = 5
@@ -99,7 +99,7 @@ if temperature > 20 {
 ```
 
 ### Combining conditions
-|--|--|
+| And | Or |
 |-|-|
 |&&|&#124;&#124;|
 ```swift
