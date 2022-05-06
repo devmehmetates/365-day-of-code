@@ -18,6 +18,8 @@ struct Mission: Codable, Identifiable{
     var formattedLaunchDate: String {
         launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
     }
+    
+    var longFormattedLaunchDate: String { launchDate?.formatted(date: .complete, time: .complete) ?? "N/A" }
     let crew: [CrewRole]
     let description: String
     

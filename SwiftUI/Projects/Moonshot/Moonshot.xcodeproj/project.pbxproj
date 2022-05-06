@@ -24,6 +24,7 @@
 		2EBA457028213E0200030024 /* PushingNewVies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA456F28213E0200030024 /* PushingNewVies.swift */; };
 		2EBA45732821400C00030024 /* HierachicalCodableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA45722821400C00030024 /* HierachicalCodableData.swift */; };
 		2EBA45752821444800030024 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA45742821444800030024 /* GridLayout.swift */; };
+		2EFF97702824F32D009813EA /* CrewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF976F2824F32D009813EA /* CrewMember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		2EBA456F28213E0200030024 /* PushingNewVies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushingNewVies.swift; sourceTree = "<group>"; };
 		2EBA45722821400C00030024 /* HierachicalCodableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierachicalCodableData.swift; sourceTree = "<group>"; };
 		2EBA45742821444800030024 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		2EFF976F2824F32D009813EA /* CrewMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				2E285F5B28228B05001860D7 /* Astronaut.swift */,
 				2E285F5F2822967F001860D7 /* Missions.swift */,
+				2EFF976F2824F32D009813EA /* CrewMember.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				2EBA456E2821355700030024 /* ScrollingData.swift in Sources */,
 				2E285F6228229A9D001860D7 /* Color-Theme.swift in Sources */,
 				2E285F6028229680001860D7 /* Missions.swift in Sources */,
+				2EFF97702824F32D009813EA /* CrewMember.swift in Sources */,
 				2EBA456C2821309D00030024 /* ResizingAndGeometryReader.swift in Sources */,
 				2E22DEC22823B20D008E476C /* MissionView.swift in Sources */,
 				2E285F5C28228B05001860D7 /* Astronaut.swift in Sources */,
