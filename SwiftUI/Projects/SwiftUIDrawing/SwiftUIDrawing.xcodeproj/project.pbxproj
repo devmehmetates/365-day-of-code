@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2940A32827C67300BC8836 /* ShapeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2940A22827C67300BC8836 /* ShapeTransform.swift */; };
+		2E2940A52827C74900BC8836 /* BordersImagePaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2940A42827C74900BC8836 /* BordersImagePaint.swift */; };
+		2E2940A72827C81800BC8836 /* MetalRendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2940A62827C81800BC8836 /* MetalRendering.swift */; };
 		2E38BC7728264E28005FA685 /* SwiftUIDrawingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38BC7628264E28005FA685 /* SwiftUIDrawingApp.swift */; };
 		2E38BC7928264E28005FA685 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38BC7828264E28005FA685 /* ContentView.swift */; };
 		2E38BC7B28264E2B005FA685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E38BC7A28264E2B005FA685 /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E2940A22827C67300BC8836 /* ShapeTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTransform.swift; sourceTree = "<group>"; };
+		2E2940A42827C74900BC8836 /* BordersImagePaint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordersImagePaint.swift; sourceTree = "<group>"; };
+		2E2940A62827C81800BC8836 /* MetalRendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalRendering.swift; sourceTree = "<group>"; };
 		2E38BC7328264E28005FA685 /* SwiftUIDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E38BC7628264E28005FA685 /* SwiftUIDrawingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDrawingApp.swift; sourceTree = "<group>"; };
 		2E38BC7828264E28005FA685 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +86,9 @@
 				2E38BC8528264F36005FA685 /* CustomPaths.swift */,
 				2E38BC87282650C8005FA685 /* PathsVsShapes.swift */,
 				2E38BC89282653EE005FA685 /* InsettableShapes.swift */,
+				2E2940A22827C67300BC8836 /* ShapeTransform.swift */,
+				2E2940A42827C74900BC8836 /* BordersImagePaint.swift */,
+				2E2940A62827C81800BC8836 /* MetalRendering.swift */,
 			);
 			path = Tutorials;
 			sourceTree = "<group>";
@@ -154,10 +163,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2940A72827C81800BC8836 /* MetalRendering.swift in Sources */,
 				2E38BC8628264F36005FA685 /* CustomPaths.swift in Sources */,
 				2E38BC7928264E28005FA685 /* ContentView.swift in Sources */,
 				2E38BC7728264E28005FA685 /* SwiftUIDrawingApp.swift in Sources */,
 				2E38BC8A282653EE005FA685 /* InsettableShapes.swift in Sources */,
+				2E2940A32827C67300BC8836 /* ShapeTransform.swift in Sources */,
+				2E2940A52827C74900BC8836 /* BordersImagePaint.swift in Sources */,
 				2E38BC88282650C8005FA685 /* PathsVsShapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
