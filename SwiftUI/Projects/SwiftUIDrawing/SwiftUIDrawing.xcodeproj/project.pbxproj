@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0FBDAD28290D950006BB3B /* SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0FBDAC28290D950006BB3B /* SpecialEffects.swift */; };
+		2E0FBDB02829104F0006BB3B /* AnimateWithAnimatableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0FBDAF2829104F0006BB3B /* AnimateWithAnimatableData.swift */; };
+		2E0FBDB22829114C0006BB3B /* AnimateSomeComplexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0FBDB12829114C0006BB3B /* AnimateSomeComplexView.swift */; };
+		2E0FBDB4282911FF0006BB3B /* SwiftUISpiroGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0FBDB3282911FF0006BB3B /* SwiftUISpiroGraph.swift */; };
 		2E2940A32827C67300BC8836 /* ShapeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2940A22827C67300BC8836 /* ShapeTransform.swift */; };
 		2E2940A52827C74900BC8836 /* BordersImagePaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2940A42827C74900BC8836 /* BordersImagePaint.swift */; };
 		2E2940A72827C81800BC8836 /* MetalRendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2940A62827C81800BC8836 /* MetalRendering.swift */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E0FBDAC28290D950006BB3B /* SpecialEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialEffects.swift; sourceTree = "<group>"; };
+		2E0FBDAF2829104F0006BB3B /* AnimateWithAnimatableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateWithAnimatableData.swift; sourceTree = "<group>"; };
+		2E0FBDB12829114C0006BB3B /* AnimateSomeComplexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateSomeComplexView.swift; sourceTree = "<group>"; };
+		2E0FBDB3282911FF0006BB3B /* SwiftUISpiroGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISpiroGraph.swift; sourceTree = "<group>"; };
 		2E2940A22827C67300BC8836 /* ShapeTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTransform.swift; sourceTree = "<group>"; };
 		2E2940A42827C74900BC8836 /* BordersImagePaint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordersImagePaint.swift; sourceTree = "<group>"; };
 		2E2940A62827C81800BC8836 /* MetalRendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalRendering.swift; sourceTree = "<group>"; };
@@ -89,6 +97,10 @@
 				2E2940A22827C67300BC8836 /* ShapeTransform.swift */,
 				2E2940A42827C74900BC8836 /* BordersImagePaint.swift */,
 				2E2940A62827C81800BC8836 /* MetalRendering.swift */,
+				2E0FBDAC28290D950006BB3B /* SpecialEffects.swift */,
+				2E0FBDAF2829104F0006BB3B /* AnimateWithAnimatableData.swift */,
+				2E0FBDB12829114C0006BB3B /* AnimateSomeComplexView.swift */,
+				2E0FBDB3282911FF0006BB3B /* SwiftUISpiroGraph.swift */,
 			);
 			path = Tutorials;
 			sourceTree = "<group>";
@@ -167,10 +179,14 @@
 				2E38BC8628264F36005FA685 /* CustomPaths.swift in Sources */,
 				2E38BC7928264E28005FA685 /* ContentView.swift in Sources */,
 				2E38BC7728264E28005FA685 /* SwiftUIDrawingApp.swift in Sources */,
+				2E0FBDB4282911FF0006BB3B /* SwiftUISpiroGraph.swift in Sources */,
 				2E38BC8A282653EE005FA685 /* InsettableShapes.swift in Sources */,
+				2E0FBDAD28290D950006BB3B /* SpecialEffects.swift in Sources */,
 				2E2940A32827C67300BC8836 /* ShapeTransform.swift in Sources */,
 				2E2940A52827C74900BC8836 /* BordersImagePaint.swift in Sources */,
+				2E0FBDB22829114C0006BB3B /* AnimateSomeComplexView.swift in Sources */,
 				2E38BC88282650C8005FA685 /* PathsVsShapes.swift in Sources */,
+				2E0FBDB02829104F0006BB3B /* AnimateWithAnimatableData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
