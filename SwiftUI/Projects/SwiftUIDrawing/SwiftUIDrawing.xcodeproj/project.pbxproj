@@ -21,6 +21,8 @@
 		2E38BC8628264F36005FA685 /* CustomPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38BC8528264F36005FA685 /* CustomPaths.swift */; };
 		2E38BC88282650C8005FA685 /* PathsVsShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38BC87282650C8005FA685 /* PathsVsShapes.swift */; };
 		2E38BC8A282653EE005FA685 /* InsettableShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38BC89282653EE005FA685 /* InsettableShapes.swift */; };
+		2EA0B1EB282A48BB0005B00F /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0B1EA282A48BB0005B00F /* ArrowView.swift */; };
+		2EA0B1ED282A53320005B00F /* ColorCyclingRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0B1EC282A53320005B00F /* ColorCyclingRectangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		2E38BC8528264F36005FA685 /* CustomPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaths.swift; sourceTree = "<group>"; };
 		2E38BC87282650C8005FA685 /* PathsVsShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathsVsShapes.swift; sourceTree = "<group>"; };
 		2E38BC89282653EE005FA685 /* InsettableShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettableShapes.swift; sourceTree = "<group>"; };
+		2EA0B1EA282A48BB0005B00F /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
+		2EA0B1EC282A53320005B00F /* ColorCyclingRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingRectangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		2E38BC7528264E28005FA685 /* SwiftUIDrawing */ = {
 			isa = PBXGroup;
 			children = (
+				2EA0B1E8282A489A0005B00F /* Challenges */,
 				2E38BC8428264E5E005FA685 /* Tutorials */,
 				2E38BC7628264E28005FA685 /* SwiftUIDrawingApp.swift */,
 				2E38BC7828264E28005FA685 /* ContentView.swift */,
@@ -103,6 +108,15 @@
 				2E0FBDB3282911FF0006BB3B /* SwiftUISpiroGraph.swift */,
 			);
 			path = Tutorials;
+			sourceTree = "<group>";
+		};
+		2EA0B1E8282A489A0005B00F /* Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				2EA0B1EA282A48BB0005B00F /* ArrowView.swift */,
+				2EA0B1EC282A53320005B00F /* ColorCyclingRectangle.swift */,
+			);
+			path = Challenges;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +196,11 @@
 				2E0FBDB4282911FF0006BB3B /* SwiftUISpiroGraph.swift in Sources */,
 				2E38BC8A282653EE005FA685 /* InsettableShapes.swift in Sources */,
 				2E0FBDAD28290D950006BB3B /* SpecialEffects.swift in Sources */,
+				2EA0B1EB282A48BB0005B00F /* ArrowView.swift in Sources */,
 				2E2940A32827C67300BC8836 /* ShapeTransform.swift in Sources */,
 				2E2940A52827C74900BC8836 /* BordersImagePaint.swift in Sources */,
 				2E0FBDB22829114C0006BB3B /* AnimateSomeComplexView.swift in Sources */,
+				2EA0B1ED282A53320005B00F /* ColorCyclingRectangle.swift in Sources */,
 				2E38BC88282650C8005FA685 /* PathsVsShapes.swift in Sources */,
 				2E0FBDB02829104F0006BB3B /* AnimateWithAnimatableData.swift in Sources */,
 			);
