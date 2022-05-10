@@ -2,13 +2,15 @@
 //  AppDelegate.swift
 //  TrendyolUIKit
 //
-//  Created by Mehmet Ateş on 5.05.2022.
+//  Created by Mehmet Ateş on 10.05.2022.
 //
 
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

@@ -7,35 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E9B59AE282591B800E38995 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B59AD282591B800E38995 /* HomeViewController.swift */; };
-		2E9B59B1282591D000E38995 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B59B0282591D000E38995 /* FavoriteViewController.swift */; };
-		2E9B59B3282591D800E38995 /* GoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B59B2282591D800E38995 /* GoViewController.swift */; };
-		2E9B59B5282591ED00E38995 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B59B4282591ED00E38995 /* BasketViewController.swift */; };
-		2E9B59B7282591F500E38995 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B59B6282591F500E38995 /* ProfileViewController.swift */; };
-		2E9B59B92825927200E38995 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B59B82825927200E38995 /* TabBarViewController.swift */; };
-		2EE24530282466A40037DFAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE2452F282466A40037DFAE /* AppDelegate.swift */; };
-		2EE24532282466A40037DFAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE24531282466A40037DFAE /* SceneDelegate.swift */; };
-		2EE24539282466A50037DFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EE24538282466A50037DFAE /* Assets.xcassets */; };
-		2EE2453C282466A50037DFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE2453A282466A50037DFAE /* LaunchScreen.storyboard */; };
+		2E817359282ADDA300464140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E817358282ADDA300464140 /* AppDelegate.swift */; };
+		2E81735B282ADDA300464140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81735A282ADDA300464140 /* SceneDelegate.swift */; };
+		2E81735D282ADDA300464140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81735C282ADDA300464140 /* ViewController.swift */; };
+		2E817360282ADDA300464140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E81735E282ADDA300464140 /* Main.storyboard */; };
+		2E817362282ADDA300464140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E817361282ADDA300464140 /* Assets.xcassets */; };
+		2E817365282ADDA300464140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E817363282ADDA300464140 /* LaunchScreen.storyboard */; };
+		2E817373282AE42800464140 /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E817372282AE42800464140 /* AccountTableViewController.swift */; };
+		2E817376282AE85700464140 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E817375282AE85700464140 /* AccountTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E9B59AD282591B800E38995 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		2E9B59B0282591D000E38995 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		2E9B59B2282591D800E38995 /* GoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoViewController.swift; sourceTree = "<group>"; };
-		2E9B59B4282591ED00E38995 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
-		2E9B59B6282591F500E38995 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		2E9B59B82825927200E38995 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		2EE2452C282466A40037DFAE /* TrendyolUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendyolUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EE2452F282466A40037DFAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2EE24531282466A40037DFAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2EE24538282466A50037DFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2EE2453B282466A50037DFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2EE2453D282466A50037DFAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E817355282ADDA300464140 /* TrendyolUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendyolUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E817358282ADDA300464140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E81735A282ADDA300464140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2E81735C282ADDA300464140 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E81735F282ADDA300464140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E817361282ADDA300464140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E817364282ADDA300464140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E817366282ADDA300464140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E817372282AE42800464140 /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
+		2E817375282AE85700464140 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2EE24529282466A40037DFAE /* Frameworks */ = {
+		2E817352282ADDA300464140 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,122 +41,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2E9B59A4282590D100E38995 /* Fundamentals */ = {
+		2E81734C282ADDA200464140 = {
 			isa = PBXGroup;
 			children = (
-				2EE24538282466A50037DFAE /* Assets.xcassets */,
-				2EE2452F282466A40037DFAE /* AppDelegate.swift */,
-				2EE24531282466A40037DFAE /* SceneDelegate.swift */,
+				2E817357282ADDA300464140 /* TrendyolUIKit */,
+				2E817356282ADDA300464140 /* Products */,
 			);
-			path = Fundamentals;
 			sourceTree = "<group>";
 		};
-		2E9B59A5282590E200E38995 /* Models */ = {
+		2E817356282ADDA300464140 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				2E817355282ADDA300464140 /* TrendyolUIKit.app */,
 			);
-			path = Models;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		2E9B59A6282590EB00E38995 /* Utils */ = {
+		2E817357282ADDA300464140 /* TrendyolUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				2E81736D282ADDB800464140 /* App */,
+				2E817370282ADDD700464140 /* Models */,
+				2E81736C282ADDB000464140 /* Services */,
+				2E81736E282ADDBD00464140 /* Views */,
+				2E81736F282ADDCB00464140 /* ViewModels */,
+				2E817361282ADDA300464140 /* Assets.xcassets */,
+				2E817366282ADDA300464140 /* Info.plist */,
 			);
-			path = Utils;
+			path = TrendyolUIKit;
 			sourceTree = "<group>";
 		};
-		2E9B59A7282590F200E38995 /* Services */ = {
+		2E81736C282ADDB000464140 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		2E9B59A8282590F700E38995 /* ViewModels */ = {
+		2E81736D282ADDB800464140 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2E817358282ADDA300464140 /* AppDelegate.swift */,
+				2E81735A282ADDA300464140 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2E81736E282ADDBD00464140 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E817371282AE41100464140 /* AccountView */,
+				2E81735E282ADDA300464140 /* Main.storyboard */,
+				2E817363282ADDA300464140 /* LaunchScreen.storyboard */,
+				2E81735C282ADDA300464140 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E81736F282ADDCB00464140 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		2E9B59A9282590FD00E38995 /* Views */ = {
+		2E817370282ADDD700464140 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2E9B59AC2825917A00E38995 /* StartUP */,
-				2E9B59AB2825916B00E38995 /* TabControllers */,
-				2E9B59AA2825916200E38995 /* AppViews */,
 			);
-			path = Views;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		2E9B59AA2825916200E38995 /* AppViews */ = {
+		2E817371282AE41100464140 /* AccountView */ = {
 			isa = PBXGroup;
 			children = (
-				2E9B59AD282591B800E38995 /* HomeViewController.swift */,
-				2E9B59B6282591F500E38995 /* ProfileViewController.swift */,
-				2E9B59B0282591D000E38995 /* FavoriteViewController.swift */,
-				2E9B59B2282591D800E38995 /* GoViewController.swift */,
-				2E9B59B4282591ED00E38995 /* BasketViewController.swift */,
+				2E817374282AE83500464140 /* Components */,
+				2E817372282AE42800464140 /* AccountTableViewController.swift */,
 			);
-			path = AppViews;
+			path = AccountView;
 			sourceTree = "<group>";
 		};
-		2E9B59AB2825916B00E38995 /* TabControllers */ = {
+		2E817374282AE83500464140 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2E9B59B82825927200E38995 /* TabBarViewController.swift */,
+				2E817375282AE85700464140 /* AccountTableViewCell.swift */,
 			);
-			path = TabControllers;
-			sourceTree = "<group>";
-		};
-		2E9B59AC2825917A00E38995 /* StartUP */ = {
-			isa = PBXGroup;
-			children = (
-				2EE2453A282466A50037DFAE /* LaunchScreen.storyboard */,
-			);
-			path = StartUP;
-			sourceTree = "<group>";
-		};
-		2EE24523282466A40037DFAE = {
-			isa = PBXGroup;
-			children = (
-				2EE2452E282466A40037DFAE /* TrendyolUIKit */,
-				2EE2452D282466A40037DFAE /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		2EE2452D282466A40037DFAE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2EE2452C282466A40037DFAE /* TrendyolUIKit.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2EE2452E282466A40037DFAE /* TrendyolUIKit */ = {
-			isa = PBXGroup;
-			children = (
-				2E9B59A9282590FD00E38995 /* Views */,
-				2E9B59A8282590F700E38995 /* ViewModels */,
-				2E9B59A7282590F200E38995 /* Services */,
-				2E9B59A6282590EB00E38995 /* Utils */,
-				2E9B59A5282590E200E38995 /* Models */,
-				2E9B59A4282590D100E38995 /* Fundamentals */,
-				2EE2453D282466A50037DFAE /* Info.plist */,
-			);
-			path = TrendyolUIKit;
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2EE2452B282466A40037DFAE /* TrendyolUIKit */ = {
+		2E817354282ADDA300464140 /* TrendyolUIKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EE24540282466A50037DFAE /* Build configuration list for PBXNativeTarget "TrendyolUIKit" */;
+			buildConfigurationList = 2E817369282ADDA300464140 /* Build configuration list for PBXNativeTarget "TrendyolUIKit" */;
 			buildPhases = (
-				2EE24528282466A40037DFAE /* Sources */,
-				2EE24529282466A40037DFAE /* Frameworks */,
-				2EE2452A282466A40037DFAE /* Resources */,
+				2E817351282ADDA300464140 /* Sources */,
+				2E817352282ADDA300464140 /* Frameworks */,
+				2E817353282ADDA300464140 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -168,25 +146,25 @@
 			);
 			name = TrendyolUIKit;
 			productName = TrendyolUIKit;
-			productReference = 2EE2452C282466A40037DFAE /* TrendyolUIKit.app */;
+			productReference = 2E817355282ADDA300464140 /* TrendyolUIKit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2EE24524282466A40037DFAE /* Project object */ = {
+		2E81734D282ADDA200464140 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					2EE2452B282466A40037DFAE = {
+					2E817354282ADDA300464140 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 2EE24527282466A40037DFAE /* Build configuration list for PBXProject "TrendyolUIKit" */;
+			buildConfigurationList = 2E817350282ADDA200464140 /* Build configuration list for PBXProject "TrendyolUIKit" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -194,51 +172,57 @@
 				en,
 				Base,
 			);
-			mainGroup = 2EE24523282466A40037DFAE;
-			productRefGroup = 2EE2452D282466A40037DFAE /* Products */;
+			mainGroup = 2E81734C282ADDA200464140;
+			productRefGroup = 2E817356282ADDA300464140 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2EE2452B282466A40037DFAE /* TrendyolUIKit */,
+				2E817354282ADDA300464140 /* TrendyolUIKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2EE2452A282466A40037DFAE /* Resources */ = {
+		2E817353282ADDA300464140 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EE2453C282466A50037DFAE /* LaunchScreen.storyboard in Resources */,
-				2EE24539282466A50037DFAE /* Assets.xcassets in Resources */,
+				2E817365282ADDA300464140 /* LaunchScreen.storyboard in Resources */,
+				2E817362282ADDA300464140 /* Assets.xcassets in Resources */,
+				2E817360282ADDA300464140 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2EE24528282466A40037DFAE /* Sources */ = {
+		2E817351282ADDA300464140 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E9B59B3282591D800E38995 /* GoViewController.swift in Sources */,
-				2E9B59B5282591ED00E38995 /* BasketViewController.swift in Sources */,
-				2EE24530282466A40037DFAE /* AppDelegate.swift in Sources */,
-				2E9B59B92825927200E38995 /* TabBarViewController.swift in Sources */,
-				2EE24532282466A40037DFAE /* SceneDelegate.swift in Sources */,
-				2E9B59AE282591B800E38995 /* HomeViewController.swift in Sources */,
-				2E9B59B7282591F500E38995 /* ProfileViewController.swift in Sources */,
-				2E9B59B1282591D000E38995 /* FavoriteViewController.swift in Sources */,
+				2E81735D282ADDA300464140 /* ViewController.swift in Sources */,
+				2E817359282ADDA300464140 /* AppDelegate.swift in Sources */,
+				2E817373282AE42800464140 /* AccountTableViewController.swift in Sources */,
+				2E817376282AE85700464140 /* AccountTableViewCell.swift in Sources */,
+				2E81735B282ADDA300464140 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2EE2453A282466A50037DFAE /* LaunchScreen.storyboard */ = {
+		2E81735E282ADDA300464140 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2EE2453B282466A50037DFAE /* Base */,
+				2E81735F282ADDA300464140 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E817363282ADDA300464140 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E817364282ADDA300464140 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -246,7 +230,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2EE2453E282466A50037DFAE /* Debug */ = {
+		2E817367282ADDA300464140 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -306,7 +290,7 @@
 			};
 			name = Debug;
 		};
-		2EE2453F282466A50037DFAE /* Release */ = {
+		2E817368282ADDA300464140 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -360,7 +344,7 @@
 			};
 			name = Release;
 		};
-		2EE24541282466A50037DFAE /* Debug */ = {
+		2E81736A282ADDA300464140 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -372,6 +356,7 @@
 				INFOPLIST_FILE = TrendyolUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -387,7 +372,7 @@
 			};
 			name = Debug;
 		};
-		2EE24542282466A50037DFAE /* Release */ = {
+		2E81736B282ADDA300464140 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -399,6 +384,7 @@
 				INFOPLIST_FILE = TrendyolUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -417,25 +403,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2EE24527282466A40037DFAE /* Build configuration list for PBXProject "TrendyolUIKit" */ = {
+		2E817350282ADDA200464140 /* Build configuration list for PBXProject "TrendyolUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2EE2453E282466A50037DFAE /* Debug */,
-				2EE2453F282466A50037DFAE /* Release */,
+				2E817367282ADDA300464140 /* Debug */,
+				2E817368282ADDA300464140 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EE24540282466A50037DFAE /* Build configuration list for PBXNativeTarget "TrendyolUIKit" */ = {
+		2E817369282ADDA300464140 /* Build configuration list for PBXNativeTarget "TrendyolUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2EE24541282466A50037DFAE /* Debug */,
-				2EE24542282466A50037DFAE /* Release */,
+				2E81736A282ADDA300464140 /* Debug */,
+				2E81736B282ADDA300464140 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2EE24524282466A40037DFAE /* Project object */;
+	rootObject = 2E81734D282ADDA200464140 /* Project object */;
 }
