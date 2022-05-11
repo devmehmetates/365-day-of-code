@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftuianimatedringcharts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/devmehmetates/SwiftUIAnimatedRingCharts",
+      "state" : {
+        "branch" : "main",
+        "revision" : "104960ba4f54cf801e176ae45be3bafccaf8ea23"
+      }
+    }
+  ],
+  "version" : 2
+}
