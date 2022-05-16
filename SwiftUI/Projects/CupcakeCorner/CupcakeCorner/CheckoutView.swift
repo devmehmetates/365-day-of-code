@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct CheckoutView: View {
+    @State private var inProgress: Bool = false
+    @State private var confirmationTitle = ""
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
-    @ObservedObject var order: Order
+    @ObservedObject var pageViewModel: OrderVieModel
     
     var body: some View {
         ScrollView {
@@ -24,20 +26,28 @@ struct CheckoutView: View {
                 }
                 .frame(height: 233)
                 
-                Text("Your total is \(order.cost, format: .currency(code: "USD"))")
+                Text("Your total is \(pageViewModel.cost, format: .currency(code: "USD"))")
                     .font(.title)
                 
-                Button("Place Order") {
-                    Task {
-                        await placeOrder()
+                
+                Group{
+                    if inProgress{
+                        ProgressView()
+                            .tint(.blue)
+                    }else{
+                        Button("Place Order") {
+                            Task {
+                                await placeOrder()
+                            }
+                        }
+                        
                     }
-                }
-                .padding()
+                }.padding()
             }
         }
         .navigationTitle("Check out")
         .navigationBarTitleDisplayMode(.inline)
-        .alert("Thank you!", isPresented: $showingConfirmation) {
+        .alert(confirmationTitle, isPresented: $showingConfirmation) {
             Button("OK") { }
         } message: {
             Text(confirmationMessage)
@@ -45,7 +55,8 @@ struct CheckoutView: View {
     }
     
     func placeOrder() async {
-        guard let encoded = try? JSONEncoder().encode(order) else {
+        inProgress = true
+        guard let encoded = try? JSONEncoder().encode(pageViewModel.order) else {
             print("Failed to encode order")
             return
         }
@@ -55,19 +66,25 @@ struct CheckoutView: View {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         
+       
         do {
             let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
             let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
-            confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
+            confirmationTitle = "Thank You!"
+            confirmationMessage = "Your order for \(decodedOrder.quantity)x \(OrderVieModel.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
             showingConfirmation = true
+            inProgress = false
         } catch {
-            print("Checkout failed.")
+            confirmationTitle = "Upps!"
+            confirmationMessage = "Your order could not be received. Please try again!"
+            showingConfirmation = true
+            inProgress = false
         }
     }
 }
 
 struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutView(order: Order())
+        CheckoutView(pageViewModel: OrderVieModel())
     }
 }
