@@ -1,16 +1,15 @@
 //
-//  DataController.swift
+//  MainDataController.swift
 //  Bookworm
 //
-//  Created by Mehmet Ateş on 17.05.2022.
+//  Created by Mehmet Ateş on 18.05.2022.
 //
 
-import CoreData
 import Foundation
+import CoreData
 
-
-class DataController: ObservableObject{
-    let container = NSPersistentContainer(name: "Tutorial")
+class MainDataController: ObservableObject{
+    let container = NSPersistentContainer(name: "Bookworm")
     
     init(){
         container.loadPersistentStores { description, err in
