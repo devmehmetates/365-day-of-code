@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E69EDD4283620520081131F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69EDD3283620520081131F /* DetailView.swift */; };
 		2EEA24A7283522F100641FA0 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEA24A6283522F100641FA0 /* AddBookView.swift */; };
 		2EEA24A9283524A600641FA0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEA24A8283524A600641FA0 /* HomeView.swift */; };
 		2EEA24AB2835250000641FA0 /* MainDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEA24AA2835250000641FA0 /* MainDataController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E69EDD3283620520081131F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		2EEA24A6283522F100641FA0 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		2EEA24A8283524A600641FA0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2EEA24AA2835250000641FA0 /* MainDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				2EEA24B12835271900641FA0 /* EmojiRatingView.swift */,
 				2EF972412833CEA7005B5D0D /* Preview Content */,
 				2EEA24AF2835266200641FA0 /* RatingView.swift */,
+				2E69EDD3283620520081131F /* DetailView.swift */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				2EEA24B22835271900641FA0 /* EmojiRatingView.swift in Sources */,
 				2EEA24AB2835250000641FA0 /* MainDataController.swift in Sources */,
 				2EF9724B2833CFA5005B5D0D /* BindingUsage.swift in Sources */,
+				2E69EDD4283620520081131F /* DetailView.swift in Sources */,
 				2EF972512833D51B005B5D0D /* Tutorial.xcdatamodeld in Sources */,
 				2EEA24A9283524A600641FA0 /* HomeView.swift in Sources */,
 				2EF9723C2833CEA5005B5D0D /* BookwormApp.swift in Sources */,
