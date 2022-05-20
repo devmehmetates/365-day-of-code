@@ -33,6 +33,10 @@ struct DetailView: View {
                 .font(.title)
                 .foregroundColor(.secondary)
             
+            if let bookReviewDate = book.reviewDate{
+                Text(bookReviewDate, format: Date.FormatStyle().year().month().day())
+            }
+            
             Text(book.review ?? "No review")
                 .padding()
             

@@ -26,10 +26,15 @@ struct HomeView: View {
                                 .font(.largeTitle)
                             
                             VStack(alignment: .leading) {
-                                Text(book.title ?? "Unknown Title")
-                                    .font(.headline)
+                                HStack{
+                                    Text(book.title ?? "Unknown Title")
+                                        .font(.headline)
+                                    GenreTypeLabel(type: book.genre ?? "Unknow")
+                                }
+                                
                                 Text(book.author ?? "Unknown Author")
                                     .foregroundColor(.secondary)
+                                    .font(.caption)
                             }
                         }
                     }
@@ -65,10 +70,39 @@ struct HomeView: View {
         // save the context
         try? moc.save()
     }
+    
+
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        GenreTypeLabel(type: "Fantasy")
+    }
+}
+
+
+struct GenreTypeLabel: View{
+    private let typesColors = [
+        "Fantasy": Color.green,
+        "Horror": Color.gray,
+        "Kids": Color.blue,
+        "Mystery": Color.purple,
+        "Poetry": Color.pink,
+        "Romance": Color.red,
+        "Thriller": Color.orange,
+        "Unknow": Color.secondary
+    ]
+
+    var type: String
+    
+    
+    var body: some View{
+        VStack{
+            Text(type)
+                .font(.caption2)
+                .padding(5)
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke())
+                .foregroundColor(typesColors[type])
+        }
     }
 }

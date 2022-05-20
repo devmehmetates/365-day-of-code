@@ -11,18 +11,31 @@ struct EmojiRatingView: View {
     let rating: Int16
     
     var body: some View {
-        switch rating {
-        case 1:
-            Text("1")
-        case 2:
-            Text("2")
-        case 3:
-            Text("3")
-        case 4:
-            Text("4")
-        default:
-            Text("5")
+        VStack(spacing: 0){
+            Text(rating.formatted())
+                .foregroundColor(setContentColor(bookPoint: rating))
+            Image(systemName: setContentIcon(bookPoint: rating))
+                .foregroundColor(.yellow)
+                .font(.caption2)
         }
+    }
+    
+    func setContentColor(bookPoint: Int16) -> Color{
+        if bookPoint < 2{
+            return .red
+        }else if bookPoint < 4{
+            return .orange
+        }
+        return .green
+    }
+    
+    func setContentIcon(bookPoint: Int16) -> String{
+        if bookPoint < 2{
+            return "star"
+        }else if bookPoint < 4{
+            return "star.leadinghalf.filled"
+        }
+        return "star.fill"
     }
 }
 

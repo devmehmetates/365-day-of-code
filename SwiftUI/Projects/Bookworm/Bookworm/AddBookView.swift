@@ -16,6 +16,7 @@ struct AddBookView: View {
     @State private var rating = 3
     @State private var genre = ""
     @State private var review = ""
+    @State private var reviewDate = Date.now
     
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
     var body: some View {
@@ -30,6 +31,7 @@ struct AddBookView: View {
                             Text($0)
                         }
                     }
+                    DatePicker("Review Date", selection: $reviewDate, displayedComponents: .date)
                 }
                 
                 Section {
@@ -42,12 +44,14 @@ struct AddBookView: View {
                 Section {
                     Button("Save") {
                         let newBook = Book(context: moc)
+                        validateContent()
                         newBook.id = UUID()
                         newBook.title = title
                         newBook.author = author
                         newBook.rating = Int16(rating)
                         newBook.genre = genre
                         newBook.review = review
+                        newBook.reviewDate = reviewDate
                         
                         dismiss()
                         try? moc.save()
@@ -55,6 +59,21 @@ struct AddBookView: View {
                 }
             }
             .navigationTitle("Add Book")
+        }
+    }
+    
+    
+    func validateContent(){
+        if title.isEmpty{
+            title = "Unknow"
+        }
+        
+        if author.isEmpty{
+            author = "Unknow"
+        }
+        
+        if genre.isEmpty{
+            genre = "Fantasy"
         }
     }
 }
