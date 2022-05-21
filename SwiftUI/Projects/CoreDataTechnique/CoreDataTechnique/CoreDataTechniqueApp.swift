@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct CoreDataTechniqueApp: App {
-    var dataController = MainDataController()
+    var dataController = FourthDataController()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FourthContentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
