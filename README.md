@@ -98,7 +98,8 @@ This repository has been opened to develop iOS in a planned way.
 | Day124-127 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Moonshot/Moonshot"> Project </a>| FlexDecode, Json files, Custom Grids |
 | Day128-131 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/SwiftUIDrawing/SwiftUIDrawing"> Project </a>| SwiftUI Path, Drawing, Metal, animatableData and Shapes |
 | Day132-133 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/HabitTracker/HabitTracker"> Project and Gallery </a>| Review and Horizon Days |
-| Day134-137 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/CupcakeCorner/CupcakeCorner"> Project </a>| Let's meet  async-await functions and Task, Network connections, HTTP Requests and detailed Codable protocol|
+| Day134-137 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/CupcakeCorner/CupcakeCorner"> Project </a>| Let's meet  async-await functions and Task, Network connections, HTTP Requests and detailed Codable protocol |
+| Day138-141 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Bookworm/Bookworm"> Project </a>| CoreData basics |
 | ... | ... | ... |
 
 ## Side Project Map
