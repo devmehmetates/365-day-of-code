@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E15FD2628395B6F00F1E1E4 /* MyFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E15FD2528395B6F00F1E1E4 /* MyFavoritesView.swift */; };
+		2E15FD2828395B8300F1E1E4 /* MyCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E15FD2728395B8300F1E1E4 /* MyCollectionsView.swift */; };
+		2E15FD2A283960B100F1E1E4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E15FD29283960B100F1E1E4 /* Utils.swift */; };
 		2E2B319E2825A83200650C07 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B319D2825A83200650C07 /* HomeView.swift */; };
 		2E2B31A12825A83F00650C07 /* GoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B31A02825A83F00650C07 /* GoView.swift */; };
 		2E2B31A32825A84800650C07 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B31A22825A84800650C07 /* FavoriteView.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E15FD2528395B6F00F1E1E4 /* MyFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesView.swift; sourceTree = "<group>"; };
+		2E15FD2728395B8300F1E1E4 /* MyCollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionsView.swift; sourceTree = "<group>"; };
+		2E15FD29283960B100F1E1E4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2E2B319D2825A83200650C07 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2E2B31A02825A83F00650C07 /* GoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoView.swift; sourceTree = "<group>"; };
 		2E2B31A22825A84800650C07 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
@@ -46,10 +52,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E15FD232839598100F1E1E4 /* FavoriteView */ = {
+			isa = PBXGroup;
+			children = (
+				2E15FD2428395B5C00F1E1E4 /* Components */,
+				2E2B31A22825A84800650C07 /* FavoriteView.swift */,
+			);
+			path = FavoriteView;
+			sourceTree = "<group>";
+		};
+		2E15FD2428395B5C00F1E1E4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2E15FD2528395B6F00F1E1E4 /* MyFavoritesView.swift */,
+				2E15FD2728395B8300F1E1E4 /* MyCollectionsView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		2E2B31952825A7A200650C07 /* Fundamentals */ = {
 			isa = PBXGroup;
 			children = (
 				2E9CCA1928246682004E24CB /* TrendyolSwiftUIApp.swift */,
+				2E15FD29283960B100F1E1E4 /* Utils.swift */,
 			);
 			path = Fundamentals;
 			sourceTree = "<group>";
@@ -98,9 +123,9 @@
 		2E2B319B2825A81A00650C07 /* AppViews */ = {
 			isa = PBXGroup;
 			children = (
+				2E15FD232839598100F1E1E4 /* FavoriteView */,
 				2E2B319D2825A83200650C07 /* HomeView.swift */,
 				2E2B31A02825A83F00650C07 /* GoView.swift */,
-				2E2B31A22825A84800650C07 /* FavoriteView.swift */,
 				2E2B31A52825A85C00650C07 /* BasketView.swift */,
 				2E2B31A72825A86500650C07 /* ProfileView.swift */,
 			);
@@ -226,11 +251,14 @@
 				2E2B31A62825A85C00650C07 /* BasketView.swift in Sources */,
 				2E2B31AC2825A8FE00650C07 /* TabBarView.swift in Sources */,
 				2E2B31A32825A84800650C07 /* FavoriteView.swift in Sources */,
+				2E15FD2828395B8300F1E1E4 /* MyCollectionsView.swift in Sources */,
 				2E9CCA1A28246682004E24CB /* TrendyolSwiftUIApp.swift in Sources */,
 				2E2B319E2825A83200650C07 /* HomeView.swift in Sources */,
 				2E2B31AE2825A93800650C07 /* TabBarButtonView.swift in Sources */,
 				2E2B31A82825A86500650C07 /* ProfileView.swift in Sources */,
+				2E15FD2628395B6F00F1E1E4 /* MyFavoritesView.swift in Sources */,
 				2E2B31A12825A83F00650C07 /* GoView.swift in Sources */,
+				2E15FD2A283960B100F1E1E4 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
