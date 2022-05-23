@@ -20,8 +20,22 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
         }
     }
     
-    init(filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
-        _fetchRequest = FetchRequest<T>(sortDescriptors: [], predicate: NSPredicate(format: "%K BEGINSWITH %@", filterKey, filterValue))
+    init(filterKey: String, filterValue: String, predicateValue: PredicateValues, sortDescriptor: NSSortDescriptor, @ViewBuilder content: @escaping (T) -> Content) {
+        if filterValue.isEmpty{
+            print("Hi")
+            _fetchRequest = FetchRequest<T>(sortDescriptors: [])
+        }else{
+            _fetchRequest = FetchRequest<T>(sortDescriptors: [sortDescriptor], predicate: NSPredicate(format: "%K \(predicateValue.rawValue) %@", filterKey, filterValue))
+        }
         self.content = content
     }
+}
+
+
+enum PredicateValues: String, CaseIterable{
+    case BEGINSWITH
+    case ENDSWITH
+    case CONTAINS
+    case LIKE
+    case MATCHES
 }
