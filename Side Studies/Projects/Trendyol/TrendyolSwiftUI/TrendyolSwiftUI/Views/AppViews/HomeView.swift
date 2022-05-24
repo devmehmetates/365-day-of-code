@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(\.managedObjectContext) var moc
+    @ObservedObject private var favoriteSystem = FavoriteViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button("Add Favorite"){
+            favoriteSystem.saveFavorite(moc)
+        }
     }
 }
 

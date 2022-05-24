@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TrendyolSwiftUIApp: App {
+    var dataController = DataController()
+    
     var body: some Scene {
         WindowGroup {
             TabController()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

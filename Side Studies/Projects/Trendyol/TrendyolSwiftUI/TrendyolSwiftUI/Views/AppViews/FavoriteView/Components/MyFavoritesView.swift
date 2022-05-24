@@ -6,26 +6,23 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct MyFavoritesView: View {
+    @FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "isFavorite == %@", NSNumber(value: true))) var favorites: FetchedResults<Product>
+    
     var body: some View {
         List{
-            ForEach(0..<100, id: \.self){ number in
+            ForEach(favorites, id: \.self){ product in
                 NavigationLink {
                     Text("Deneme")
                 } label: {
-                    Text(number.formatted())
-                        .frame(height: 30.0.responsiveW, alignment: .center)
-                }.swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                    VStack{
-                        Button("Deneme"){
-                            
-                        }
-                        Button("Deneme"){
-                            
-                        }
-                    }
-                }
+                    FavoriteCardView(product: product)
+                }.listRowSeparator(.visible, edges: .bottom)
+                    .buttonStyle(.plain)
+                    
+            }.onDelete { indexSet in
+                
             }
             
         }.listStyle(.plain)
