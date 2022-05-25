@@ -23,8 +23,6 @@ extension CachedFriend {
     var wrappedId: String { id ?? UUID().uuidString }
     var wrappedName: String { name ?? "Unknowed" }
 
-    
-
 }
 
 extension CachedFriend : Identifiable {

@@ -16,7 +16,6 @@
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="company" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="friends" optional="YES" attributeType="Transformable"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
@@ -30,7 +29,7 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="CachedUser" positionX="-63" positionY="-18" width="128" height="209"/>
         <element name="CachedFriend" positionX="-54" positionY="-9" width="128" height="74"/>
+        <element name="CachedUser" positionX="-63" positionY="-18" width="128" height="194"/>
     </elements>
 </model>

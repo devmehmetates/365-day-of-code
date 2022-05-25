@@ -23,11 +23,7 @@ class OfflineViewModel: ObservableObject{
             cachedUser.address = user.address
             cachedUser.registered = user.registered
             cachedUser.tags = handleTags(tags: user.tags)
-            do{
-                try moc.save()
-            }catch{
-                fatalError("save error")
-            }
+            handleCachedFriends(user: cachedUser, friends: user.friends, moc: moc)
             
         }
     }
@@ -35,7 +31,8 @@ class OfflineViewModel: ObservableObject{
     func handleCachedToOriginalUser(contents: FetchedResults<CachedUser>) -> Array<UserModel>{
         var resultList: Array<UserModel> = []
         for cachedUser in contents{
-            let user: UserModel = UserModel(id: cachedUser.wrappedId, name: cachedUser.wrappedName, age: Int(cachedUser.age), about: cachedUser.wrappedAbout, isActive: cachedUser.isActive, company: cachedUser.wrappedCompany, email: cachedUser.wrappedEmail, address: cachedUser.wrappedAddress, registered: cachedUser.wrappedRegistered, tags: revertHandleTags(tags: cachedUser.wrappedTags), friends: [])
+            let user: UserModel = UserModel(id: cachedUser.wrappedId, name: cachedUser.wrappedName, age: Int(cachedUser.age), about: cachedUser.wrappedAbout, isActive: cachedUser.isActive, company: cachedUser.wrappedCompany, email: cachedUser.wrappedEmail, address: cachedUser.wrappedAddress, registered: cachedUser.wrappedRegistered, tags: revertHandleTags(tags: cachedUser.wrappedTags), friends: revertHandleCachedFriends(cachedFriends: cachedUser.friendArray))
+            print(revertHandleCachedFriends(cachedFriends: cachedUser.friendArray))
             resultList.append(user)
         }
         
@@ -60,26 +57,29 @@ class OfflineViewModel: ObservableObject{
         return resultList
     }
     
-    func handleCachedFriends(friends: Array<Friend>, moc: NSManagedObjectContext) -> [CachedFriend]{
-        var resultList: Array<CachedFriend> = []
+    func handleCachedFriends(user: CachedUser, friends: Array<Friend>, moc: NSManagedObjectContext){
+        print(user)
+        
         for friend in friends {
             let cachedFriend = CachedFriend(context: moc)
             cachedFriend.id = friend.id
             cachedFriend.name = friend.name
-            resultList.append(cachedFriend)
+            cachedFriend.friend = user
         }
         
-        return resultList
+        do{
+            try moc.save()
+        }catch{
+            fatalError("save error")
+        }
     }
     
-    func revertHandleCachedFriends(cachedFriends: Array<NSManagedObject>) -> [Friend]{
+    func revertHandleCachedFriends(cachedFriends: Array<CachedFriend>) -> [Friend]{
         var resultList: Array<Friend> = []
         for cachedFriend in cachedFriends {
-            let handledCachedFriend = cachedFriend as! CachedFriend
-            let friend = Friend(id: handledCachedFriend.wrappedId, name: handledCachedFriend.wrappedName)
+            let friend = Friend(id: cachedFriend.wrappedId, name: cachedFriend.wrappedName)
             resultList.append(friend)
         }
-        
         return resultList
     }
 }
