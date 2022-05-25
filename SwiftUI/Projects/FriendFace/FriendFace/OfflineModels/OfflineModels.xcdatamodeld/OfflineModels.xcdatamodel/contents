@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CachedFriend" representedClassName="CachedFriend" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="friend" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CachedUser" inverseName="original" inverseEntity="CachedUser"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CachedUser" representedClassName="CachedUser" syncable="YES">
+        <attribute name="about" optional="YES" attributeType="String"/>
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="company" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="friends" optional="YES" attributeType="Transformable"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="registered" optional="YES" attributeType="String"/>
+        <attribute name="tags" optional="YES" attributeType="Transformable"/>
+        <relationship name="original" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CachedFriend" inverseName="friend" inverseEntity="CachedFriend"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="CachedUser" positionX="-63" positionY="-18" width="128" height="209"/>
+        <element name="CachedFriend" positionX="-54" positionY="-9" width="128" height="74"/>
+    </elements>
+</model>

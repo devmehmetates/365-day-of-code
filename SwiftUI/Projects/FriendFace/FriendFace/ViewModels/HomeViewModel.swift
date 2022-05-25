@@ -47,7 +47,7 @@ class HomeViewModel: ObservableObject{
         if let firstIndex = firstIndex {
             return users[firstIndex]
         }else{
-            return UserModel(id: "", isActive: false, name: "Unknowed", age: 0, company: "Unknowed", email: "Unknowed", address: "Unknowed", about: "Unknowed", registered: "Unknowed", tags: [], friends: [])
+            return UserModel(id: "", name: "", age: 0, about: "", isActive: false, company: "", email: "", address: "", registered: "", tags: [], friends: [])
         }
     }
     

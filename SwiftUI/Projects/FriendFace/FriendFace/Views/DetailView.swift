@@ -32,21 +32,26 @@ struct DetailView: View {
             }
             
             Section("Friends"){
-                ScrollView(.horizontal) {
-                    HStack{
-                        ForEach(user.friends, id: \.id) { friend in
-                            NavigationLink {
-                                DetailView(parentViewModel: parentViewModel, user: parentViewModel.getFriendsToUser(id: friend.id))
-                            } label: {
-                                VStack{
-                                    Text(friend.name)
-                                }.frame(width: UIScreen.main.bounds.width * 0.3, height: UIScreen.main.bounds.width * 0.3, alignment: .center)
-                                    .overlay(RoundedRectangle(cornerRadius: 10).stroke())
-                                    .padding(5)
-                                    .contentShape(Rectangle())
-                            }.buttonStyle(.plain)
+                if !user.friends.isEmpty{
+                    ScrollView(.horizontal) {
+                        HStack{
+                            ForEach(user.friends, id: \.id) { friend in
+                                NavigationLink {
+                                    DetailView(parentViewModel: parentViewModel, user: parentViewModel.getFriendsToUser(id: friend.id))
+                                } label: {
+                                    VStack{
+                                        Text(friend.name)
+                                    }.frame(width: UIScreen.main.bounds.width * 0.3, height: UIScreen.main.bounds.width * 0.3, alignment: .center)
+                                        .overlay(RoundedRectangle(cornerRadius: 10).stroke())
+                                        .padding(5)
+                                        .contentShape(Rectangle())
+                                }.buttonStyle(.plain)
+                            }
+                            
                         }
                     }
+                }else{
+                    Text("For using friends property, you must be in online mood")
                 }
             }
             

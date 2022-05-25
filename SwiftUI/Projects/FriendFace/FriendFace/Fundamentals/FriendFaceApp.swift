@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct FriendFaceApp: App {
+    var offlineDataController = OfflineDataController()
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environment(\.managedObjectContext, offlineDataController.container.viewContext)
         }
     }
 }
