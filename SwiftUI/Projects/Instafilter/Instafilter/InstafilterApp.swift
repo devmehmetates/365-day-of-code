@@ -11,7 +11,7 @@ import SwiftUI
 struct InstafilterApp: App {
     var body: some Scene {
         WindowGroup {
-            ShowingMultipleOptions()
+            CoreImageTutorial()
         }
     }
 }
