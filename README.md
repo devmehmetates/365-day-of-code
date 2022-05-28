@@ -102,6 +102,7 @@ This repository has been opened to develop iOS in a planned way.
 | Day138-141 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Bookworm/Bookworm"> Project </a>| CoreData basics |
 | Day142-144 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/CoreDataTechnique/CoreDataTechnique"> Project </a>| Advanced CoreData and Filtering CoreData Entities |
 | Day145-146 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/FriendFace/FriendFace"> Project and Gallery </a>| Advanced CoreData and More Practice |
+| Day147-150 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Instafilter/Instafilter"> Project </a>| CoreImage and UIKit integration |
 | ... | ... | ... |
 
 ## Side Project Map
