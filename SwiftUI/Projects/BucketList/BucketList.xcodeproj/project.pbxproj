@@ -14,6 +14,8 @@
 		2E23E7302847699500B371D4 /* CustomTypesComparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23E72F2847699500B371D4 /* CustomTypesComparable.swift */; };
 		2E23E73228476B8400B371D4 /* DocumentDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23E73128476B8400B371D4 /* DocumentDictionary.swift */; };
 		2E23E73428476BCD00B371D4 /* EnumsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23E73328476BCD00B371D4 /* EnumsState.swift */; };
+		2EC18E4D28489CF400F3EA51 /* MapkitUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC18E4C28489CF400F3EA51 /* MapkitUsage.swift */; };
+		2EC18E4F28489E9400F3EA51 /* FaceTouchIDUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC18E4E28489E9400F3EA51 /* FaceTouchIDUsage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		2E23E72F2847699500B371D4 /* CustomTypesComparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTypesComparable.swift; sourceTree = "<group>"; };
 		2E23E73128476B8400B371D4 /* DocumentDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDictionary.swift; sourceTree = "<group>"; };
 		2E23E73328476BCD00B371D4 /* EnumsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumsState.swift; sourceTree = "<group>"; };
+		2EC18E4C28489CF400F3EA51 /* MapkitUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapkitUsage.swift; sourceTree = "<group>"; };
+		2EC18E4E28489E9400F3EA51 /* FaceTouchIDUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTouchIDUsage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				2E23E72F2847699500B371D4 /* CustomTypesComparable.swift */,
 				2E23E73128476B8400B371D4 /* DocumentDictionary.swift */,
 				2E23E73328476BCD00B371D4 /* EnumsState.swift */,
+				2EC18E4C28489CF400F3EA51 /* MapkitUsage.swift */,
+				2EC18E4E28489E9400F3EA51 /* FaceTouchIDUsage.swift */,
 			);
 			path = Tutorials;
 			sourceTree = "<group>";
@@ -156,7 +162,9 @@
 			files = (
 				2E23E73228476B8400B371D4 /* DocumentDictionary.swift in Sources */,
 				2E23E7232847670100B371D4 /* ContentView.swift in Sources */,
+				2EC18E4F28489E9400F3EA51 /* FaceTouchIDUsage.swift in Sources */,
 				2E23E7302847699500B371D4 /* CustomTypesComparable.swift in Sources */,
+				2EC18E4D28489CF400F3EA51 /* MapkitUsage.swift in Sources */,
 				2E23E73428476BCD00B371D4 /* EnumsState.swift in Sources */,
 				2E23E7212847670100B371D4 /* BucketListApp.swift in Sources */,
 			);
@@ -290,6 +298,7 @@
 				DEVELOPMENT_TEAM = 6PALB6K8YY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need this for auth";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +328,7 @@
 				DEVELOPMENT_TEAM = 6PALB6K8YY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need this for auth";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
