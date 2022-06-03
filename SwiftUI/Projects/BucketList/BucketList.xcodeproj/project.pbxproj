@@ -16,6 +16,8 @@
 		2E23E73428476BCD00B371D4 /* EnumsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23E73328476BCD00B371D4 /* EnumsState.swift */; };
 		2EC18E4D28489CF400F3EA51 /* MapkitUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC18E4C28489CF400F3EA51 /* MapkitUsage.swift */; };
 		2EC18E4F28489E9400F3EA51 /* FaceTouchIDUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC18E4E28489E9400F3EA51 /* FaceTouchIDUsage.swift */; };
+		C0DACF502849FC0000B57714 /* MainLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DACF4F2849FC0000B57714 /* MainLocation.swift */; };
+		C0DACF522849FCF100B57714 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DACF512849FCF100B57714 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		2E23E73328476BCD00B371D4 /* EnumsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumsState.swift; sourceTree = "<group>"; };
 		2EC18E4C28489CF400F3EA51 /* MapkitUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapkitUsage.swift; sourceTree = "<group>"; };
 		2EC18E4E28489E9400F3EA51 /* FaceTouchIDUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTouchIDUsage.swift; sourceTree = "<group>"; };
+		C0DACF4F2849FC0000B57714 /* MainLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLocation.swift; sourceTree = "<group>"; };
+		C0DACF512849FCF100B57714 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				2E23E72E2847684D00B371D4 /* Tutorials */,
 				2E23E7202847670100B371D4 /* BucketListApp.swift */,
 				2E23E7222847670100B371D4 /* ContentView.swift */,
+				C0DACF4F2849FC0000B57714 /* MainLocation.swift */,
+				C0DACF512849FCF100B57714 /* EditView.swift */,
 				2E23E7242847670300B371D4 /* Assets.xcassets */,
 				2E23E7262847670300B371D4 /* Preview Content */,
 			);
@@ -163,7 +169,9 @@
 				2E23E73228476B8400B371D4 /* DocumentDictionary.swift in Sources */,
 				2E23E7232847670100B371D4 /* ContentView.swift in Sources */,
 				2EC18E4F28489E9400F3EA51 /* FaceTouchIDUsage.swift in Sources */,
+				C0DACF502849FC0000B57714 /* MainLocation.swift in Sources */,
 				2E23E7302847699500B371D4 /* CustomTypesComparable.swift in Sources */,
+				C0DACF522849FCF100B57714 /* EditView.swift in Sources */,
 				2EC18E4D28489CF400F3EA51 /* MapkitUsage.swift in Sources */,
 				2E23E73428476BCD00B371D4 /* EnumsState.swift in Sources */,
 				2E23E7212847670100B371D4 /* BucketListApp.swift in Sources */,
