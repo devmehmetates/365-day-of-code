@@ -15,7 +15,7 @@ struct EnumsState: View {
             Group{
                 if loadingState == .loading {
                     LoadingView()
-                } else if loadingState == .success {
+                } else if loadingState == .loaded {
                     SuccessView()
                 } else if loadingState == .failed {
                     FailedView()
@@ -24,7 +24,7 @@ struct EnumsState: View {
         }.onAppear{
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 if Int.random(in: 0...1) == 0{
-                    self.loadingState = .success
+                    self.loadingState = .loaded
                 }else{
                     self.loadingState = .failed
                 }
@@ -34,7 +34,7 @@ struct EnumsState: View {
 }
 
 enum LoadingState {
-    case loading, success, failed
+    case loading, loaded, failed
 }
 
 struct EnumsState_Previews: PreviewProvider {

@@ -16,6 +16,7 @@
 		2E23E73428476BCD00B371D4 /* EnumsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23E73328476BCD00B371D4 /* EnumsState.swift */; };
 		2EC18E4D28489CF400F3EA51 /* MapkitUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC18E4C28489CF400F3EA51 /* MapkitUsage.swift */; };
 		2EC18E4F28489E9400F3EA51 /* FaceTouchIDUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC18E4E28489E9400F3EA51 /* FaceTouchIDUsage.swift */; };
+		C08000FA284B302F006F1F0E /* ResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08000F9284B302F006F1F0E /* ResultList.swift */; };
 		C0DACF502849FC0000B57714 /* MainLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DACF4F2849FC0000B57714 /* MainLocation.swift */; };
 		C0DACF522849FCF100B57714 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DACF512849FCF100B57714 /* EditView.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		2E23E73328476BCD00B371D4 /* EnumsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumsState.swift; sourceTree = "<group>"; };
 		2EC18E4C28489CF400F3EA51 /* MapkitUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapkitUsage.swift; sourceTree = "<group>"; };
 		2EC18E4E28489E9400F3EA51 /* FaceTouchIDUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTouchIDUsage.swift; sourceTree = "<group>"; };
+		C08000F9284B302F006F1F0E /* ResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultList.swift; sourceTree = "<group>"; };
 		C0DACF4F2849FC0000B57714 /* MainLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLocation.swift; sourceTree = "<group>"; };
 		C0DACF512849FCF100B57714 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 			children = (
 				2E23E72E2847684D00B371D4 /* Tutorials */,
 				2E23E7202847670100B371D4 /* BucketListApp.swift */,
+				C08000F9284B302F006F1F0E /* ResultList.swift */,
 				2E23E7222847670100B371D4 /* ContentView.swift */,
 				C0DACF4F2849FC0000B57714 /* MainLocation.swift */,
 				C0DACF512849FCF100B57714 /* EditView.swift */,
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C08000FA284B302F006F1F0E /* ResultList.swift in Sources */,
 				2E23E73228476B8400B371D4 /* DocumentDictionary.swift in Sources */,
 				2E23E7232847670100B371D4 /* ContentView.swift in Sources */,
 				2EC18E4F28489E9400F3EA51 /* FaceTouchIDUsage.swift in Sources */,
