@@ -24,6 +24,9 @@ struct EditView: View {
         _name = State(initialValue: location.name)
         _description = State(initialValue: location.description)
     }
+    
+    let imageHeight: CGFloat? = UIScreen.main.bounds.width * 0.4
+    let imageWidth: CGFloat? = nil
 
     var body: some View {
         NavigationView {
@@ -37,6 +40,22 @@ struct EditView: View {
                     switch loadingState {
                     case .loaded:
                         ForEach(pages, id: \.pageid) { page in
+                            AsyncImage(url: URL(string: page.thumbnail?.source ?? ""), scale: 1, transaction: .init(animation: .easeInOut)) { phase in
+                                if let loadedImage = phase.image{
+                                    loadedImage
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: imageWidth, height: imageHeight, alignment: .center)
+                                        .clipped()
+                                        .cornerRadius(10)
+                                }else if phase.error != nil{
+                                    Image(systemName: "xmark")
+                                        .frame(width: imageWidth, height: imageHeight, alignment: .center)
+                                }else{
+                                    ProgressView()
+                                        .frame(width: imageWidth, height: imageHeight, alignment: .center)
+                                }
+                            }
                             Text(page.title)
                                 .font(.headline)
                             + Text(": ") +
