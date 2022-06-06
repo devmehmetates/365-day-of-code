@@ -45,13 +45,20 @@ struct ContentView: View {
                             viewModel.addLocation()
                         } label: {
                             Image(systemName: "plus")
+                                .padding()
+                                .background(.black.opacity(0.75))
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .clipShape(Circle())
+                                .padding(.trailing)
                         }
-                        .padding()
-                        .background(.black.opacity(0.75))
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .clipShape(Circle())
-                        .padding(.trailing)
+                        // Buttons trigger with their labels. If the label is smaller than the appearance of the button, the button is visible and not available to the entire area.
+//                        .padding()
+//                        .background(.black.opacity(0.75))
+//                        .foregroundColor(.white)
+//                        .font(.title)
+//                        .clipShape(Circle())
+//                        .padding(.trailing)
                     }
                 }
             }else{
@@ -67,6 +74,10 @@ struct ContentView: View {
             EditView(location: place) { newLocation in
                 viewModel.update(location: newLocation)
             }
+        }.alert("Authentication failed", isPresented: $viewModel.anErrorTaked) {
+            Button("Okay", role: .cancel) { }
+        } message: {
+            Text("Please try again!")
         }
     }
 }
