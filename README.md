@@ -113,9 +113,9 @@ Sorted by development time.
 
 | Name | Status | Url | Subject | Main Technologies | Sub Technologies or Target |
 | ---- | ------ | --- | ------- | ----------------- | ---------------- |
-| Socia | Development |  <a href="https://github.com/devmehmetates/Socia">Go to Project</a> | Social Media | SwiftUI, UIKit integration, Firebase | MVVM, WebKit, UIImagePicker, Auth-System, EnvironmentObjects, ObservedObjects, UserDefaults, Video-Player, Pure iOS Properties, Unit Tests, AvKit, 3D Touch, UIActitivityViewController |
-| Tips for Riot | Completed | <a href="https://github.com/devmehmetates/TipsForRiot">Go to Project</a> | Game | SwiftUI, Packages | SwiftUI Animations, Charts, Custom-API Usage, 3D Touch, Carousel Views(Made with Native SwiftUI)|
-| My Custom iTunes | Completed | <a href="https://github.com/devmehmetates/iTunes-Search-API">Go to Project</a> | Music | SwiftUI and iTunes Search API | MVVM, MVP, AVFoundation, WebView, UserDefaults, UIKit usage in SwiftUI, UIActivityViewController |
+| Socia | Stopped(Will continue after my works) |  <a href="https://github.com/devmehmetates/Socia">Go to Project</a> | Social Media | SwiftUI, UIKit integration, Firebase | MVVM, WebKit, UIImagePicker, Auth-System, EnvironmentObjects, ObservedObjects, UserDefaults, Video-Player, Pure iOS Properties, Unit Tests, AvKit, 3D Touch, UIActitivityViewController |
+| Tips for Riot | Completed(In renewing) | <a href="https://github.com/devmehmetates/TipsForRiot">Go to Project</a> | Game | SwiftUI, Packages | SwiftUI Animations, Charts, Custom-API Usage, 3D Touch, Carousel Views(Made with Native SwiftUI)|
+| My Custom iTunes | Completed(In renewing) | <a href="https://github.com/devmehmetates/iTunes-Search-API">Go to Project</a> | Music | SwiftUI and iTunes Search API | MVVM, MVP, AVFoundation, WebView, UserDefaults, UIKit usage in SwiftUI, UIActivityViewController |
 | Tate Mcrae App | Canceled(I moved it to "My Custom iTunes" project) | <a href="https://twitter.com/devmehmetates/status/1482353368853004288?s=20&t=aFlb1Nz1GslgnMscA8RcKQ">Some Detail</a> | Music | SwiftUI | StoryBoard to SwiftUI, Animations, MVVM |
 | Health Care | Completed | <a href="https://github.com/devmehmetates/Health-Care-Public">Go to Project</a> | Health and Life Style | SwiftUI and Firebase | MVVM, Twitter API, HealthKit, Notifications |
 | CountDown App | Completed | <a href="https://github.com/devmehmetates/CountDown-App">Go to Project</a> | Movie | SwiftUI | Timer, Splash Design |
