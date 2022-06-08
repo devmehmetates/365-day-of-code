@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C02CFA7B28509E610021C86F /* UsingSwiftUICharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CFA7A28509E610021C86F /* UsingSwiftUICharts.swift */; };
+		C02CFA7D2850AC790021C86F /* UsingShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CFA7C2850AC790021C86F /* UsingShareSheet.swift */; };
 		C07EF37E284F5A9700E0C872 /* NewFeaturesOnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EF37D284F5A9700E0C872 /* NewFeaturesOnSwiftUIApp.swift */; };
 		C07EF382284F5A9800E0C872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07EF381284F5A9800E0C872 /* Assets.xcassets */; };
 		C07EF385284F5A9800E0C872 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07EF384284F5A9800E0C872 /* Preview Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C02CFA7A28509E610021C86F /* UsingSwiftUICharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingSwiftUICharts.swift; sourceTree = "<group>"; };
+		C02CFA7C2850AC790021C86F /* UsingShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingShareSheet.swift; sourceTree = "<group>"; };
 		C07EF37A284F5A9700E0C872 /* NewFeaturesOnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewFeaturesOnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07EF37D284F5A9700E0C872 /* NewFeaturesOnSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeaturesOnSwiftUIApp.swift; sourceTree = "<group>"; };
 		C07EF381284F5A9800E0C872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				C0F107D5284F5CCA00664877 /* UsignSheets.swift */,
 				C0F107D7284F5EF100664877 /* UsignFixedGrids.swift */,
 				C0F107D9284F603100664877 /* UsignDetectUserTouchLocation.swift */,
+				C02CFA7A28509E610021C86F /* UsingSwiftUICharts.swift */,
+				C02CFA7C2850AC790021C86F /* UsingShareSheet.swift */,
 				C07EF381284F5A9800E0C872 /* Assets.xcassets */,
 				C07EF383284F5A9800E0C872 /* Preview Content */,
 			);
@@ -149,6 +155,8 @@
 				C0F107D8284F5EF100664877 /* UsignFixedGrids.swift in Sources */,
 				C0F107D6284F5CCA00664877 /* UsignSheets.swift in Sources */,
 				C07EF37E284F5A9700E0C872 /* NewFeaturesOnSwiftUIApp.swift in Sources */,
+				C02CFA7D2850AC790021C86F /* UsingShareSheet.swift in Sources */,
+				C02CFA7B28509E610021C86F /* UsingSwiftUICharts.swift in Sources */,
 				C0F107DC284F607200664877 /* MainView.swift in Sources */,
 				C0F107DA284F603100664877 /* UsignDetectUserTouchLocation.swift in Sources */,
 			);
@@ -282,6 +290,7 @@
 				DEVELOPMENT_TEAM = 6PALB6K8YY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need this to the save any photos on your library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -311,6 +320,7 @@
 				DEVELOPMENT_TEAM = 6PALB6K8YY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need this to the save any photos on your library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

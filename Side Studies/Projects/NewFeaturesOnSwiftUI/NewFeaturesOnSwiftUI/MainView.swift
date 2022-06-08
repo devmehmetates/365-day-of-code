@@ -13,20 +13,34 @@ struct MainView: View {
     var body: some View {
         NavigationStack(path: $navigationPath) {
             Form {
-                NavigationLink {
-                    UsignSheets()
-                } label: {
-                    Text("Sheets")
+                Section("Modified"){
+                    NavigationLink {
+                        UsignSheets()
+                    } label: {
+                        Text("Sheets")
+                    }
                 }
-                NavigationLink {
-                    UsignFixedGrids()
-                } label: {
-                    Text("Fixed grids")
-                }
-                NavigationLink {
-                    UsignDetectUserTouchLocation()
-                } label: {
-                    Text("Detecting user touch location")
+                Section("Fully New"){
+                    NavigationLink {
+                        UsignFixedGrids()
+                    } label: {
+                        Text("Grid Row")
+                    }
+                    NavigationLink {
+                        UsignDetectUserTouchLocation()
+                    } label: {
+                        Text("Detecting user touch location")
+                    }
+                    NavigationLink {
+                        UsingSwiftUICharts()
+                    } label: {
+                        Text("SwiftUI Charts(Module)")
+                    }
+                    NavigationLink {
+                        UsingShareSheet()
+                    } label: {
+                        Text("Share Sheet")
+                    }
                 }
             }.navigationTitle("What's the new on SwiftUI!")
                 .navigationBarTitleDisplayMode(.inline)

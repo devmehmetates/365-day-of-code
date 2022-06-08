@@ -13,7 +13,7 @@ struct UsignSheets: View {
     @State private var showingfraction = false
 
     var body: some View {
-        VStack{
+        Form{
             Button("Trigger medium-large") { showingMediumLarge.toggle() }
             Button("Trigger specific") { showingSpecific.toggle() }
             Button("Trigger fraction") { showingfraction.toggle() }
