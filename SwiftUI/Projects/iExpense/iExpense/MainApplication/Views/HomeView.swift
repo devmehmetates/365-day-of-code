@@ -17,7 +17,6 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             List{
-                
                 Section{
                     Text(expenses.totalAmount, format: .number)
                 } header: {
@@ -47,7 +46,8 @@ struct HomeView: View {
                                     Text(item.name)
                                         .font(.headline)
                                     Text(item.type)
-                                }
+                                        .accessibilityHint(item.type)
+                                }.accessibilityLabel("name is \(item.name) and type is \(item.type)")
                                 Spacer()
                                 Text(item.amount, format: .currency(code: item.currency))
                             }

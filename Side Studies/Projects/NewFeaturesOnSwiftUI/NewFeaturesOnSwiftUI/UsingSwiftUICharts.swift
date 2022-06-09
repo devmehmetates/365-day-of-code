@@ -75,7 +75,7 @@ struct UsingSwiftUICharts: View {
                     }
                 }
             }.frame(maxWidth: .infinity)
-        }
+        }.navigationBarTitle("SwiftUI Charts")
     }
 }
 
@@ -99,7 +99,7 @@ struct ChartCard<Content: View>: View{
             Text(title)
                 .foregroundColor(.secondary)
             content
-                .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.width * 0.4, alignment: .center)
+                .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.width * 0.4, alignment: .center)
                 .padding()
                 .background(Color.white)
                 .cornerRadius(10.0)

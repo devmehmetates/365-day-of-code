@@ -21,6 +21,8 @@ struct CheckoutView: View {
                     image
                         .resizable()
                         .scaledToFit()
+                        .accessibilityLabel("Cupcake Image")
+                        .accessibilityRemoveTraits(.isImage)
                 } placeholder: {
                     ProgressView()
                 }
