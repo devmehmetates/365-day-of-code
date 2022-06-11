@@ -24,11 +24,10 @@ struct ImageDetailView: View {
                     VStack {
                         Image(uiImage: UIImage(data: object.imageData)!)
                             .resizable()
-                            .foregroundColor(.red)
-                            .frame(width: 44, height: 44)
-                            .background(.white)
+                            .frame(width: 50, height: 50)
                             .clipShape(Circle())
-
+                            .shadow(radius: 3)
+                            .overlay(Circle().stroke(lineWidth: 1).foregroundColor(.white))
                         Text(object.name)
                             .fixedSize()
                     }
