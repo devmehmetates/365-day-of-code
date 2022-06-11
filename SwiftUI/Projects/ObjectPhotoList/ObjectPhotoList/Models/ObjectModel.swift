@@ -11,4 +11,6 @@ struct ObjectModel: Identifiable, Codable{
     var id = UUID()
     var name: String
     var imageData: Data
+    var locationLongitude: Double
+    var locationLatitude: Double
 }

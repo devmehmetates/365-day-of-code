@@ -6,21 +6,44 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ImageDetailView: View {
-    var image: Image
-    var name: String
+    @ObservedObject private var viewModel: ImageDetailViewModel = ImageDetailViewModel()
+    private var object: ObjectModel
+    
+    init(object: ObjectModel){
+        self.object = object
+        viewModel.setMapRegion(object)
+    }
     
     var body: some View {
-        image
-            .resizable()
-            .scaledToFit()
-            .navigationTitle(name)
+        if viewModel.mapReady{
+            Map(coordinateRegion: $viewModel.mapRegion, annotationItems: [object]){ object in
+                MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: object.locationLatitude, longitude: object.locationLongitude)) {
+                    VStack {
+                        Image(uiImage: UIImage(data: object.imageData)!)
+                            .resizable()
+                            .foregroundColor(.red)
+                            .frame(width: 44, height: 44)
+                            .background(.white)
+                            .clipShape(Circle())
+
+                        Text(object.name)
+                            .fixedSize()
+                    }
+                }
+            }.ignoresSafeArea()
+        }else{
+            VStack{
+                ProgressView()
+            }
+        }
     }
 }
 
 struct ImageDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageDetailView(image: Image(systemName: "star"), name: "Star")
+        ImageDetailView(object: ObjectModel(name: "deneme", imageData: Data(), locationLongitude: 10, locationLatitude: 10))
     }
 }

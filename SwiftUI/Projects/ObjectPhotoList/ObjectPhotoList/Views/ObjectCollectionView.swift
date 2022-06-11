@@ -19,7 +19,7 @@ struct ObjectCollectionView: View {
                 LazyVGrid(columns: gridItems) {
                     ForEach(viewModel.objects) { object in
                         NavigationLink{
-                            ImageDetailView(image: Image(uiImage: UIImage(data: object.imageData)!), name: object.name)
+                            ImageDetailView(object: object)
                         } label: {
                             VStack{
                                 Image(uiImage: UIImage(data: object.imageData)!)
@@ -42,6 +42,7 @@ struct ObjectCollectionView: View {
                         Image(systemName: "plus")
                     }
                 }
+
         }.sheet(isPresented: $viewModel.sheetImagePicker, onDismiss: {
             viewModel.alertToggle.toggle()
         }) {
@@ -53,7 +54,7 @@ struct ObjectCollectionView: View {
             placeholder: "Object name",
             action: { newText in
                 viewModel.pickedName = newText ?? ""
-                viewModel.saveModel()
+                viewModel.saveModel(self.viewModel.locationFetcher.lastKnownLocation)
             }
         )
     }
