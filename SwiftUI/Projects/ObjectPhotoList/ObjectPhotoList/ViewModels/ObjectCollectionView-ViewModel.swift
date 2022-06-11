@@ -37,10 +37,8 @@ extension ObjectCollectionView{
         }
         
         func handleObjects(){
-            DispatchQueue.main.async{
-                if let encoded = try? JSONEncoder().encode(self.objects){
-                    self.userDefaults.set(encoded, forKey: "object")
-                }
+            if let encoded = try? JSONEncoder().encode(self.objects){
+                self.userDefaults.set(encoded, forKey: "object")
             }
             if !(objects.count < 2) {
                 objects.sort { $0.name > $1.name }

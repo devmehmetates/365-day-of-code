@@ -14,6 +14,7 @@
 		C008A795285328DA00920B5E /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008A794285328DA00920B5E /* ImagePickerView.swift */; };
 		C008A79828532D1200920B5E /* ObjectCollectionView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008A79728532D1200920B5E /* ObjectCollectionView-ViewModel.swift */; };
 		C008A79B28532D8000920B5E /* ObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008A79A28532D8000920B5E /* ObjectModel.swift */; };
+		C0C682A42854D23F00DC1DFB /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C682A32854D23F00DC1DFB /* ImageDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C008A794285328DA00920B5E /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		C008A79728532D1200920B5E /* ObjectCollectionView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectCollectionView-ViewModel.swift"; sourceTree = "<group>"; };
 		C008A79A28532D8000920B5E /* ObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectModel.swift; sourceTree = "<group>"; };
+		C0C682A32854D23F00DC1DFB /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				C008A790285328A900920B5E /* ObjectCollectionView.swift */,
 				C008A794285328DA00920B5E /* ImagePickerView.swift */,
+				C0C682A32854D23F00DC1DFB /* ImageDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				C008A795285328DA00920B5E /* ImagePickerView.swift in Sources */,
 				C008A79828532D1200920B5E /* ObjectCollectionView-ViewModel.swift in Sources */,
 				C008A7832853280700920B5E /* ObjectPhotoListApp.swift in Sources */,
+				C0C682A42854D23F00DC1DFB /* ImageDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

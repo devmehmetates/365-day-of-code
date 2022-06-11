@@ -18,15 +18,19 @@ struct ObjectCollectionView: View {
             ScrollView{
                 LazyVGrid(columns: gridItems) {
                     ForEach(viewModel.objects) { object in
-                        VStack{
-                            Image(uiImage: UIImage(data: object.imageData)!)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: imageSize, height: imageSize, alignment: .center)
-                                .clipped()
-                                .cornerRadius(10)
-                            Text(object.name)
-                                .font(.headline)
+                        NavigationLink{
+                            ImageDetailView(image: Image(uiImage: UIImage(data: object.imageData)!), name: object.name)
+                        } label: {
+                            VStack{
+                                Image(uiImage: UIImage(data: object.imageData)!)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: imageSize, height: imageSize, alignment: .center)
+                                    .clipped()
+                                    .cornerRadius(10)
+                                Text(object.name)
+                                    .font(.headline)
+                            }
                         }
                     }
                 }
