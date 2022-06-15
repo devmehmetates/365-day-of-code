@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C06863B22859EB2A00B8FC4D /* UsingCustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06863B12859EB2A00B8FC4D /* UsingCustomTabbar.swift */; };
+		C06863B42859EB4A00B8FC4D /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06863B32859EB4A00B8FC4D /* ProspectsView.swift */; };
+		C06863B62859EB6500B8FC4D /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06863B52859EB6500B8FC4D /* MeView.swift */; };
+		C06863B82859EE5D00B8FC4D /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06863B72859EE5D00B8FC4D /* Prospect.swift */; };
 		C06E48AC28571A7800925F46 /* ManuallyPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E48AB28571A7800925F46 /* ManuallyPublish.swift */; };
 		C06E48AE28571B7900925F46 /* UnderstandingResultTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E48AD28571B7900925F46 /* UnderstandingResultTypes.swift */; };
 		C06E48B028571E5200925F46 /* ImageInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E48AF28571E5200925F46 /* ImageInterpolation.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C06863B12859EB2A00B8FC4D /* UsingCustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingCustomTabbar.swift; sourceTree = "<group>"; };
+		C06863B32859EB4A00B8FC4D /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
+		C06863B52859EB6500B8FC4D /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		C06863B72859EE5D00B8FC4D /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 		C06E48AB28571A7800925F46 /* ManuallyPublish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuallyPublish.swift; sourceTree = "<group>"; };
 		C06E48AD28571B7900925F46 /* UnderstandingResultTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingResultTypes.swift; sourceTree = "<group>"; };
 		C06E48AF28571E5200925F46 /* ImageInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInterpolation.swift; sourceTree = "<group>"; };
@@ -97,6 +105,10 @@
 				C0ED238F28586E7A0079724E /* UsingSwipeActions.swift */,
 				C0ED239128586EC20079724E /* UsingLocalNotification.swift */,
 				C0ED23932858706C0079724E /* AddingPackages.swift */,
+				C06863B12859EB2A00B8FC4D /* UsingCustomTabbar.swift */,
+				C06863B32859EB4A00B8FC4D /* ProspectsView.swift */,
+				C06863B52859EB6500B8FC4D /* MeView.swift */,
+				C06863B72859EE5D00B8FC4D /* Prospect.swift */,
 			);
 			path = Tutorials;
 			sourceTree = "<group>";
@@ -177,16 +189,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06863B42859EB4A00B8FC4D /* ProspectsView.swift in Sources */,
 				C0ED239228586EC20079724E /* UsingLocalNotification.swift in Sources */,
 				C0BC5DCA2855D6D4001FBAA5 /* HotProspectsApp.swift in Sources */,
 				C0ED239028586E7A0079724E /* UsingSwipeActions.swift in Sources */,
 				C0ED238E28586E130079724E /* UsingContextMenu.swift in Sources */,
 				C0BC5DDB2855D78E001FBAA5 /* UsingTabView.swift in Sources */,
 				C0ED23942858706C0079724E /* AddingPackages.swift in Sources */,
+				C06863B82859EE5D00B8FC4D /* Prospect.swift in Sources */,
 				C06E48B028571E5200925F46 /* ImageInterpolation.swift in Sources */,
 				C06E48AE28571B7900925F46 /* UnderstandingResultTypes.swift in Sources */,
 				C06E48AC28571A7800925F46 /* ManuallyPublish.swift in Sources */,
+				C06863B22859EB2A00B8FC4D /* UsingCustomTabbar.swift in Sources */,
 				C0BC5DD92855D772001FBAA5 /* UsingEnvironmentsObject.swift in Sources */,
+				C06863B62859EB6500B8FC4D /* MeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
