@@ -16,20 +16,32 @@ struct MeView: View {
     
     var body: some View {
         NavigationView {
-            Form {
-                TextField("Name", text: $name)
-                    .textContentType(.name)
-                    .font(.title)
 
-                TextField("Email address", text: $emailAddress)
-                    .textContentType(.emailAddress)
-                    .font(.title)
+            Form {
+                Section{
+                    TextField("Name", text: $name)
+                        .textContentType(.name)
+
+                    TextField("Email address", text: $emailAddress)
+                        .textContentType(.emailAddress)
+                } header: {
+                    Text("Your information")
+                } footer: {
+                    Text("You can change that values")
+                }
                 
-                Image(uiImage: generateQRCode(from: "\(name)\n\(emailAddress)"))
-                    .interpolation(.none)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 200)
+                
+                Section("Your QR Code"){
+                    HStack{
+                        Spacer()
+                        Image(uiImage: generateQRCode(from: "\(name)\n\(emailAddress)"))
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                        Spacer()
+                    }
+                }
             }
             .navigationTitle("Your code")
         }
