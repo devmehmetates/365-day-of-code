@@ -13,6 +13,7 @@ struct ProspectsView: View {
     @EnvironmentObject var prospects: Prospects
     @State private var isShowingScanner = false
     
+    
     let filter: FilterType
     var filteredProspects: [Prospect] {
         switch filter {
@@ -40,11 +41,19 @@ struct ProspectsView: View {
         NavigationView {
             List {
                 ForEach(filteredProspects) { prospect in
-                    VStack(alignment: .leading) {
-                        Text(prospect.name)
-                            .font(.headline)
-                        Text(prospect.emailAddress)
-                            .foregroundColor(.secondary)
+                    HStack{
+                        VStack(alignment: .leading) {
+                            Text(prospect.name)
+                                .font(.headline)
+                            Text(prospect.emailAddress)
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        if filter == .none{
+                            Spacer()
+                            Image(systemName: setIcon(prospect.isContacted))
+                                .foregroundColor(prospect.isContacted ? Color.green : .orange)
+                        }
                     }.swipeActions {
                         if prospect.isContacted {
                             Button {
@@ -52,7 +61,7 @@ struct ProspectsView: View {
                             } label: {
                                 Label("Mark Uncontacted", systemImage: "person.crop.circle.badge.xmark")
                             }
-                            .tint(.blue)
+                            .tint(.red)
                         } else {
                             Button {
                                 prospects.toggle(prospect)
@@ -72,13 +81,27 @@ struct ProspectsView: View {
                 }
             }.navigationTitle(title)
                 .toolbar {
-                    Button {
-                        isShowingScanner = true
-                    } label: {
-                        Label("Scan", systemImage: "qrcode.viewfinder")
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Picker(selection: $prospects.sortingSelection) {
+                            Text("Most Recent")
+                                .tag(0)
+                            Text("By Name")
+                                .tag(1)
+                        } label: {
+                            
+                        }
+
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            isShowingScanner = true
+                        } label: {
+                            Label("Scan", systemImage: "qrcode.viewfinder")
+                        }
                     }
                 }.sheet(isPresented: $isShowingScanner) {
-                    CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: handleScan)
+                    CodeScannerView(codeTypes: [.qr], simulatedData: "Mehmet ATEŞ\ndev.mehmetates@gmail.com", completion: handleScan)
                 }
         }
     }
@@ -93,6 +116,7 @@ struct ProspectsView: View {
             let person = Prospect()
             person.name = details[0]
             person.emailAddress = details[1]
+            person.creatingDate = Date.now
             prospects.add(person)
             
         case .failure(let error):
@@ -131,6 +155,10 @@ struct ProspectsView: View {
                 }
             }
         }
+    }
+    
+    func setIcon(_ prospectType: Bool) -> String{
+        prospectType ? "person.crop.circle.fill.badge.checkmark" : "person.crop.circle.badge.clock.fill"
     }
 }
 

@@ -11,39 +11,67 @@ class Prospect: Identifiable, Codable {
     var id = UUID()
     var name = "Anonymous"
     var emailAddress = ""
+    var creatingDate = Date.now
     fileprivate(set) var isContacted = false
 }
 
 @MainActor class Prospects: ObservableObject {
     @Published private(set) var people: [Prospect]
-    let saveKey = "SavedData"
+    @Published var sortingSelection: Int = 0{
+        didSet{
+            sortByType()
+        }
+    }
+    let saveKey = "SavedData.txt"
     
 
     init() {
-        if let data = UserDefaults.standard.data(forKey: saveKey) {
-            if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
-                people = decoded
-                return
-            }
-        }
-
         people = []
+        readData()
+        sortByType()
     }
     
     func toggle(_ prospect: Prospect) {
         objectWillChange.send()
         prospect.isContacted.toggle()
-        save()
-    }
-    
-    private func save() {
-        if let encoded = try? JSONEncoder().encode(people) {
-            UserDefaults.standard.set(encoded, forKey: saveKey)
-        }
+        saveData()
     }
     
     func add(_ prospect: Prospect) {
         people.append(prospect)
-        save()
+        saveData()
+    }
+    
+    func saveData(){
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
+            let fileURL = dir.appendingPathComponent(saveKey)
+            
+            do{
+                if let encoded = try? JSONEncoder().encode(people) {
+                    try encoded.write(to: fileURL)
+                }
+            } catch{ print("save error") }
+        }
+    }
+    
+    func readData(){
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
+            let fileURL = dir.appendingPathComponent(saveKey)
+            
+            do{
+                let stringContent = try String(contentsOf: fileURL, encoding: .utf8)
+                if let decoded = try? JSONDecoder().decode([Prospect].self, from: stringContent.data(using: .utf8) ?? Data()) {
+                    people = decoded
+                }
+            } catch{ print("read error"); people = [] }
+        }
+    }
+    
+    func sortByType(){
+        if sortingSelection == 0{ // Most Recent
+            people.sort { $0.creatingDate > $1.creatingDate }
+        } else{ // By Name
+            people.sort { $0.name > $1.name }
+        }
     }
 }
