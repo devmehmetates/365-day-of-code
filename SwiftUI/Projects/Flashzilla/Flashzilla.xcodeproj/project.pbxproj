@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C011DB3328606A3F00464535 /* TriggeringEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C011DB3228606A3F00464535 /* TriggeringEvents.swift */; };
+		C011DB3528606B1000464535 /* AppMoves.swift in Sources */ = {isa = PBXBuildFile; fileRef = C011DB3428606B1000464535 /* AppMoves.swift */; };
+		C011DB3728606BEA00464535 /* SpecificAccessibility .swift in Sources */ = {isa = PBXBuildFile; fileRef = C011DB3628606BEA00464535 /* SpecificAccessibility .swift */; };
 		C0DE962C285F13AF004123CC /* FlashzillaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DE962B285F13AF004123CC /* FlashzillaApp.swift */; };
 		C0DE9630285F13B2004123CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0DE962F285F13B2004123CC /* Assets.xcassets */; };
 		C0DE9633285F13B2004123CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0DE9632285F13B2004123CC /* Preview Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C011DB3228606A3F00464535 /* TriggeringEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggeringEvents.swift; sourceTree = "<group>"; };
+		C011DB3428606B1000464535 /* AppMoves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMoves.swift; sourceTree = "<group>"; };
+		C011DB3628606BEA00464535 /* SpecificAccessibility .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecificAccessibility .swift"; sourceTree = "<group>"; };
 		C0DE9628285F13AF004123CC /* Flashzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DE962B285F13AF004123CC /* FlashzillaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashzillaApp.swift; sourceTree = "<group>"; };
 		C0DE962F285F13B2004123CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +83,9 @@
 				C0DE963C285F13F8004123CC /* UsingGestures.swift */,
 				C0DE963E285F1918004123CC /* UsingHaptics.swift */,
 				C0DE9640285F1BBE004123CC /* DisablingUserInteractivity.swift */,
+				C011DB3228606A3F00464535 /* TriggeringEvents.swift */,
+				C011DB3428606B1000464535 /* AppMoves.swift */,
+				C011DB3628606BEA00464535 /* SpecificAccessibility .swift */,
 			);
 			path = Tutorials;
 			sourceTree = "<group>";
@@ -151,10 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C011DB3528606B1000464535 /* AppMoves.swift in Sources */,
 				C0DE9641285F1BBE004123CC /* DisablingUserInteractivity.swift in Sources */,
 				C0DE963F285F1918004123CC /* UsingHaptics.swift in Sources */,
 				C0DE963D285F13F8004123CC /* UsingGestures.swift in Sources */,
 				C0DE962C285F13AF004123CC /* FlashzillaApp.swift in Sources */,
+				C011DB3328606A3F00464535 /* TriggeringEvents.swift in Sources */,
+				C011DB3728606BEA00464535 /* SpecificAccessibility .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
