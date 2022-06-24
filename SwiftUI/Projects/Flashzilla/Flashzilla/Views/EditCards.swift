@@ -11,15 +11,22 @@ struct EditCards: View {
     @Environment(\.dismiss) var dismiss
     @State private var cards = [Card]()
     @State private var newPrompt = ""
+    @State private var newQuestionAnswer = ""
     @State private var newAnswer = ""
 
     var body: some View {
         NavigationView {
             List {
-                Section("Add new card") {
+                Section{
                     TextField("Prompt", text: $newPrompt)
+                    TextField("Question Answer", text: $newQuestionAnswer)
                     TextField("Answer", text: $newAnswer)
                     Button("Add card", action: addCard)
+                } header: {
+                    Text("Add new card")
+                } footer: {
+                    Text("If answer is empty, question answer will be correct answer.")
+                        .font(.caption)
                 }
 
                 Section {
@@ -27,8 +34,10 @@ struct EditCards: View {
                         VStack(alignment: .leading) {
                             Text(cards[index].prompt)
                                 .font(.headline)
-                            Text(cards[index].answer)
+                            Text(cards[index].questionAnswer)
                                 .foregroundColor(.secondary)
+                            Text(cards[index].answer)
+                                .foregroundColor(.green)
                         }
                     }
                     .onDelete(perform: removeCards)
@@ -63,12 +72,16 @@ struct EditCards: View {
 
     func addCard() {
         let trimmedPrompt = newPrompt.trimmingCharacters(in: .whitespaces)
-        let trimmedAnswer = newAnswer.trimmingCharacters(in: .whitespaces)
-        guard trimmedPrompt.isEmpty == false && trimmedAnswer.isEmpty == false else { return }
+        let trimmedQuestionAnswer = newQuestionAnswer.trimmingCharacters(in: .whitespaces)
+        let trimmedAnswer = newAnswer.isEmpty ? nil : newAnswer.trimmingCharacters(in: .whitespaces)
+        guard trimmedPrompt.isEmpty == false && trimmedQuestionAnswer.isEmpty == false else { return }
 
-        let card = Card(prompt: trimmedPrompt, answer: trimmedAnswer)
+        let card = Card(prompt: trimmedPrompt, questionAnswer: trimmedQuestionAnswer, answer: trimmedAnswer)
         cards.insert(card, at: 0)
         saveData()
+        newPrompt = ""
+        newAnswer = ""
+        newQuestionAnswer = ""
     }
 
     func removeCards(at offsets: IndexSet) {

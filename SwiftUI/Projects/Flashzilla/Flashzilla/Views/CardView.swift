@@ -10,11 +10,22 @@ import SwiftUI
 struct CardView: View {
     @Environment(\.accessibilityVoiceOverEnabled) var voiceOverEnabled
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
-    @State private var offset = CGSize.zero
+    @State private var offset = CGSize.zero{
+        didSet{
+            if offset.width > 0 {
+                offsetColor = .green
+            }else if offset.width < 0 {
+                offsetColor = .red
+            }else{
+                offsetColor = .white
+            }
+        }
+    }
     @State private var isShowingAnswer = false
     @State private var feedback = UINotificationFeedbackGenerator()
+    @State private var offsetColor: Color = .white
     let card: Card
-    var removal: (() -> Void)? = nil
+    var removal: ((_ answer: Bool) -> Void)? = nil
     
 
     var body: some View {
@@ -31,7 +42,7 @@ struct CardView: View {
                     differentiateWithoutColor
                         ? nil
                         : RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(offset.width > 0 ? .green : .red)
+                            .fill(offsetColor)
                 )
                 .shadow(radius: 10)
             
@@ -47,7 +58,7 @@ struct CardView: View {
                         .foregroundColor(.black)
 
                     if isShowingAnswer {
-                        Text(card.answer)
+                        Text(card.questionAnswer)
                             .font(.title)
                             .foregroundColor(.gray)
                     }
@@ -75,7 +86,7 @@ struct CardView: View {
                             feedback.notificationOccurred(.error)
                         }
 
-                        removal?()
+                        removal?(offset.width > 0)
                     } else {
                         offset = .zero
                     }

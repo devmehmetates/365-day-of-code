@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     @Environment(\.accessibilityVoiceOverEnabled) var voiceOverEnabled
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
-    @State private var cards = [Card]()
+    @State private(set) var cards = [Card]()
     @State private var timeRemaining = 100
     @State private var showingEditScreen = false
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -34,16 +34,27 @@ struct MainView: View {
                     .clipShape(Capsule())
                 
                 ZStack {
-                    ForEach(0..<cards.count, id: \.self) { index in
-                        CardView(card: cards[index]) {
-                           withAnimation {
-                               removeCard(at: index)
-                           }
+                    ForEach(Array(zip(cards.indices, cards)), id: \.1.id) { index, card in
+                        VStack{
+                            CardView(card: card){ answer in
+                                withAnimation {
+                                    removeCard(at: index, answer: answer)
+                                }
+                            }.stacked(at: index, in: cards.count)
+                                .accessibilityHidden(index < cards.count - 1)
                         }
-                        .stacked(at: index, in: cards.count)
-                        .allowsHitTesting(index == cards.count - 1)
-                        .accessibilityHidden(index < cards.count - 1)
                     }
+                    
+//                    ForEach(0..<cards.count, id: \.self) { index in
+//                        CardView(card: cards[index]) { answer in
+//                           withAnimation {
+//                               removeCard(at: index, answer: answer)
+//                           }
+//                        }
+//                        .stacked(at: index, in: cards.count)
+//                        .allowsHitTesting(index == cards.count - 1)
+//                        .accessibilityHidden(index < cards.count - 1)
+//                    }
                 }.allowsHitTesting(timeRemaining > 0)
                 
                 if cards.isEmpty {
@@ -82,7 +93,7 @@ struct MainView: View {
                     HStack {
                         Button {
                             withAnimation {
-                                removeCard(at: cards.count - 1)
+                                removeCard(at: cards.count - 1, answer: false)
                             }
                         } label: {
                             Image(systemName: "xmark.circle")
@@ -97,7 +108,7 @@ struct MainView: View {
 
                         Button {
                             withAnimation {
-                                removeCard(at: cards.count - 1)
+                                removeCard(at: cards.count - 1, answer: true)
                             }
                         } label: {
                             Image(systemName: "checkmark.circle")
@@ -139,9 +150,9 @@ struct MainView: View {
         }
     }
     
-    func removeCard(at index: Int) {
+    func removeCard(at index: Int, answer: Bool) {
         guard index >= 0 else { return }
-        cards.remove(at: index)
+        checkCardAnswer(index: index, answer: answer)
         
         if cards.isEmpty {
             isActive = false
@@ -153,6 +164,15 @@ struct MainView: View {
         isActive = true
         loadData()
     }
+    
+    func checkCardAnswer(index: Int, answer: Bool){
+        let card = cards[index]
+        if (card.answer == card.questionAnswer) == answer{
+            cards.remove(at: index)
+        }else{
+            cards.insert(card, at: cards.count)
+        }
+    }
 }
 
 struct MainView_Previews: PreviewProvider {
@@ -161,9 +181,3 @@ struct MainView_Previews: PreviewProvider {
     }
 }
 
-extension View {
-    func stacked(at position: Int, in total: Int) -> some View {
-        let offset = Double(total - position)
-        return self.offset(x: 0, y: offset * 10)
-    }
-}
