@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0208EBE2869A19700B5D82D /* FadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0208EBD2869A19700B5D82D /* FadeView.swift */; };
+		C0208EC02869AE8200B5D82D /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0208EBF2869AE8200B5D82D /* ScaleView.swift */; };
+		C0208EC22869B1E100B5D82D /* ColorfulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0208EC12869B1E100B5D82D /* ColorfulView.swift */; };
 		C09BEA6D286709580067E294 /* LayoutAndGeometryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09BEA6C286709580067E294 /* LayoutAndGeometryApp.swift */; };
 		C09BEA6F286709580067E294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09BEA6E286709580067E294 /* ContentView.swift */; };
 		C09BEA712867095A0067E294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C09BEA702867095A0067E294 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0208EBD2869A19700B5D82D /* FadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeView.swift; sourceTree = "<group>"; };
+		C0208EBF2869AE8200B5D82D /* ScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleView.swift; sourceTree = "<group>"; };
+		C0208EC12869B1E100B5D82D /* ColorfulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulView.swift; sourceTree = "<group>"; };
 		C09BEA69286709580067E294 /* LayoutAndGeometry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutAndGeometry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09BEA6C286709580067E294 /* LayoutAndGeometryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAndGeometryApp.swift; sourceTree = "<group>"; };
 		C09BEA6E286709580067E294 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +42,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0208EBC2869A18800B5D82D /* Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				C0208EBD2869A19700B5D82D /* FadeView.swift */,
+				C0208EBF2869AE8200B5D82D /* ScaleView.swift */,
+				C0208EC12869B1E100B5D82D /* ColorfulView.swift */,
+			);
+			path = Challenges;
+			sourceTree = "<group>";
+		};
 		C09BEA60286709580067E294 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +71,7 @@
 		C09BEA6B286709580067E294 /* LayoutAndGeometry */ = {
 			isa = PBXGroup;
 			children = (
+				C0208EBC2869A18800B5D82D /* Challenges */,
 				C09BEA7A2867098A0067E294 /* Tutorials */,
 				C09BEA6C286709580067E294 /* LayoutAndGeometryApp.swift */,
 				C09BEA702867095A0067E294 /* Assets.xcassets */,
@@ -154,6 +171,9 @@
 				C0F84B20286845D100A4321C /* ContentView2.swift in Sources */,
 				C0F84B2228684AE900A4321C /* ContentView6.swift in Sources */,
 				C09BEA6F286709580067E294 /* ContentView.swift in Sources */,
+				C0208EC02869AE8200B5D82D /* ScaleView.swift in Sources */,
+				C0208EC22869B1E100B5D82D /* ColorfulView.swift in Sources */,
+				C0208EBE2869A19700B5D82D /* FadeView.swift in Sources */,
 				C09BEA6D286709580067E294 /* LayoutAndGeometryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ import SwiftUI
 struct LayoutAndGeometryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView6()
+            ColorfulView()
         }
     }
 }
