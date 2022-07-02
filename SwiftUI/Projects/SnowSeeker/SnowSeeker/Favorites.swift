@@ -8,17 +8,25 @@
 import Foundation
 
 class Favorites: ObservableObject {
-    // the actual resorts the user has favorited
     private var resorts: Set<String>
 
     // the key we're using to read/write in UserDefaults
     private let saveKey = "Favorites"
 
     init() {
-        // load our saved data
-
-        // still here? Use an empty array
         resorts = []
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
+            let fileURL = dir.appendingPathComponent(saveKey)
+            
+            do{
+                let stringContent = try String(contentsOf: fileURL, encoding: .utf8)
+                if let decoded = try? JSONDecoder().decode([String].self, from: stringContent.data(using: .utf8) ?? Data()) {
+                    decoded.forEach { favResort in resorts.insert(favResort) }
+                }
+            } catch{ print("read error"); resorts = [] }
+            return
+        }
     }
 
     // returns true if our set contains this resort
@@ -41,6 +49,14 @@ class Favorites: ObservableObject {
     }
 
     func save() {
-        // write out our data
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
+            let fileURL = dir.appendingPathComponent(saveKey)
+            
+            do{
+                if let encoded = try? JSONEncoder().encode(resorts) {
+                    try encoded.write(to: fileURL)
+                }
+            } catch{ print("save error") }
+        }
     }
 }

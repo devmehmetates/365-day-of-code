@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var favorites = Favorites()
     @State private var searchText = ""
-    let resorts: [Resort] = Bundle.main.decode("resorts.json")
+    @State private var sortType: SortType = .alfabet
+    @State var resorts: [Resort] = Bundle.main.decode("resorts.json")
     
     var body: some View {
         NavigationView {
@@ -47,9 +48,22 @@ struct ContentView: View {
             }
             .navigationTitle("Resorts")
             .searchable(text: $searchText, prompt: "Search for a resort")
+            .toolbar {
+                Picker("", selection: self.$sortType) {
+                    ForEach(SortType.allCases, id:\.self){ value in
+                        Text(value.rawValue)
+                            .tag(value)
+                    }
+                }
+            }
             
             WelcomeView()
         }.environmentObject(favorites)
+            .onChange(of: self.sortType) { newSortValue in
+                sortByType(type: newSortValue)
+            }.onAppear {
+                sortByType(type: .alfabet)
+            }
     }
     
     var filteredResorts: [Resort] {
@@ -57,6 +71,15 @@ struct ContentView: View {
             return resorts
         } else {
             return resorts.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+        }
+    }
+    
+    func sortByType(type: SortType){
+        switch type {
+        case .alfabet:
+            self.resorts.sort { $0.name < $1.name }
+        case .country:
+            self.resorts.sort { $0.country < $1.country }
         }
     }
 }
@@ -75,4 +98,9 @@ extension View {
             self
         }
     }
+}
+
+enum SortType: String, CaseIterable{
+    case alfabet = "By Alfabet"
+    case country = "By Country"
 }
