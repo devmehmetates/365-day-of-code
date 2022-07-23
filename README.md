@@ -109,7 +109,9 @@ This repository has been opened to develop iOS in a planned way.
 | Day164-170 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/HotProspects/HotProspects"> Project </a>| Packages, Image Interpolations, QR Code Genaretor, Results, Context Menu, EnvironmentObjects, LocalNotifications, Swipe Actions and TabViews |
 | Day171-176 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/Flashzilla/Flashzilla"> Project </a>| ScenePhase, User Interactivity, Accessibility, Gestures and Habtics|
 | Day177-179 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/LayoutAndGeometry/LayoutAndGeometry"> Project </a>| GeometryReader, Advanced Layout, Dynamic Animations |
-| ... | ... | ... |
+| Day180 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/RollTheDice/RollTheDice"> Project and Gallery </a>| Timer, Custom Effects, Timed Animations |
+| Day181-185 | <a href="https://github.com/devmehmetates/365-day-of-code/tree/main/SwiftUI/Projects/SnowSeeker/SnowSeeker"> Project </a>| Side By Side, Searchable, Optional Variables in Alerts |
+| Completed | Done🎉 | Thank you <a href = "https://github.com/twostraws"> Paul Hudson </a> 🧡|
 
 ## Side Project Map
 
