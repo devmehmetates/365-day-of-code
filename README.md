@@ -120,6 +120,7 @@ Sorted by development time.
 
 | Name | Status | Url | Subject | Main Technologies | Sub Technologies or Target |
 | ---- | ------ | --- | ------- | ----------------- | ---------------- |
+| OpenFashion | Develop |  <a href="https://github.com/devmehmetates/OpenFashion-MehmetAtes">Go to Project</a> | E-Commerce | UIKit-NoStoryboard, Alamofire, SwiftLint, Kingfisher, MVVM, CRS |
 | Socia | In Re-newing(Major update) |  <a href="https://github.com/devmehmetates/Socia">Go to Project</a> | Social Media | SwiftUI, UIKit integration, Firebase | MVVM, WebKit, UIImagePicker, Auth-System, EnvironmentObjects, ObservedObjects, UserDefaults, Video-Player, Pure iOS Properties, Unit Tests, AvKit, 3D Touch, UIActitivityViewController |
 | Tips for Riot | Completed | <a href="https://github.com/devmehmetates/TipsForRiot">Go to Project</a> | Game | SwiftUI, Packages | SwiftUI Animations, Charts, Custom-API Usage, 3D Touch, Carousel Views(Made with Native SwiftUI)|
 | My Custom iTunes | Completed | <a href="https://github.com/devmehmetates/iTunes-Search-API">Go to Project</a> | Music | SwiftUI and iTunes Search API | MVVM, MVP, AVFoundation, WebView, UserDefaults, UIKit usage in SwiftUI, UIActivityViewController |
