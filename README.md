@@ -7,7 +7,7 @@ This repository has been opened to develop iOS in a planned way.
 |------------|-------------|-----|------------------------------------| ------------- | 
 | 01/01/2022 | 10/04/2022  | 100 | Swift And UIKit                    | Done ✅       |
 | 26/03/2022 | 04/07/2022  | 100 | Swift Review and SwiftUI           | Done ✅       |
-| 01/01/2022 | 01/01/2023  | 365 | Project examples and more practice | Working On 🚀 |
+| 01/01/2022 | 01/01/2023  | 365 | Project examples and more practice | Done ✅       |
 
 ## Swift Fundamentals 
 | Topics                                        | File                                                                                                                                                        |
@@ -148,6 +148,6 @@ Sorted by development time.
 
 ## Target
 
-+ Be happy 🙂
-+ Starting a job as an iOS developer by June ❌ (failed) -> by September
-+ Specialize in iOS as much as possible 🚀
++ Be happy 🥹
++ Starting a job as an iOS developer by September 😎
++ Specialize in iOS as much as possible 🤩
